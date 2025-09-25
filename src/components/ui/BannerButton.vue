@@ -61,6 +61,7 @@ const imgSrcComputed = computed(() =>
     background-color 0.2s,
     border-color 0.2s;
   color: var(--font-color-light);
+  overflow: hidden;
 }
 .banner-text {
   text-align: center;

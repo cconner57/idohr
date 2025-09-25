@@ -3,13 +3,14 @@ import NavBar from './components/nav-bar/NavBar.vue'
 import '../src/styles/base.css'
 import BannerButton from './components/ui/BannerButton.vue'
 import PetItem from './components/pet-item/PetItem.vue'
+import Button from './components/ui/Button.vue'
 </script>
 
 <template>
   <NavBar />
   <section class="hero-section">
     <h1 style="font-size: 48px">Rescue. Love. Adopt.</h1>
-    <button class="adopt-now-button">Adopt Now</button>
+    <Button title="Adopt Now" :onClick="() => {}" />
   </section>
   <section style="display: flex; flex-direction: column; gap: 16px">
     <h5>Adoption Spotlight</h5>
