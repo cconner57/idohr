@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Roboto-V';
+  src: url('../assets/fonts/Roboto-Variable.ttf') format('truetype-variations');
+  font-weight: 1 999;
+}
+
+:root {
+  --primary: #008389;
+  --secondary: #007682;
+
+  --yellow: #fedc32;
+  --red: #d51f2f;
+  --white: #f8f8f3;
+
+  --font-color-light: #fefeff;
+  --font-color-dark: #1f2121;
+
+  --font-regular: 'Roboto-V';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: var(--font-regular);
+}
+
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: var(--font-regular);
+  color: var(--tertiary);
+  font-weight: 700;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+  font-family: var(--font-regular);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
