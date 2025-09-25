@@ -7,9 +7,11 @@ import PetItem from './components/pet-item/PetItem.vue'
 
 <template>
   <NavBar />
-  <h1>Rescue. Love. Adopt.</h1>
-  <section>
+  <section class="hero-section">
+    <h1 style="font-size: 48px">Rescue. Love. Adopt.</h1>
     <button>Adopt Now</button>
+  </section>
+  <section>
     <h5>Adoptable Pets</h5>
   </section>
   <section style="display: flex; gap: 16px; flex-wrap: wrap">
@@ -70,4 +72,12 @@ import PetItem from './components/pet-item/PetItem.vue'
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.hero-section {
+  min-height: 600px;
+  width: 100%;
+  background-image: url('https://placehold.co/1440x600');
+  background-size: cover;
+  background-position: center;
+}
+</style>
