@@ -9,7 +9,7 @@ import PetItem from './components/pet-item/PetItem.vue'
   <NavBar />
   <section class="hero-section">
     <h1 style="font-size: 48px">Rescue. Love. Adopt.</h1>
-    <button>Adopt Now</button>
+    <button class="adopt-now-button">Adopt Now</button>
   </section>
   <section style="display: flex; flex-direction: column; gap: 16px">
     <h5>Adoption Spotlight</h5>
@@ -79,5 +79,14 @@ import PetItem from './components/pet-item/PetItem.vue'
   background-image: url('https://placehold.co/1440x600');
   background-size: cover;
   background-position: center;
+}
+.adopt-now-button {
+  background-color: var(--green);
+  height: 48px;
+  min-width: 160px;
+  padding: 0 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
 }
 </style>
