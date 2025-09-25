@@ -68,6 +68,9 @@ const imgSrcComputed = computed(() =>
   flex-direction: column;
   gap: 4px;
 }
+img {
+  border-radius: 8px;
+}
 h5 {
   margin: 0;
   font-size: 1.5rem;
