@@ -52,14 +52,29 @@ const imgSrcComputed = computed(() =>
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 24px;
   border-radius: 8px;
   cursor: pointer;
+  height: 160px;
+  width: 300px;
   transition:
     background-color 0.2s,
     border-color 0.2s;
+  color: var(--font-color-light);
 }
 .banner-text {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+p {
+  margin: 0;
+  font-size: 1rem;
 }
 </style>

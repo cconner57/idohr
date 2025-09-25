@@ -45,10 +45,13 @@ nav {
 
 button {
   background-color: var(--green);
-  color: var(--font-color-light);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  height: 48px;
+  min-width: 140px;
+  padding: 8px 24px;
+  font-size: 1.15rem;
   font-weight: 600;
+  border-radius: 6px;
+  align-self: center;
+  margin: 8px 0;
 }
 </style>

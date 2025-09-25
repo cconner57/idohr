@@ -11,14 +11,14 @@ import PetItem from './components/pet-item/PetItem.vue'
     <h1 style="font-size: 48px">Rescue. Love. Adopt.</h1>
     <button>Adopt Now</button>
   </section>
-  <section>
-    <h5>Adoptable Pets</h5>
-  </section>
-  <section style="display: flex; gap: 16px; flex-wrap: wrap">
-    <PetItem name="Bella" />
-    <PetItem name="Bella" />
-    <PetItem name="Bella" />
-    <PetItem name="Bella" />
+  <section style="display: flex; flex-direction: column; gap: 16px">
+    <h5>Adoption Spotlight</h5>
+    <div style="display: flex; gap: 3rem; flex-wrap: wrap; justify-content: center">
+      <PetItem name="Crystal" />
+      <PetItem name="Montclair" />
+      <PetItem name="Apricot" />
+      <PetItem name="Flare" />
+    </div>
   </section>
   <section>
     <h5>Our Mission</h5>
@@ -38,7 +38,7 @@ import PetItem from './components/pet-item/PetItem.vue'
     </div>
     <p>500+ pets rescued since 2020</p>
   </section>
-  <section style="display: flex; gap: 16px">
+  <section style="display: flex; gap: 32px; justify-content: center">
     <BannerButton
       imgSrc="https://placehold.co/32x32"
       title="Adopt a Pet"
