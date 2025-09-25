@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NavBar from './components/nav-bar/NavBar.vue'
 import '../src/styles/base.css'
+import BannerButton from './components/ui/BannerButton.vue'
 </script>
 
 <template>
@@ -46,19 +47,20 @@ import '../src/styles/base.css'
     </div>
     <p>500+ pets rescued since 2020</p>
   </section>
-  <section>
-    <button>
-      <h5>Adopt a Pet</h5>
-      <p>Find your perfect companion</p>
-    </button>
-    <button>
-      <h5>Get Involved</h5>
-      <p>Volunteer, foster, or support us</p>
-    </button>
-    <button>
-      <h5>Donate</h5>
-      <p>Help us save more lives</p>
-    </button>
+  <section style="display: flex; gap: 16px">
+    <BannerButton
+      imgSrc=""
+      title="Adopt a Pet"
+      subtitle="Find your perfect companion"
+      color="yellow"
+    />
+    <BannerButton
+      imgSrc=""
+      title="Get Involved"
+      subtitle="Volunteer, foster, or support us"
+      color="green"
+    />
+    <BannerButton imgSrc="" title="Donate" subtitle="Help us save more lives" color="red" />
   </section>
   <footer>
     <div>
