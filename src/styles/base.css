@@ -6,8 +6,8 @@
 
 :root {
   --green: #008389;
-  --yellow: #fedc32;
-  --red: #d51f2f;
+  --yellow: #deb024;
+  --red: rgb(199, 58, 103);
   --white: #f8f8f3;
 
   --font-color-light: #fefeff;

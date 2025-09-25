@@ -2,6 +2,7 @@
 import NavBar from './components/nav-bar/NavBar.vue'
 import '../src/styles/base.css'
 import BannerButton from './components/ui/BannerButton.vue'
+import PetItem from './components/pet-item/PetItem.vue'
 </script>
 
 <template>
@@ -11,23 +12,11 @@ import BannerButton from './components/ui/BannerButton.vue'
     <button>Adopt Now</button>
     <h5>Adoptable Pets</h5>
   </section>
-  <section>
-    <div>
-      <p>Bella</p>
-      <button>Adopt Me</button>
-    </div>
-    <div>
-      <p>Bella</p>
-      <button>Adopt Me</button>
-    </div>
-    <div>
-      <p>Bella</p>
-      <button>Adopt Me</button>
-    </div>
-    <div>
-      <p>Bella</p>
-      <button>Adopt Me</button>
-    </div>
+  <section style="display: flex; gap: 16px; flex-wrap: wrap">
+    <PetItem name="Bella" />
+    <PetItem name="Bella" />
+    <PetItem name="Bella" />
+    <PetItem name="Bella" />
   </section>
   <section>
     <h5>Our Mission</h5>
@@ -49,18 +38,23 @@ import BannerButton from './components/ui/BannerButton.vue'
   </section>
   <section style="display: flex; gap: 16px">
     <BannerButton
-      imgSrc=""
+      imgSrc="https://placehold.co/32x32"
       title="Adopt a Pet"
       subtitle="Find your perfect companion"
       color="yellow"
     />
     <BannerButton
-      imgSrc=""
+      imgSrc="https://placehold.co/32x32"
       title="Get Involved"
       subtitle="Volunteer, foster, or support us"
+      color="red"
+    />
+    <BannerButton
+      imgSrc="https://placehold.co/32x32"
+      title="Donate"
+      subtitle="Help us save more lives"
       color="green"
     />
-    <BannerButton imgSrc="" title="Donate" subtitle="Help us save more lives" color="red" />
   </section>
   <footer>
     <div>

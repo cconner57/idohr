@@ -44,8 +44,8 @@ nav {
 }
 
 button {
-  background-color: var(--yellow);
-  color: var(--font-color-dark);
+  background-color: var(--green);
+  color: var(--font-color-light);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
