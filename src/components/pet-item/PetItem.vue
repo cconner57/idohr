@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+import { goToAdopt } from '../../utils/navigate'
+
 const props = defineProps({
   name: {
     type: String,
@@ -10,6 +13,11 @@ const props = defineProps({
     default: 'A lovely pet looking for a forever home',
   },
 })
+const router = useRouter()
+
+function handleAdopt() {
+  goToAdopt(router)
+}
 </script>
 
 <template>
@@ -17,7 +25,7 @@ const props = defineProps({
     <img src="https://placehold.co/600x600" alt="test" height="300" width="300" />
     <h5>{{ props.name }}</h5>
     <p>{{ props.description }}</p>
-    <button class="adopt-me-button">Adopt Me</button>
+    <button class="adopt-me-button" @click="handleAdopt">Adopt Me</button>
   </div>
 </template>
 
@@ -42,7 +50,7 @@ const props = defineProps({
   }
 }
 .adopt-me-button {
-  background-color: var(--green);
+  background-color: var(--blue);
   height: 48px;
   min-width: 160px;
   padding: 8px 24px;
@@ -51,5 +59,8 @@ const props = defineProps({
   border-radius: 6px;
   align-self: center;
   margin: 8px 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>

@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+import { goToDonate } from '../../utils/navigate'
+import Button from '../ui/Button.vue'
+
+const router = useRouter()
+</script>
 
 <template>
   <nav>
@@ -12,8 +18,11 @@
       <RouterLink to="/adopt" class="nav-item" active-class="active">
         <p>Adopt</p>
       </RouterLink>
+      <RouterLink to="/volunteer" class="nav-item" active-class="active">
+        <p>Volunteer</p>
+      </RouterLink>
     </section>
-    <button>Donate</button>
+    <Button title="Donate" color="green" @click="goToDonate(router)" />
   </nav>
 </template>
 
@@ -53,5 +62,8 @@ button {
   border-radius: 6px;
   align-self: center;
   margin: 8px 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>

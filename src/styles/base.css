@@ -6,9 +6,17 @@
 
 :root {
   --green: #008389;
-  --yellow: #deb024;
-  --red: rgb(199, 58, 103);
+  --green-weak: #7fd1c9;
+
+  --blue: #1976d2;
+  --blue-weak: #aed9ff;
+
+  --purple: #6b5b95;
+  --purple-weak: #cdbaf0;
+
   --white: #f8f8f3;
+  --red: #c73a67;
+  --yellow: #deb024;
 
   --font-color-light: #fefeff;
   --font-color-dark: #1f2121;
