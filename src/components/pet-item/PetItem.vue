@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { goToAdopt } from '../../utils/navigate'
+import Button from '../ui/Button.vue'
 
 const props = defineProps({
   name: {
@@ -25,7 +26,9 @@ function handleAdopt() {
     <img src="https://placehold.co/600x600" alt="test" height="300" width="300" />
     <h5>{{ props.name }}</h5>
     <p>{{ props.description }}</p>
-    <button class="adopt-me-button" @click="handleAdopt">Adopt Me</button>
+    <div class="button-section">
+      <Button title="Adopt Me" color="blue" @click="handleAdopt" />
+    </div>
   </div>
 </template>
 
@@ -49,18 +52,9 @@ function handleAdopt() {
     flex-grow: 1;
   }
 }
-.adopt-me-button {
-  background-color: var(--blue);
-  height: 48px;
-  min-width: 160px;
-  padding: 8px 24px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  align-self: center;
-  margin: 8px 0;
-  &:hover {
-    cursor: pointer;
-  }
+.button-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
 }
 </style>

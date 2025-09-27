@@ -17,23 +17,17 @@ const props = withDefaults(
   },
 )
 
-const placeholderSvg = `
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
-  <rect width='24' height='24' rx='4' fill='%23E5E7EB'/>
-  <path d='M7 14l3-4 2.5 3.5L17 9l4 6H7z' fill='%239CA3AF'/>
-</svg>`
-
-const placeholderDataUri = `data:image/svg+xml;utf8,${encodeURIComponent(placeholderSvg)}`
-
-const imgSrcComputed = computed(() =>
-  props.imgSrc && props.imgSrc.length ? props.imgSrc : placeholderDataUri,
-)
+const imgSrcComputed = computed(() => (props.imgSrc && props.imgSrc.length ? props.imgSrc : ''))
 </script>
 
 <template>
   <button
-    :style="{ backgroundColor: `var(--${props.color})` }"
     class="banner-button"
+    :class="{
+      'banner-button-blue': props.color === 'blue',
+      'banner-button-green': props.color === 'green',
+      'banner-button-purple': props.color === 'purple',
+    }"
     :type="props.type"
     :aria-label="props.title"
   >
@@ -80,5 +74,24 @@ h5 {
 p {
   margin: 0;
   font-size: 1rem;
+}
+
+.banner-button-green {
+  background-color: var(--green);
+  &:hover {
+    background-color: var(--green-hover);
+  }
+}
+.banner-button-blue {
+  background-color: var(--blue);
+  &:hover {
+    background-color: var(--blue-hover);
+  }
+}
+.banner-button-purple {
+  background-color: var(--purple);
+  &:hover {
+    background-color: var(--purple-hover);
+  }
 }
 </style>
