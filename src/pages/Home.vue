@@ -119,6 +119,8 @@ function handleAdopt() {
   background-size: cover;
   background-position: 50% 30%;
   padding: 100px 180px 40px;
+  overflow: hidden;
+
   & h1 {
     font-size: 6rem;
     color: var(--white);
@@ -133,6 +135,7 @@ main {
   align-items: center;
   gap: 64px;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 .adoption-spotlight {
@@ -164,6 +167,8 @@ main {
   max-width: 80%;
   text-align: start;
   margin-bottom: 30px;
+  overflow: hidden;
+
   & h4 {
     font-size: 2.75rem;
     color: var(--font-color-light);
