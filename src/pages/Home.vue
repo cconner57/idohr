@@ -118,7 +118,7 @@ function handleAdopt() {
   background-image: url('/images/hero.png');
   background-size: cover;
   background-position: 50% 35%;
-  padding: 50px;
+  padding: 40px 180px;
   & h1 {
     font-size: 6rem;
     color: var(--white);
