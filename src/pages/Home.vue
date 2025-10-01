@@ -72,7 +72,7 @@ function handleAdopt() {
         </div>
       </content>
     </section>
-    <section style="display: flex; gap: 32px; justify-content: center">
+    <section class="call-to-action">
       <BannerButton
         imgSrc="/images/paw.svg"
         title="Adopt a Pet"
@@ -251,6 +251,15 @@ main {
       }
     }
   }
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 80px;
+  min-width: 80%;
+  max-width: 80%;
+  padding: 0 60px;
 }
 
 .gold-border {
