@@ -135,7 +135,6 @@ main {
   align-items: center;
   gap: 64px;
   background-color: var(--background);
-  overflow: hidden;
 }
 
 .adoption-spotlight {
