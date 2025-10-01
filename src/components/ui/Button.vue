@@ -1,8 +1,9 @@
 <script setup lang="ts">
 const props = defineProps<{
-  title: string
   color: 'green' | 'blue' | 'purple'
   onClick?: () => void
+  size?: 'small' | 'medium' | 'large'
+  title: string
 }>()
 </script>
 
@@ -12,6 +13,9 @@ const props = defineProps<{
       'button-blue': props.color === 'blue',
       'button-green': props.color === 'green',
       'button-purple': props.color === 'purple',
+      small: props.size === 'small',
+      medium: props.size === 'medium' || !props.size,
+      large: props.size === 'large',
     }"
     @click="props.onClick && props.onClick()"
   >
@@ -24,16 +28,33 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 48px;
-  min-width: 160px;
-  padding: 0 24px;
-  font-size: 1rem;
   font-weight: 600;
   border-radius: 6px;
   transition: background-color 0.2s;
   &:hover {
     cursor: pointer;
   }
+}
+
+.small {
+  height: 30px;
+  min-width: 120px;
+  padding: 0 16px;
+  font-size: 0.875rem;
+}
+
+.medium {
+  height: 40px;
+  min-width: 160px;
+  padding: 0 24px;
+  font-size: 1rem;
+}
+
+.large {
+  height: 60px;
+  min-width: 220px;
+  padding: 0 32px;
+  font-size: 1.5rem;
 }
 
 .button-green {

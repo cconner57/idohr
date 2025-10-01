@@ -23,7 +23,12 @@ function handleAdopt() {
 
 <template>
   <div class="pet-item">
-    <img src="https://placehold.co/600x600" alt="test" height="300" width="300" />
+    <img
+      :src="`/images/${props.name.toLowerCase() ?? ''}.jpeg`"
+      :alt="props.name"
+      height="300"
+      width="300"
+    />
     <h5>{{ props.name }}</h5>
     <p>{{ props.description }}</p>
     <div class="button-section">
@@ -42,6 +47,12 @@ function handleAdopt() {
   overflow: hidden;
   background-color: var(--white);
   color: var(--font-color-dark);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+  }
   h5 {
     font-size: 1.5rem;
     padding: 0 16px;
