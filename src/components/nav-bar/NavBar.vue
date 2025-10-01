@@ -50,6 +50,7 @@ nav {
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
+  overflow: hidden;
 }
 
 .nav-blurred {

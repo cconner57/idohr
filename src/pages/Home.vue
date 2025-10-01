@@ -198,6 +198,7 @@ main {
   gap: 16px;
   padding: 24px 50px 50px 50px;
   border-radius: 12px;
+  overflow: hidden;
 
   & h4 {
     font-size: 2rem;
