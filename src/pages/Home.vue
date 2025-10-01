@@ -148,6 +148,7 @@ main {
   padding: 24px 50px 40px 50px;
   border-radius: 12px;
   margin: -120px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   & h4 {
     font-size: 2rem;
