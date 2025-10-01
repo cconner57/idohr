@@ -17,7 +17,7 @@ function handleAdopt() {
     <h1>Rescue. Love. Adopt.</h1>
     <Button color="blue" title="Adopt Now" @click="handleAdopt" size="large" />
   </section>
-  <main>
+  <main :style="{ backgroundColor: 'var(--background)', paddingBottom: '220px' }">
     <section class="adoption-spotlight">
       <h4>Adoption Spotlight</h4>
       <div class="pet-list">
@@ -39,6 +39,8 @@ function handleAdopt() {
         <img src="/images/watercolor.avif" alt="watercolor painting of dog and cat" height="300" />
       </content>
     </section>
+  </main>
+  <main :style="{ backgroundColor: 'var(--white)' }">
     <section class="impact">
       <h4>Our Impact</h4>
       <content>
@@ -134,7 +136,6 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 64px;
-  background-color: var(--background);
 }
 
 .adoption-spotlight {
@@ -203,6 +204,8 @@ main {
   padding: 24px 50px 50px 50px;
   border-radius: 12px;
   overflow: hidden;
+  margin-top: -150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   & h4 {
     font-size: 2rem;
