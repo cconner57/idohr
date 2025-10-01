@@ -36,7 +36,7 @@ function handleAdopt() {
           food, veterinary care, and love. IDOHR will also advocate and educate on the importance of
           pet adoption, spaying, neutering, and proper pet care.
         </p>
-        <img src="/images/watercolor.avif" alt="watercolor painting of dog and cat" />
+        <img src="/images/watercolor.avif" alt="watercolor painting of dog and cat" height="300" />
       </content>
     </section>
     <section class="impact">
@@ -117,8 +117,8 @@ function handleAdopt() {
   width: 100%;
   background-image: url('/images/hero.png');
   background-size: cover;
-  background-position: 50% 35%;
-  padding: 40px 180px;
+  background-position: 50% 30%;
+  padding: 100px 180px 40px;
   & h1 {
     font-size: 6rem;
     color: var(--white);
@@ -132,6 +132,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 64px;
+  background-color: var(--background);
 }
 
 .adoption-spotlight {
@@ -143,7 +144,7 @@ main {
   gap: 16px;
   padding: 24px 50px 40px 50px;
   border-radius: 12px;
-  margin: -150px 0 0;
+  margin: -120px 0 0;
 
   & h4 {
     font-size: 2rem;
@@ -173,6 +174,8 @@ main {
     & img {
       border-radius: 16px;
       height: auto;
+      max-height: 300px;
+      object-fit: cover;
       width: 350px;
       margin-right: 200px;
     }

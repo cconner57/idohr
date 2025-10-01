@@ -2,12 +2,28 @@
 import { useRouter } from 'vue-router'
 import { goToDonate } from '../../utils/navigate'
 import Button from '../ui/Button.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isScrolledDown = ref(false)
 
 const router = useRouter()
+
+const handleScroll = () => {
+  // Check if the scroll position is past a certain threshold (e.g., 50px)
+  isScrolledDown.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
-  <nav>
+  <nav :class="{ 'nav-blurred': isScrolledDown }">
     <section class="nav-links">
       <RouterLink to="/" class="nav-item" active-class="active">
         <p>Home</p>
@@ -32,12 +48,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-blurred {
+  background-color: hsl(182, 100%, 23%, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease;
 }
 
 .nav-links {
   display: flex;
   gap: 4rem;
-  padding: 1rem;
+  padding: 1rem 9.5rem;
 }
 
 .nav-item {

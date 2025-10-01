@@ -5,7 +5,7 @@
 }
 
 :root {
-  --green: #008389;
+  --green: hsl(183, 100%, 37%);
   --green-hover: #006f73;
   --green-weak: #7fd1c9;
 
@@ -20,6 +20,8 @@
   --white: #f8f8f3;
   --red: #c73a67;
   --yellow: #deb024;
+
+  --background: #008389;
 
   --font-color-light: #fefeff;
   --font-color-dark: #1f2121;
