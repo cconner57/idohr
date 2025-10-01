@@ -36,7 +36,7 @@ function handleAdopt() {
           food, veterinary care, and love. IDOHR will also advocate and educate on the importance of
           pet adoption, spaying, neutering, and proper pet care.
         </p>
-        <img src="/images/watercolor.avif" alt="watercolor painting of dog and cat" height="300" />
+        <img src="/images/watercolor.jpeg" alt="watercolor painting of dog and cat" height="300" />
       </content>
     </section>
   </main>
