@@ -115,9 +115,9 @@ function handleAdopt() {
 .hero-section {
   min-height: 600px;
   width: 100%;
-  background-image: url('https://placehold.co/1440x600');
+  background-image: url('/images/hero.png');
   background-size: cover;
-  background-position: center;
+  background-position: 50% 35%;
   padding: 50px;
   & h1 {
     font-size: 6rem;
@@ -141,7 +141,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px 50px;
+  padding: 24px 50px 40px 50px;
   border-radius: 12px;
   margin: -150px 0 0;
 

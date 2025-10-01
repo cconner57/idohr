@@ -29,10 +29,10 @@ function handleAdopt() {
       height="300"
       width="300"
     />
-    <h5>{{ props.name }}</h5>
-    <p>{{ props.description }}</p>
-    <div class="button-section">
-      <Button title="Adopt Me" color="blue" @click="handleAdopt" />
+    <div class="info-section">
+      <h5>{{ props.name }}</h5>
+      <p>{{ props.description }}</p>
+      <Button title="Adopt Me" color="blue" @click="handleAdopt" :fullWidth="true" />
     </div>
   </div>
 </template>
@@ -48,24 +48,24 @@ function handleAdopt() {
   background-color: var(--white);
   color: var(--font-color-dark);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+
   img {
     width: 100%;
     object-fit: cover;
     height: 250px;
   }
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px 16px;
+  }
   h5 {
     font-size: 1.5rem;
-    padding: 0 16px;
   }
   p {
     font-size: 1rem;
-    padding: 0 16px;
     flex-grow: 1;
   }
-}
-.button-section {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 16px;
 }
 </style>

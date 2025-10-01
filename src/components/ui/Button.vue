@@ -4,6 +4,7 @@ const props = defineProps<{
   onClick?: () => void
   size?: 'small' | 'medium' | 'large'
   title: string
+  fullWidth?: boolean
 }>()
 </script>
 
@@ -16,6 +17,7 @@ const props = defineProps<{
       small: props.size === 'small',
       medium: props.size === 'medium' || !props.size,
       large: props.size === 'large',
+      'w-full': props.fullWidth,
     }"
     @click="props.onClick && props.onClick()"
   >
@@ -74,5 +76,9 @@ button {
   &:hover {
     background-color: var(--purple-hover);
   }
+}
+
+.w-full {
+  width: 100%;
 }
 </style>
