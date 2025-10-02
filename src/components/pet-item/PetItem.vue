@@ -43,7 +43,7 @@ function handleAdopt() {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 300px;
+  width: 280px;
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--white);
