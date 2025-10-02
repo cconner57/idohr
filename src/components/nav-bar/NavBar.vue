@@ -15,29 +15,24 @@ const handleScroll = () => {
 const add = () => window.addEventListener('scroll', handleScroll, { passive: true })
 const remove = () => window.removeEventListener('scroll', handleScroll)
 
-// React to route changes (including initial mount)
 watch(
   () => route.path,
   (path, _prev, onCleanup) => {
-    remove() // ensure we don't double-bind
+    remove()
 
     if (path === '/volunteer') {
-      // No listeners on Volunteer; force the blurred state
       isScrolledDown.value = true
       return
     }
 
-    // Other pages: set initial state + attach listener
     isScrolledDown.value = window.scrollY > 50
     add()
 
-    // Auto-cleanup when route changes again
     onCleanup(() => remove())
   },
   { immediate: true },
 )
 
-// Extra safety if the component unmounts
 onUnmounted(remove)
 </script>
 
