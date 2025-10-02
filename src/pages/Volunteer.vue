@@ -35,9 +35,12 @@ import Button from '../components/ui/Button.vue'
       </header>
 
       <p class="lede">
-        I Dream of Home Rescue (IDOHR) is non-profit all-volunteer organization dedicated to helping
-        homeless cats and kittens find their forever homes. We are seeking responsible mature people
-        to assist with tasks like feeding, cleaning, socializing, and adoption support.
+        I Dream of Home Rescue (IDOHR) is an all-volunteer, nonprofit dedicated to helping homeless
+        cats and kittens find loving, permanent homes. We’re looking for responsible volunteers to
+        help with feeding and cleaning, socializing cats and kittens, supporting adoptions, and
+        light administrative tasks. Volunteers must be 18 or older. If under 18, a parent or
+        guardian must sign the waiver below. Join us and help change a life. You’ll connect with
+        amazing animals, work alongside caring volunteers, and make a meaningful impact.
       </p>
 
       <fieldset class="grid" aria-labelledby="pi">
@@ -189,6 +192,21 @@ import Button from '../components/ui/Button.vue'
             <div class="control"><input type="date" /></div>
           </div>
         </div>
+
+        <label for="parental-consent" class="label"
+          >If under 18, I (parent/guardian name) give permission for my child to volunteer with
+          IDOHR and agree to the above waiver.</label
+        >
+        <div class="grid" style="margin-top: 12px">
+          <div class="field">
+            <label class="label">Parent/Guardian Signature:</label>
+            <div class="control"><input placeholder="" /></div>
+          </div>
+          <div class="field">
+            <label class="label">Date:</label>
+            <div class="control"><input type="date" /></div>
+          </div>
+        </div>
       </fieldset>
 
       <div class="actions">
@@ -202,7 +220,7 @@ import Button from '../components/ui/Button.vue'
 .page-shell {
   min-height: 100vh;
   background-color: var(--green);
-  padding: 6rem 16px 64px;
+  padding: 9rem 16px 64px;
 }
 fieldset {
   border: 0;
@@ -298,7 +316,10 @@ fieldset {
 .lede {
   color: var(--text-700);
   margin: 6px 0 18px;
-  max-width: 75ch;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  user-select: none;
 }
 
 .section-title {
@@ -394,9 +415,10 @@ fieldset {
   pointer-events: none;
 }
 .chip:has(> input:checked) {
-  background: #e8f1ff;
-  border-color: #bfd0ff;
-  box-shadow: 0 0 0 3px rgba(30, 99, 217, 0.18) inset;
+  background: var(--green-weak);
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #1e63d92e inset;
+  color: var(--font-color-dark);
 }
 .chip:has(> input:focus-visible) {
   box-shadow: 0 0 0 3px var(--ring);
@@ -452,8 +474,8 @@ fieldset {
   pointer-events: none;
 }
 .time-card:has(> input:checked) {
-  background: #e8f1ff;
-  border-color: #bfd0ff;
+  background: var(--green-weak);
+  border-color: var(--green);
   box-shadow: 0 0 0 3px rgba(30, 99, 217, 0.18) inset;
 }
 .time-card:has(> input:focus-visible) {

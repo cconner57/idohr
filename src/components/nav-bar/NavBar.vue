@@ -1,42 +1,55 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { ref, watch, onUnmounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { goToDonate } from '../../utils/navigate'
 import Button from '../ui/Button.vue'
-import { ref, onMounted, onUnmounted } from 'vue'
 
 const isScrolledDown = ref(false)
-
 const router = useRouter()
+const route = useRoute()
 
 const handleScroll = () => {
-  // Check if the scroll position is past a certain threshold (e.g., 50px)
   isScrolledDown.value = window.scrollY > 50
 }
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
+const add = () => window.addEventListener('scroll', handleScroll, { passive: true })
+const remove = () => window.removeEventListener('scroll', handleScroll)
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+// React to route changes (including initial mount)
+watch(
+  () => route.path,
+  (path, _prev, onCleanup) => {
+    remove() // ensure we don't double-bind
+
+    if (path === '/volunteer') {
+      // No listeners on Volunteer; force the blurred state
+      isScrolledDown.value = true
+      return
+    }
+
+    // Other pages: set initial state + attach listener
+    isScrolledDown.value = window.scrollY > 50
+    add()
+
+    // Auto-cleanup when route changes again
+    onCleanup(() => remove())
+  },
+  { immediate: true },
+)
+
+// Extra safety if the component unmounts
+onUnmounted(remove)
 </script>
 
 <template>
   <nav :class="{ 'nav-blurred': isScrolledDown }">
     <section class="nav-links">
-      <RouterLink to="/" class="nav-item" active-class="active">
-        <p>Home</p>
-      </RouterLink>
-      <RouterLink to="/about" class="nav-item" active-class="active">
-        <p>About</p>
-      </RouterLink>
-      <RouterLink to="/adopt" class="nav-item" active-class="active">
-        <p>Adopt</p>
-      </RouterLink>
-      <RouterLink to="/volunteer" class="nav-item" active-class="active">
-        <p>Volunteer</p>
-      </RouterLink>
+      <RouterLink to="/" class="nav-item" active-class="active"><p>Home</p></RouterLink>
+      <RouterLink to="/about" class="nav-item" active-class="active"><p>About</p></RouterLink>
+      <RouterLink to="/adopt" class="nav-item" active-class="active"><p>Adopt</p></RouterLink>
+      <RouterLink to="/volunteer" class="nav-item" active-class="active"
+        ><p>Volunteer</p></RouterLink
+      >
     </section>
     <Button title="Donate" color="green" @click="goToDonate(router)" />
   </nav>
@@ -77,7 +90,15 @@ nav {
 }
 
 .nav-item.active {
-  border-bottom: 2px solid var(--yellow);
+  font-weight: 600;
+  border-bottom: 2px solid var(--font-color-light);
+  padding-bottom: 4px;
+  p {
+    font-size: 1.2rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 button {
