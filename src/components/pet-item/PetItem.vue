@@ -28,6 +28,7 @@ function handleAdopt() {
       :alt="props.name"
       height="300"
       width="300"
+      loading="lazy"
     />
     <div class="info-section">
       <h5>{{ props.name }}</h5>
