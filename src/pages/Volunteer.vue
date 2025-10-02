@@ -176,9 +176,9 @@ import Button from '../components/ui/Button.vue'
       <fieldset class="waiver-container">
         <legend id="waiv" class="section-title">Agreement</legend>
         <p class="waiver">
-          I, (NAME), hereby volunteer to assist in various tasks to support IDoHR. I understand that
-          IDoHR and partners are not responsible for any illness or injury caused during volunteer
-          work. I agree to hold harmless IDoHR and partners should I become sick or injured from any
+          I, (NAME), hereby volunteer to assist in various tasks to support IDOHR. I understand that
+          IDOHR and partners are not responsible for any illness or injury caused during volunteer
+          work. I agree to hold harmless IDOHR and partners should I become sick or injured from any
           animals as a result of my volunteer work.
         </p>
 
