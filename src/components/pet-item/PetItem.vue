@@ -29,6 +29,9 @@ function handleAdopt() {
       height="300"
       width="300"
       loading="lazy"
+      :style="{
+        background: `url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6`,
+      }"
     />
     <div class="info-section">
       <h5>{{ props.name }}</h5>
