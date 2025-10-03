@@ -320,6 +320,7 @@ fieldset {
   line-height: 1.6;
   max-width: 1000px;
   user-select: none;
+  font-weight: 400;
 }
 
 .section-title {

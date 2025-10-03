@@ -32,6 +32,7 @@ button {
   justify-content: center;
   font-weight: 600;
   border-radius: 6px;
+  color: var(--white);
   transition: background-color 0.2s;
   &:hover {
     cursor: pointer;

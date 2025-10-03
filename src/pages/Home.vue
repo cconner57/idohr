@@ -128,6 +128,9 @@ function handleAdopt() {
     color: var(--white);
     max-width: 600px;
     margin-bottom: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 100px;
+    user-select: none;
   }
 }
 
@@ -191,6 +194,7 @@ main {
       color: var(--font-color-medium);
       line-height: 1.6;
       margin-top: 20px;
+      font-weight: 400;
     }
   }
 }

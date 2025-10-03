@@ -59,6 +59,7 @@ nav {
   position: fixed;
   width: 100%;
   overflow: hidden;
+  z-index: 100;
 }
 
 .nav-blurred {
