@@ -4,6 +4,7 @@ import PetItem from '../components/pet-item/PetItem.vue'
 import BannerButton from '../components/ui/BannerButton.vue'
 import Button from '../components/ui/Button.vue'
 import { goToAdopt } from '../utils/navigate'
+import Candid from '../components/candid-award/Candid.vue'
 
 const router = useRouter()
 
@@ -45,21 +46,9 @@ function handleAdopt() {
       <h4>Our Impact</h4>
       <content>
         <div class="awards">
-          <span class="gold-border">
-            <p>Gold Transparency</p>
-            <p>2024</p>
-            <p>Candid.</p>
-          </span>
-          <span class="gold-border">
-            <p>Gold Transparency</p>
-            <p>2023</p>
-            <p>Candid.</p>
-          </span>
-          <span class="silver-border">
-            <p>Silver Transparency</p>
-            <p>2022</p>
-            <p>Candid.</p>
-          </span>
+          <Candid type="Gold" year="2024" />
+          <Candid type="Gold" year="2023" />
+          <Candid type="Silver" year="2022" />
         </div>
         <div class="divider"></div>
         <div class="stats">
@@ -227,21 +216,6 @@ main {
     display: flex;
     gap: 50px;
     width: 50%;
-    & span {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      padding: 8px;
-    }
-    & p {
-      font-size: 1.05rem;
-    }
-    & p:not(:first-child) {
-      font-weight: 600;
-    }
-    & p:last-child {
-      margin-top: 24px;
-    }
   }
   .divider {
     border-left: 5px solid gray;
