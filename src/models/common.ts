@@ -28,4 +28,6 @@ export interface IPet {
     medicalDescription?: string
   }
   adoptionFee?: number
+  spotLight?: string
+  photos?: string[]
 }
