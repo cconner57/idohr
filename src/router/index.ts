@@ -12,9 +12,12 @@ const router = createRouter({
       path: '/about',
       component: About,
     },
+    { path: '/adopt', name: 'adopt-list', component: Adopt },
     {
-      path: '/adopt',
+      path: '/adopt/:slug',
+      name: 'adopt-pet',
       component: Adopt,
+      props: true,
     },
     {
       path: '/donate',
@@ -25,6 +28,10 @@ const router = createRouter({
       component: Volunteer,
     },
   ],
+  scrollBehavior(to, from, saved) {
+    if (saved) return saved
+    return { top: 0 }
+  },
 })
 
 export default router

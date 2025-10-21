@@ -17,7 +17,7 @@ const props = defineProps({
 const router = useRouter()
 
 function handleAdopt() {
-  goToAdopt(router)
+  goToAdopt(router, props.name.toLowerCase())
 }
 </script>
 
