@@ -15,6 +15,13 @@ const props = defineProps({
   },
 })
 const router = useRouter()
+import { ref } from 'vue'
+
+const imgError = ref(false)
+
+function onImgError() {
+  imgError.value = true
+}
 
 function handleAdopt() {
   goToAdopt(router, props.name.toLowerCase())
@@ -24,15 +31,15 @@ function handleAdopt() {
 <template>
   <div class="pet-item">
     <img
+      v-if="!imgError"
       :src="`/images/${props.name.toLowerCase() ?? ''}.jpeg`"
       :alt="props.name"
       height="300"
       width="300"
       loading="lazy"
-      :style="{
-        background: `url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6`,
-      }"
+      @error="onImgError"
     />
+    <div v-else class="img-fallback" aria-hidden="true"></div>
     <div class="info-section">
       <h5>{{ props.name }}</h5>
       <p>{{ props.description }}</p>
@@ -57,6 +64,12 @@ function handleAdopt() {
     width: 100%;
     object-fit: cover;
     height: 250px;
+    background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
+  }
+  .img-fallback {
+    width: 100%;
+    height: 250px;
+    background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
   }
   .info-section {
     display: flex;
