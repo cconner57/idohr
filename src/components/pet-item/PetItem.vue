@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router'
 import { goToAdopt } from '../../utils/navigate'
 import Button from '../ui/Button.vue'
+import { ref, type PropType } from 'vue'
 
 const props = defineProps({
   name: {
@@ -11,11 +12,14 @@ const props = defineProps({
   description: {
     type: String,
     required: false,
-    default: 'A lovely pet looking for a forever home',
+  },
+  capsules: {
+    type: Array as PropType<string[]>,
+    required: false,
+    default: () => [],
   },
 })
 const router = useRouter()
-import { ref } from 'vue'
 
 const imgError = ref(false)
 
@@ -42,7 +46,8 @@ function handleAdopt() {
     <div v-else class="img-fallback" aria-hidden="true"></div>
     <div class="info-section">
       <h5>{{ props.name }}</h5>
-      <p>{{ props.description }}</p>
+      <Capsules></Capsules>
+      <p v-if="props.description">{{ props.description }}</p>
       <Button title="Adopt Me" color="blue" @click="handleAdopt" :fullWidth="true" />
     </div>
   </div>

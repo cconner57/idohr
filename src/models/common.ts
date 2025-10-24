@@ -12,6 +12,7 @@ export interface IPet {
     physicalDescription?: string
   }
   behavioralTraits?: {
+    mustGoWithAnotherCat?: boolean
     goodWithKids?: boolean
     goodWithDogs?: boolean
     goodWithCats?: boolean
@@ -20,6 +21,7 @@ export interface IPet {
     specialNeeds?: string
     houseTrained?: boolean
     behavioralDescription?: string
+    funDescription?: string
   }
   medicalHistory?: {
     vaccinationsUpToDate?: boolean
@@ -28,6 +30,7 @@ export interface IPet {
     medicalDescription?: string
   }
   adoptionFee?: number
-  spotLight?: string
+  spotlight?: boolean
+  spotlightDescription?: string
   photos?: string[]
 }
