@@ -28,19 +28,19 @@ const faqs = ref([
   },
 ])
 
-function toggleFaq(index: number) {
+const toggleFaq = (index: number) => {
   faqs.value[index].expanded = !faqs.value[index].expanded
 }
 
-function handleStartAdoption() {
+const handleStartAdoption = () => {
   // Implement start adoption logic here
 }
 
-function handleScheduleMeet() {
+const handleScheduleMeet = () => {
   // Implement scheduling logic here
 }
 
-function handleShare() {
+const handleShare = () => {
   // Implement sharing logic here
 }
 
