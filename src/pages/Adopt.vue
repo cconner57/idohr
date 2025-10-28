@@ -17,7 +17,7 @@ const pet = computed(() => pets.find((p) => p.slug === slug.value))
 
 <template>
   <div class="adopt">
-    <div class="header">
+    <div class="header" v-if="!pet">
       <h1>Find your new best friend</h1>
       <p>
         Search adoptable cats and dogs across Southern California. Every adoption helps us rescue
@@ -32,45 +32,31 @@ const pet = computed(() => pets.find((p) => p.slug === slug.value))
 </template>
 
 <style scoped lang="css">
-.wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-.btn {
-  display: inline-block;
-  padding: 12px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.primary {
-  background: #2f6bd8;
-  color: #fff;
-}
-.ghost {
-  background: #eaf0ff;
-  color: #133c9a;
-}
-.crumbs {
+.adopt {
+  width: 100%;
+  padding: 8rem 0 3rem 11.5rem;
   display: flex;
-  gap: 8px;
-  align-items: center;
-  color: #2c5560;
-  margin-bottom: 12px;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--green);
 }
-.slash {
-  opacity: 0.5;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  & h1 {
+    font-size: 3.5rem;
+    color: var(--font-color-light);
+  }
+  & p {
+    font-size: 1.25rem;
+    color: var(--font-color-light);
+    min-width: 400px;
+    max-width: 100%;
+    font-weight: 400;
+  }
+}
+main {
+  width: 90%;
 }
 </style>

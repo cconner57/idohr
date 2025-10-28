@@ -1,7 +1,5 @@
-import About from './About.vue'
-import Adopt from './Adopt.vue'
-import Home from './Home.vue'
-import Donate from './Donate.vue'
-import Volunteer from './Volunteer.vue'
-
-export { About, Adopt, Home, Donate, Volunteer }
+export { default as About } from './About.vue'
+export { default as Adopt } from './Adopt.vue'
+export { default as Home } from './Home.vue'
+export { default as Donate } from './Donate.vue'
+export { default as Volunteer } from './Volunteer.vue'

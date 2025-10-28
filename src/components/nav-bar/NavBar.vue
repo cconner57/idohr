@@ -20,7 +20,7 @@ watch(
   (path, _prev, onCleanup) => {
     remove()
 
-    if (['/about', '/volunteer'].includes(path)) {
+    if (!['/'].includes(path)) {
       isScrolledDown.value = true
       return
     }

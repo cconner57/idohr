@@ -42,6 +42,7 @@ function handleAdopt() {
       width="300"
       loading="lazy"
       @error="onImgError"
+      @click="handleAdopt"
     />
     <div v-else class="img-fallback" aria-hidden="true"></div>
     <div class="info-section">
@@ -70,6 +71,7 @@ function handleAdopt() {
     object-fit: cover;
     height: 250px;
     background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
+    cursor: pointer;
   }
   .img-fallback {
     width: 100%;

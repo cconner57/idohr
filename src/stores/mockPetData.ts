@@ -11,7 +11,6 @@ export const mockPetData: IPet[] = [
       age: '2 years',
       size: 'Small',
       color: 'Cream',
-      physicalDescription: 'Sweet, chatty lap buddy who loves feather wands.',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -21,18 +20,22 @@ export const mockPetData: IPet[] = [
       energyLevel: 'Medium',
       temperament: 'Affectionate',
       houseTrained: true,
-      behavioralDescription:
-        'Very social and loves human attention. She enjoys curling up in quiet spaces and thrives in calm households.',
-      funDescription:
-        'Loves chasing laser pointers and napping in sunny spots. She also enjoys climbing cat trees and observing the world from high perches. Her playful antics with feather toys will keep you entertained for hours. When she’s not playing, she loves curling up in a sunny spot for a nap.',
     },
     medicalHistory: {
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      medicalDescription: 'No known medical issues.',
     },
     adoptionFee: 75,
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious guy; professional treat inspector.',
+      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+      behavioralDescription:
+        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+    },
     spotlight: true,
     spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
     photos: ['/images/apricot-1.jpg', '/images/apricot-2.jpg'],
@@ -50,7 +53,6 @@ export const mockPetsData: IPet[] = [
       age: '2 years',
       size: 'Small',
       color: 'Cream',
-      physicalDescription: 'Sweet, chatty lap buddy who loves feather wands.',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -60,20 +62,26 @@ export const mockPetsData: IPet[] = [
       energyLevel: 'Medium',
       temperament: 'Affectionate',
       houseTrained: true,
-      behavioralDescription:
-        'Very social and loves human attention. She enjoys curling up in quiet spaces and thrives in calm households.',
-      funDescription:
-        'Loves chasing laser pointers and napping in sunny spots. She also enjoys climbing cat trees and observing the world from high perches. Her playful antics with feather toys will keep you entertained for hours. When she’s not playing, she loves curling up in a sunny spot for a nap.',
     },
     medicalHistory: {
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      medicalDescription: 'No known medical issues.',
     },
     adoptionFee: 75,
     spotlight: true,
-    spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Sweet, chatty lap buddy who loves feather wands.',
+      spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
+      behavioralDescription:
+        'Very social and loves human attention. She enjoys curling up in quiet spaces and thrives in calm households.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+      funDescription:
+        'Loves chasing laser pointers and napping in sunny spots. She also enjoys climbing cat trees and observing the world from high perches. Her playful antics with feather toys will keep you entertained for hours. When she’s not playing, she loves curling up in a sunny spot for a nap.',
+    },
+
     photos: ['/images/apricot-1.jpg', '/images/apricot-2.jpg'],
   },
   {
@@ -86,7 +94,6 @@ export const mockPetsData: IPet[] = [
       age: '3 years',
       size: 'Medium',
       color: 'Gray tabby',
-      physicalDescription: 'Curious guy; professional treat inspector.',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -96,18 +103,72 @@ export const mockPetsData: IPet[] = [
       energyLevel: 'High',
       temperament: 'Playful',
       houseTrained: true,
-      behavioralDescription:
-        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
     },
     medicalHistory: {
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      medicalDescription: '',
+      shots: {
+        felineHerpesVirus: {
+          description: 'Feline HerpesVirus-1',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felineCalicivirus: {
+          description: 'Feline Calicivirus',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felinePanleukopenia1: {
+          description: 'Feline Panleukopenia (FVRCP) 1 of 3',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felinePanleukopenia2: {
+          description: 'Feline Panleukopenia (FVRCP) 2 of 3',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felinePanleukopenia3: {
+          description: 'Feline Panleukopenia (FVRCP) 3 of 3',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felineLeukemina1: {
+          description: 'Feline Leukemina (FeLV) 1 of 2',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        felineLeukemina2: {
+          description: 'Feline Leukemina (FeLV) 2 of 2',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        rabies: {
+          description: 'Rabies',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        spayNeuter: {
+          description: 'Spay/Neutered',
+          dateAdministered: '2023-02-01',
+          receivedTreatment: true,
+        },
+      },
     },
-    adoptionFee: 60,
+    adoptionFee: 300,
     spotlight: true,
-    spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious guy; professional treat inspector.',
+      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+      funDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+      behavioralDescription:
+        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+    },
     photos: ['/images/montclair-1.jpg'],
   },
   {
@@ -120,7 +181,6 @@ export const mockPetsData: IPet[] = [
       age: '4 years',
       size: 'Small',
       color: 'White & gray',
-      physicalDescription: 'Quiet, gentle soul who enjoys windows and naps.',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -130,14 +190,11 @@ export const mockPetsData: IPet[] = [
       energyLevel: 'Low',
       temperament: 'Calm',
       houseTrained: true,
-      behavioralDescription:
-        'Prefers quiet environments and sunny spots. She relaxes with gentle petting and enjoys slow, predictable routines.',
     },
     medicalHistory: {
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: false,
-      medicalDescription: 'Allergic to one type of flea med; handled at shelter.',
     },
     adoptionFee: 50,
     photos: ['/images/crystal-1.jpg'],
@@ -152,7 +209,6 @@ export const mockPetsData: IPet[] = [
       age: '1 year',
       size: 'Small',
       color: 'White',
-      physicalDescription: 'Playful and social, loves wand toys and tunnels.',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -167,7 +223,6 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: true,
       spayedOrNeutered: false,
       microchipped: true,
-      medicalDescription: '',
     },
     adoptionFee: 85,
     photos: ['/images/casper-1.jpg', '/images/casper-2.jpg'],
@@ -194,6 +249,15 @@ export const mockPetsData: IPet[] = [
     },
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: true, microchipped: true },
     adoptionFee: 150,
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious guy; professional treat inspector.',
+      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+      behavioralDescription:
+        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+    },
     photos: ['/images/buddy-1.jpg'],
   },
   {
@@ -220,7 +284,6 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      medicalDescription: 'Requires dental follow-up.',
     },
     adoptionFee: 120,
     photos: ['/images/max-1.jpg'],
@@ -247,6 +310,15 @@ export const mockPetsData: IPet[] = [
     },
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: false, microchipped: false },
     adoptionFee: 140,
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious guy; professional treat inspector.',
+      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+      behavioralDescription:
+        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+    },
     photos: ['/images/bella-1.jpg'],
   },
   {
@@ -317,9 +389,17 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      medicalDescription: 'Arthritis managed with supplements.',
     },
     adoptionFee: 90,
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious guy; professional treat inspector.',
+      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
+      behavioralDescription:
+        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
+      aboutDescription:
+        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+    },
     photos: ['/images/max-2-1.jpg'],
   },
   {

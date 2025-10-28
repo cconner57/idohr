@@ -63,7 +63,6 @@ import Candid from '../components/candid-award/Candid.vue'
 <style scoped lang="css">
 .about {
   width: 100%;
-
   overflow: hidden;
   color: var(--font-color-dark);
 }

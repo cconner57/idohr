@@ -19,6 +19,15 @@ function handleScheduleMeet() {
 function handleShare() {
   // Implement sharing logic here
 }
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr)
+  return date.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+}
 </script>
 
 <template>
@@ -34,7 +43,7 @@ function handleShare() {
             <Capsules :label="pet.physicalTraits?.age" />
             <Capsules :label="pet.physicalTraits?.color" />
           </div>
-          <p>{{ pet.behavioralTraits?.behavioralDescription }}</p>
+          <p>{{ pet?.descriptions?.behavioralDescription }}</p>
           <div class="adopt-detail__actions">
             <Button
               title="Start Adoption"
@@ -81,8 +90,20 @@ function handleShare() {
           <div class="adopt-detail__additional-info__item">
             <p>Good in a home with</p>
             <p>
-              {{ pet.behavioralTraits?.goodWithCats ? 'Other Cats' : '' }},
-              {{ pet.behavioralTraits?.goodWithDogs ? 'Other Dogs' : '' }},
+              {{ pet.behavioralTraits?.goodWithCats ? 'Other Cats' : ''
+              }}{{
+                pet.behavioralTraits?.goodWithCats &&
+                (pet.behavioralTraits?.goodWithDogs || pet.behavioralTraits?.goodWithKids)
+                  ? ', '
+                  : ''
+              }}
+              {{ pet.behavioralTraits?.goodWithDogs ? 'Other Dogs' : ''
+              }}{{
+                pet.behavioralTraits?.goodWithDogs &&
+                (pet.behavioralTraits?.goodWithCats || pet.behavioralTraits?.goodWithKids)
+                  ? ', '
+                  : ''
+              }}
               {{ pet.behavioralTraits?.goodWithKids ? 'Kids' : '' }}
             </p>
           </div>
@@ -90,8 +111,36 @@ function handleShare() {
       </div>
     </div>
     <div class="adopt-detail__about">
-      <h2>About {{ pet.name }}</h2>
-      <p>{{ pet.behavioralTraits?.funDescription }}</p>
+      <div class="adopt-detail__about__content">
+        <div class="adopt-detail__about__fun">
+          <h2>From {{ pet.name }}</h2>
+          <p>{{ pet.descriptions?.funDescription }}</p>
+        </div>
+        <div class="adopt-detail__about__additional-info">
+          <h2>Additional Information</h2>
+          <ul>
+            <li>Not good with dogs</li>
+            <li>Must be the only pet in the home</li>
+            <li>Special dietary needs</li>
+            <li>Requires regular grooming</li>
+          </ul>
+        </div>
+      </div>
+      <div class="adopt-detail__about__medical">
+        <h2>Medical History</h2>
+        <ul>
+          <li v-for="(shot, index) in pet.medicalHistory?.shots" :key="index">
+            <p>{{ shot?.description }}</p>
+            <p>
+              {{
+                shot?.receivedTreatment
+                  ? 'Received on ' + formatDate(shot?.dateAdministered ?? '')
+                  : 'Not Received'
+              }}
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="adopt-detail__adoption-process">
       <h2>Adoption Process</h2>
@@ -144,8 +193,6 @@ function handleShare() {
 
 <style scoped lang="css">
 .adopt-detail {
-  padding: 100px 180px 40px;
-  background-color: var(--background);
 }
 
 .adopt-detail__main {
@@ -153,7 +200,7 @@ function handleShare() {
   gap: 30px;
   img {
     height: 500px;
-    width: 750px;
+    width: 780px;
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
@@ -248,15 +295,66 @@ function handleShare() {
 }
 
 .adopt-detail__about {
+  display: flex;
   margin-top: 20px;
   background-color: var(--white);
   padding: 20px;
   border-radius: 16px;
   color: var(--font-color-dark);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  & .adopt-detail__about__content {
+    width: 50%;
+    margin-right: 20px;
+    & .adopt-detail__about__fun {
+      width: 100%;
+      height: 50%;
+    }
+    & .adopt-detail__about__additional-info {
+      margin-top: 2rem;
+      width: 50%;
+      ul {
+        padding-left: 20px;
+        list-style: disc;
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  & .adopt-detail__about__medical {
+    width: 50%;
+    ul {
+      margin-bottom: 16px;
+      li {
+        margin-bottom: 8px;
+        display: flex;
+        border-bottom: 1px solid rgb(178, 177, 177);
+        width: 500px;
+        p {
+          margin-bottom: 8px;
+        }
+        p:first-child {
+          margin-right: 8px;
+          width: 300px;
+        }
+        p:last-child {
+          font-weight: bold;
+        }
+      }
+      li:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0px;
+      }
+    }
+  }
   h2 {
     font-size: 1.5rem;
     margin-bottom: 16px;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
   }
 }
 
@@ -283,8 +381,12 @@ function handleShare() {
 }
 
 .adopt-detail__more-friends {
-  padding: 10px 180px 40px;
-  background-color: var(--background);
+  margin-top: 30px;
+  width: 100%;
+  background-color: var(--white);
+  color: var(--font-color-dark);
+  padding: 20px 20px 30px;
+  border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   h2 {
     font-size: 1.5rem;
@@ -296,6 +398,8 @@ function handleShare() {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
 }
 
 .adopt-detail__more-friends__item__traits {
