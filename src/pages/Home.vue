@@ -5,6 +5,7 @@ import BannerButton from '../components/ui/BannerButton.vue'
 import Button from '../components/ui/Button.vue'
 import { goToAdopt } from '../utils/navigate'
 import Candid from '../components/candid-award/Candid.vue'
+import Footer from '../components/footer/Footer.vue'
 
 const router = useRouter()
 
@@ -88,18 +89,7 @@ function handleAdopt() {
     </section>
   </main>
 
-  <footer>
-    <div>
-      <p>Connect with us:</p>
-      <p>Facebook | Instagram</p>
-    </div>
-    <div>
-      <p>
-        I Dream of Home Rescue, Inc. is a 501(c)(3) NON-PROFIT ORGANIZATION. TAX ID: 81-0780050 I
-        Dream of Home Rescue PO Box 7612, La Verne, California 91750
-      </p>
-    </div>
-  </footer>
+  <Footer />
 </template>
 
 <style scoped lang="css">
