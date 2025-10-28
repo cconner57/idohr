@@ -3,10 +3,34 @@ import type { IPet } from '../../models/common'
 import Button from '../ui/Button.vue'
 import Capsules from '../ui/Capsules.vue'
 import PetItem from '../pet-item/PetItem.vue'
+import { ref } from 'vue'
 
 defineProps<{
   pet: IPet
 }>()
+
+const faqs = ref([
+  {
+    question: 'What is the adoption fee?',
+    answer: 'The adoption fee is $150 for cats and $200 for dogs.',
+    expanded: false,
+  },
+  {
+    question: "Can I return the pet if it doesn't work out?",
+    answer: 'Yes, we have a no-questions-asked return policy within the first 30 days of adoption.',
+    expanded: false,
+  },
+  {
+    question: 'Do you offer support after adoption?',
+    answer:
+      'Yes, we provide lifetime support to our adopters, including behavioral advice and resources.',
+    expanded: false,
+  },
+])
+
+function toggleFaq(index: number) {
+  faqs.value[index].expanded = !faqs.value[index].expanded
+}
 
 function handleStartAdoption() {
   // Implement start adoption logic here
@@ -119,8 +143,8 @@ const formatDate = (dateStr: string) => {
         <div class="adopt-detail__about__additional-info">
           <h2>Additional Information</h2>
           <ul>
-            <li>Not good with dogs</li>
-            <li>Must be the only pet in the home</li>
+            <li>This cat must be adopted into a home that already has another cat</li>
+            <li>Does not get along with dogs</li>
             <li>Special dietary needs</li>
             <li>Requires regular grooming</li>
           </ul>
@@ -142,14 +166,28 @@ const formatDate = (dateStr: string) => {
         </ul>
       </div>
     </div>
-    <div class="adopt-detail__adoption-process">
-      <h2>Adoption Process</h2>
-      <ol>
-        <li>Fill out and submit an adoption application form</li>
-        <li>Submit photos or video of your home</li>
-        <li>Pay adoption fee via Venmo or Paypal</li>
-        <li>Adoption day!</li>
-      </ol>
+    <div class="adopt-detail__adoption">
+      <div class="adopt-detail__adoption-process">
+        <h2>Adoption Process</h2>
+        <ol>
+          <li>Fill out and submit an adoption application form</li>
+          <li>Submit photos or video of your home</li>
+          <li>Pay adoption fee via Venmo or Paypal</li>
+          <li>Adoption day!</li>
+        </ol>
+      </div>
+      <div class="adopt-detail__adoption-faq">
+        <h2>Adoption FAQs</h2>
+        <ul>
+          <li v-for="(faq, index) in faqs" :key="index">
+            <p @click="toggleFaq(index)" class="faq-question">
+              <span>{{ faq.expanded ? '⌄' : '›' }}</span>
+              {{ faq.question }}
+            </p>
+            <p v-if="faq.expanded" class="faq-answer">{{ faq.answer }}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="adopt-detail__more-friends">
@@ -311,7 +349,6 @@ const formatDate = (dateStr: string) => {
     }
     & .adopt-detail__about__additional-info {
       margin-top: 2rem;
-      width: 50%;
       ul {
         padding-left: 20px;
         list-style: disc;
@@ -358,13 +395,39 @@ const formatDate = (dateStr: string) => {
   }
 }
 
-.adopt-detail__adoption-process {
+.adopt-detail__adoption {
+  display: flex;
+
   margin-top: 20px;
   background-color: var(--white);
   color: var(--font-color-dark);
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  & .adopt-detail__adoption-process {
+    width: 50%;
+  }
+  & .adopt-detail__adoption-faq {
+    width: 50%;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      &:hover {
+        color: var(--blue);
+      }
+    }
+    .faq-answer {
+      margin: 8px 0 16px 20px;
+    }
+  }
   h2 {
     font-size: 1.5rem;
     margin-bottom: 16px;
