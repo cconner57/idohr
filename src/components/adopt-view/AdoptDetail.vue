@@ -52,6 +52,10 @@ const formatDate = (dateStr: string) => {
     day: 'numeric',
   })
 }
+
+const isSpayedOrNeutered = (pet: IPet) => {
+  return pet.physicalTraits?.sex === 'Male' ? 'Neutered' : 'Spayed'
+}
 </script>
 
 <template>
@@ -106,7 +110,9 @@ const formatDate = (dateStr: string) => {
             <p>
               {{ pet.medicalHistory?.vaccinationsUpToDate ? 'Vaccinated' : 'Not Vaccinated' }},
               {{
-                pet.medicalHistory?.spayedOrNeutered ? 'Spayed/Neutered' : 'Not Spayed/Neutered'
+                pet.medicalHistory?.spayedOrNeutered
+                  ? isSpayedOrNeutered(pet)
+                  : `Not ${isSpayedOrNeutered(pet)}`
               }},
               {{ pet.medicalHistory?.microchipped ? 'Microchipped' : 'Not Microchipped' }}
             </p>
@@ -143,10 +149,9 @@ const formatDate = (dateStr: string) => {
         <div class="adopt-detail__about__additional-info">
           <h2>Additional Information</h2>
           <ul>
-            <li>This cat must be adopted into a home that already has another cat</li>
-            <li>Does not get along with dogs</li>
-            <li>Special dietary needs</li>
-            <li>Requires regular grooming</li>
+            <li v-for="(info, index) in pet.descriptions?.additionalInformation" :key="index">
+              {{ info }}
+            </li>
           </ul>
         </div>
       </div>

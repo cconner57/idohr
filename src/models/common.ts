@@ -9,9 +9,11 @@ export interface IPet {
     color?: string
     health?: string
     species: string
+    coatLength?: string
   }
   behavioralTraits?: {
     mustGoWithAnotherCat?: boolean
+    mustGoWithAnotherDog?: boolean
     goodWithKids?: boolean
     goodWithDogs?: boolean
     goodWithCats?: boolean
@@ -25,51 +27,20 @@ export interface IPet {
     spayedOrNeutered?: boolean
     microchipped?: boolean
     shots?: {
-      felineHerpesVirus?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felineCalicivirus?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felinePanleukopenia1?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felinePanleukopenia2?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felinePanleukopenia3?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felineLeukemina1?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      felineLeukemina2?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      rabies?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
-      spayNeuter?: {
-        description?: string
-        dateAdministered?: string
-        receivedTreatment?: boolean
-      }
+      felineHerpesVirus?: IMedicalHistoryItem
+      felineCalicivirus?: IMedicalHistoryItem
+      felinePanleukopenia1?: IMedicalHistoryItem
+      felinePanleukopenia2?: IMedicalHistoryItem
+      felinePanleukopenia3?: IMedicalHistoryItem
+      felineLeukemina1?: IMedicalHistoryItem
+      felineLeukemina2?: IMedicalHistoryItem
+      rabies?: IMedicalHistoryItem
+      spayNeuter?: IMedicalHistoryItem
+      canineDistemperAdenovirusParvovirusParainfluenza?: IMedicalHistoryItem
+      leptospira?: IMedicalHistoryItem
+      bordetella?: IMedicalHistoryItem
+      borrelia?: IMedicalHistoryItem
+      h3n2H3n8?: IMedicalHistoryItem
     }
   }
   adoptionFee?: number
@@ -83,5 +54,12 @@ export interface IPet {
     spotlightDescription?: string
     funDescription?: string
     aboutDescription?: string
+    additionalInformation?: string[]
   }
+}
+
+interface IMedicalHistoryItem {
+  description?: string
+  dateAdministered?: string
+  receivedTreatment?: boolean
 }

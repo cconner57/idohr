@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import type { IPet } from '../models/common.js'
 
 export const mockPetData: IPet[] = [
@@ -33,8 +34,6 @@ export const mockPetData: IPet[] = [
       spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
     },
     spotlight: true,
     spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
@@ -76,8 +75,6 @@ export const mockPetsData: IPet[] = [
       spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
       behavioralDescription:
         'Very social and loves human attention. She enjoys curling up in quiet spaces and thrives in calm households.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
       funDescription:
         'Loves chasing laser pointers and napping in sunny spots. She also enjoys climbing cat trees and observing the world from high perches. Her playful antics with feather toys will keep you entertained for hours. When she’s not playing, she loves curling up in a sunny spot for a nap.',
     },
@@ -166,8 +163,12 @@ export const mockPetsData: IPet[] = [
         "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
+      additionalInformation: [
+        'This cat must be adopted into a home that already has another cat',
+        'Does not get along with dogs',
+        'Special dietary needs',
+        'Requires regular grooming',
+      ],
     },
     photos: ['/images/montclair-1.jpg'],
   },
@@ -255,8 +256,6 @@ export const mockPetsData: IPet[] = [
       spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
     },
     photos: ['/images/buddy-1.jpg'],
   },
@@ -316,8 +315,6 @@ export const mockPetsData: IPet[] = [
       spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
     },
     photos: ['/images/bella-1.jpg'],
   },
@@ -397,8 +394,6 @@ export const mockPetsData: IPet[] = [
       spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-      aboutDescription:
-        "Hi, I'm Montclair! I'm just a little kitten with a big heart, ready to bring joy and laughter into your life. I love to play with my toys, cuddle up in warm laps, and make new friends. My gentle nature makes me the perfect companion for cozy evenings and playful afternoons. If you're looking for a sweet, friendly, and loving friend, I'm your perfect match! Let's create unforgettable memories together. Adopt me and let's start our adventure!",
     },
     photos: ['/images/max-2-1.jpg'],
   },
@@ -445,5 +440,87 @@ export const mockPetsData: IPet[] = [
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: true, microchipped: true },
     adoptionFee: 125,
     photos: ['/images/luna-2-1.jpg'],
+  },
+  {
+    slug: 'betsy',
+    name: 'Betsy',
+    physicalTraits: {
+      species: 'Dog',
+      breed: 'Jack Russell Terrier',
+      sex: 'Female',
+      age: '3 years',
+      size: 'Small',
+      color: 'White / Cream, Black',
+      coatLength: 'Short',
+    },
+    behavioralTraits: {
+      mustGoWithAnotherCat: false,
+      mustGoWithAnotherDog: false,
+      goodWithKids: true,
+      goodWithDogs: true,
+      goodWithCats: false,
+      energyLevel: 'High',
+      temperament: 'Playful',
+      houseTrained: true,
+    },
+    medicalHistory: {
+      vaccinationsUpToDate: true,
+      spayedOrNeutered: true,
+      microchipped: true,
+      shots: {
+        canineDistemperAdenovirusParvovirusParainfluenza: {
+          description: 'Canine Distemper, Adenovirus, Parvovirus, Parainfluenza (DAPP)',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        rabies: {
+          description: 'Rabies',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        leptospira: {
+          description: 'Leptospira vaccine',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        bordetella: {
+          description: 'Bordetella vaccine',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        borrelia: {
+          description: 'Borrelia vaccine',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        h3n2H3n8: {
+          description: 'H3N2/H3N8 Canine Influenza vaccine',
+          dateAdministered: '2023-01-15',
+          receivedTreatment: true,
+        },
+        spayNeuter: {
+          description: 'Spay/Neutered',
+          dateAdministered: '2023-02-01',
+          receivedTreatment: true,
+        },
+      },
+    },
+    adoptionFee: 400,
+    spotlight: false,
+    descriptions: {
+      medicalDescription: 'No known medical issues.',
+      physicalDescription: 'Curious girl; professional treat inspector.',
+      spotlightDescription: 'Betsy is our featured dog of the week — playful and cuddly!',
+      funDescription:
+        'Hi! I’m Betsy, your future best friend. I love to play fetch and explore every nook and cranny of the world around me. I’m always ready for a new adventure or a puzzle to solve. My energy will keep us active, and my loyalty means I’m always by your side. If you need a companion to share in all your daily joys and challenges, I’m your girl. Let’s start our journey together. Adopt me and fill our days with endless play and loyalty.',
+      behavioralDescription:
+        'Loves interactive play and exploring. She thrives on puzzle toys and will keep you entertained with her antics.',
+      additionalInformation: [
+        'This dog must be adopted into a home that already has another dog',
+        'High energy levels; requires daily exercise',
+        'Requires regular grooming',
+      ],
+    },
+    photos: ['/images/betsy-1.jpg'],
   },
 ]
