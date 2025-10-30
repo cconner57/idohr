@@ -48,7 +48,7 @@ const petsMobileView = () => {
   }
 
   @media (max-width: 440px) {
-    margin: -4rem 0 0;
+    margin: -3rem 0 0;
     padding: 1rem 2rem;
     gap: 0.5rem;
     & h4 {

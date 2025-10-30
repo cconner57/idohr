@@ -47,6 +47,7 @@ function handleAdopt() {
       width: 300px;
       max-width: 100%;
       margin-bottom: 16px;
+      margin-top: 20px;
     }
   }
 }
