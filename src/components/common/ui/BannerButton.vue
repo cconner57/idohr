@@ -56,6 +56,10 @@ const imgSrcComputed = computed(() => (props.imgSrc && props.imgSrc.length ? pro
     border-color 0.2s;
   color: var(--font-color-light);
   overflow: hidden;
+
+  @media (max-width: 440px) {
+    width: 100%;
+  }
 }
 .banner-text {
   text-align: center;

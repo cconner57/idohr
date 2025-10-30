@@ -52,8 +52,10 @@ const isMobile = useIsMobile()
 <template>
   <nav v-if="isMobile" :class="{ 'nav-blurred': isScrolledDown }">
     <div class="nav-logo">
-      <img src="/images/idohr-logo.jpg" alt="" />
-      <h1>I Dream of Home Rescue</h1>
+      <RouterLink to="/" class="nav-item">
+        <img src="/images/idohr-logo.jpg" alt="" />
+        <h1>I Dream of Home Rescue</h1>
+      </RouterLink>
     </div>
     <NavDrawer v-model="menuOpen" :size="28" style="color: #fff" />
   </nav>
@@ -78,31 +80,38 @@ nav {
   padding: 1rem 9.75rem;
   gap: 47.5rem;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   width: 100%;
+  margin: 0 auto;
   overflow: hidden;
-  z-index: 100;
   align-self: center;
   transition: background-color 0.3s ease;
 
   @media (max-width: 440px) {
-    padding: 1rem 1rem 1rem 2.5rem;
+    margin: 0;
+    padding: calc(1rem + var(--safe-top)) 1rem 1rem 1rem;
     gap: 0.5rem;
+    width: 100dvw;
     justify-content: space-between;
 
     .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        img {
+          height: 40px;
+          width: auto;
+          border-radius: 8px;
+        }
 
-      img {
-        height: 40px;
-        width: auto;
-        border-radius: 8px;
-      }
-
-      h1 {
-        font-size: 1.2rem;
-        color: var(--font-color-light);
+        h1 {
+          font-size: 1.2rem;
+          color: var(--font-color-light);
+        }
       }
     }
   }

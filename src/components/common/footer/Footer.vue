@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   @media (max-width: 440px) {
     padding: 20px 10px;

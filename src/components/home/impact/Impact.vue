@@ -28,16 +28,14 @@ import Candid from '../../common/candid-award/Candid.vue'
 
 <style scoped lang="css">
 .impact {
-  min-width: 80%;
-  max-width: 80%;
+  max-width: var(--desktop-breakpoint);
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 24px 50px 50px 50px;
   border-radius: 12px;
-  overflow: hidden;
-  margin-top: -150px;
+  margin-top: -200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   & h4 {
@@ -85,6 +83,7 @@ import Candid from '../../common/candid-award/Candid.vue'
     margin-top: -80px;
     padding: 16px 20px 30px 20px;
     gap: 12px;
+    overflow: hidden;
     & h4 {
       font-size: 1.5rem;
       margin-left: 0;

@@ -19,12 +19,11 @@ function handleAdopt() {
 
 <style scoped lang="css">
 .hero-section {
+  box-sizing: border-box;
+  inline-size: 100%;
   min-height: 600px;
-  width: 100%;
-  background-image: url('/images/hero.png');
-  background-size: cover;
-  background-position: 50% 30%;
-  padding: 100px 180px 40px;
+  background: url('/images/hero.png') 50% 30% / cover no-repeat;
+  padding: 100px clamp(16px, 10dvw, 140px) 40px;
   overflow: hidden;
 
   & h1 {
@@ -45,6 +44,7 @@ function handleAdopt() {
     & h1 {
       font-size: 3rem;
       line-height: 3.5rem;
+      width: 300px;
       max-width: 100%;
       margin-bottom: 16px;
     }

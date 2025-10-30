@@ -17,10 +17,10 @@
 
 <style scoped lang="css">
 .mission {
-  min-width: 80%;
-  max-width: 80%;
+  width: 100%;
+  max-width: var(--desktop-breakpoint);
   text-align: start;
-  margin-bottom: 30px;
+  padding: 0 40px;
 
   & h4 {
     font-size: 2.75rem;
@@ -35,7 +35,7 @@
       max-height: 300px;
       object-fit: cover;
       width: 350px;
-      margin-right: 200px;
+      margin-right: 100px;
     }
     & p {
       width: 650px;
@@ -48,7 +48,7 @@
   }
 
   @media (max-width: 440px) {
-    padding: 0 1rem;
+    padding: 0 2rem;
 
     & h4 {
       font-size: 2rem;

@@ -25,16 +25,15 @@ const petsMobileView = () => {
 
 <style scoped lang="css">
 .adoption-spotlight {
-  max-width: 80%;
-  min-width: 300px;
   background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: -120px auto 0;
+  max-width: var(--desktop-breakpoint);
   padding: 24px 50px 40px 50px;
-  border-radius: 12px;
-  margin: -120px 0 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   & h4 {
     font-size: 2rem;
