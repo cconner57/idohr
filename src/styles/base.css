@@ -61,7 +61,7 @@ body {
 
 html,
 body {
-  background: var(--page-bg, #0f8f93);
+  background: var(--page-bg, --green);
   min-height: 100%;
 }
 
