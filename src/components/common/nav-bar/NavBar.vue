@@ -3,6 +3,8 @@ import { ref, watch, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { goToDonate } from '../../../utils/navigate'
 import Button from '../ui/Button.vue'
+import NavDrawer from './NavDrawer.vue'
+import { useIsMobile } from '../../../utils/useIsMobile'
 
 const isScrolledDown = ref(false)
 const router = useRouter()
@@ -34,10 +36,28 @@ watch(
 )
 
 onUnmounted(remove)
+
+const menuOpen = ref(false)
+
+watch(
+  () => route.fullPath,
+  () => {
+    menuOpen.value = false
+  },
+)
+
+const isMobile = useIsMobile()
 </script>
 
 <template>
-  <nav :class="{ 'nav-blurred': isScrolledDown }">
+  <nav v-if="isMobile" :class="{ 'nav-blurred': isScrolledDown }">
+    <div class="nav-logo">
+      <img src="/images/idohr-logo.jpg" alt="" />
+      <h1>I Dream of Home Rescue</h1>
+    </div>
+    <NavDrawer v-model="menuOpen" :size="28" style="color: #fff" />
+  </nav>
+  <nav v-else :class="{ 'nav-blurred': isScrolledDown }">
     <section class="nav-links">
       <RouterLink to="/" class="nav-item" active-class="active"><p>Home</p></RouterLink>
       <RouterLink to="/about" class="nav-item" active-class="active"><p>About</p></RouterLink>
@@ -66,8 +86,26 @@ nav {
 
   @media (max-width: 440px) {
     margin: 4rem 0 0;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem 1rem 2.5rem;
     gap: 0.5rem;
+    justify-content: space-between;
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        height: 40px;
+        width: auto;
+        border-radius: 8px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        color: var(--font-color-light);
+      }
+    }
   }
 }
 
