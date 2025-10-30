@@ -274,7 +274,7 @@ svg[data-open='true'] .hx-bot {
   font-weight: 600;
 }
 .nav-link:hover {
-  background: #f3f6f7;
+  background: var(--green-hover);
 }
 .nav-link.donate {
   background: var(--blue);
