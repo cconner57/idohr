@@ -79,7 +79,7 @@ main {
   background-color: var(--white);
   padding-top: 150px;
   padding-bottom: 220px;
-  height: 500px;
+  height: 550px;
 
   @media (max-width: 440px) {
     padding: 40px 2rem 0;
