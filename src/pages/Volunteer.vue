@@ -1,6 +1,6 @@
 <!-- eslint-disable max-lines -->
 <script setup lang="ts">
-import Button from '../components/ui/Button.vue'
+import Button from '../components/common/ui/Button.vue'
 </script>
 
 <template>

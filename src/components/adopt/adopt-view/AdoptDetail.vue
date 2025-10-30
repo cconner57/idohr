@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { IPet } from '../../models/common'
-import Button from '../ui/Button.vue'
-import Capsules from '../ui/Capsules.vue'
-import PetItem from '../pet-item/PetItem.vue'
+import type { IPet } from '../../../models/common'
+import Button from '../../common/ui/Button.vue'
+import Capsules from '../../common/ui/Capsules.vue'
+import PetItem from '../../common/pet-item/PetItem.vue'
 import AdoptionFAQ from './AdoptionFAQ.vue'
 import AdoptionProcess from './AdoptionProcess.vue'
 

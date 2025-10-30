@@ -28,6 +28,10 @@
   --font-color-dark: #1f2121;
 
   --font-regular: 'Roboto-V';
+
+  --mobile-breakpoint: 440px;
+  --tablet-breakpoint: 1024px;
+  --desktop-breakpoint: 1440px;
 }
 
 *,

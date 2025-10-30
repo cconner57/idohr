@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IPet } from 'src/models/common'
-import PetItem from '../pet-item/PetItem.vue'
+import PetItem from '../../common/pet-item/PetItem.vue'
 
 defineProps<{
   pets: IPet[]
@@ -13,7 +13,7 @@ defineProps<{
       v-for="pet in pets"
       :key="pet.slug"
       :name="pet.name"
-      :description="pet.physicalTraits?.physicalDescription"
+      :description="pet.descriptions?.physicalDescription"
     />
   </div>
 </template>

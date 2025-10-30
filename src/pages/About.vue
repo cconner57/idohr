@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Candid from '../components/candid-award/Candid.vue'
+import Candid from '../components/common/candid-award/Candid.vue'
 </script>
 
 <template>

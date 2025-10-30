@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { goToDonate } from '../../utils/navigate'
+import { goToDonate } from '../../../utils/navigate'
 import Button from '../ui/Button.vue'
 
 const isScrolledDown = ref(false)
@@ -53,13 +53,22 @@ onUnmounted(remove)
 <style scoped lang="css">
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 9.75rem;
+  gap: 47.5rem;
   position: fixed;
   width: 100%;
   overflow: hidden;
   z-index: 100;
+  align-self: center;
+  transition: background-color 0.3s ease;
+
+  @media (max-width: 440px) {
+    margin: 4rem 0 0;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+  }
 }
 
 .nav-blurred {
@@ -74,7 +83,6 @@ nav {
 .nav-links {
   display: flex;
   gap: 4rem;
-  padding: 1rem 9.5rem;
 }
 
 .nav-item {

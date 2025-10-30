@@ -37,6 +37,15 @@ span {
   & p:not(:first-child) {
     font-weight: 600;
   }
+
+  @media (max-width: 440px) {
+    height: auto;
+    width: auto;
+    & p {
+      font-size: 1rem;
+      margin-left: 0;
+    }
+  }
 }
 
 .gold-border {
@@ -45,6 +54,10 @@ span {
     rgb(255, 215, 0) 0px 0px 0px 5px,
     rgb(255, 255, 255) 0px 0px 0px 8px,
     rgb(255, 215, 0) 0px 0px 0px 14px;
+
+  @media (max-width: 440px) {
+    padding: 8px;
+  }
 }
 
 .silver-border {
@@ -52,5 +65,9 @@ span {
     0 0 0 5px silver,
     0 0 0 8px white,
     0 0 0 14px silver;
+
+  @media (max-width: 440px) {
+    padding: 8px;
+  }
 }
 </style>

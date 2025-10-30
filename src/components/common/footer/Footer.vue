@@ -27,6 +27,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 440px) {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
 }
 
 .footer__social {
@@ -49,6 +54,11 @@
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
+
+  @media (max-width: 440px) {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
 }
 
 .footer__links {
@@ -64,6 +74,17 @@
   p {
     line-height: 1.5;
     font-weight: 400;
+    margin: 4px 0;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 90%;
+    p {
+      margin: 2px 0;
+      font-size: 12px;
+    }
   }
 }
 
@@ -73,6 +94,14 @@
   p {
     line-height: 1.5;
     font-weight: 400;
+  }
+
+  @media (max-width: 440px) {
+    font-size: 10px;
+    p {
+      line-height: 1.4;
+      font-size: 10px;
+    }
   }
 }
 </style>
