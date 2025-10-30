@@ -85,7 +85,6 @@ nav {
   transition: background-color 0.3s ease;
 
   @media (max-width: 440px) {
-    margin: 4rem 0 0;
     padding: 1rem 1rem 1rem 2.5rem;
     gap: 0.5rem;
     justify-content: space-between;
