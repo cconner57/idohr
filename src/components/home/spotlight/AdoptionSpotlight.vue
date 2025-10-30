@@ -2,16 +2,23 @@
 import PetItem from '../../common/pet-item/PetItem.vue'
 
 const isMobile = window.innerWidth <= 440
+
+const petsMobileView = () => {
+  if (isMobile) {
+    const pets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
+    const randomIndex = Math.floor(Math.random() * pets.length)
+    return [pets[randomIndex]]
+  } else {
+    return ['Crystal', 'Montclair', 'Apricot', 'Casper']
+  }
+}
 </script>
 
 <template>
   <section class="adoption-spotlight">
     <h4>Adoption Spotlight</h4>
     <div class="pet-list">
-      <PetItem name="Crystal" />
-      <PetItem name="Montclair" v-if="!isMobile" />
-      <PetItem name="Apricot" v-if="!isMobile" />
-      <PetItem name="Casper" v-if="!isMobile" />
+      <PetItem v-for="pet in petsMobileView()" :key="pet" :name="pet" />
     </div>
   </section>
 </template>
