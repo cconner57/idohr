@@ -1,0 +1,86 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const faqs = ref([
+  {
+    question: 'Can I adopt if I rent my home?',
+    answer:
+      'Yes, you can adopt if you rent your home. We recommend checking with your landlord and providing proof of pet approval if necessary.',
+    expanded: true,
+  },
+  {
+    question: 'Do you have a return policy?',
+    answer:
+      'Yes, we have a no-questions-asked return policy within the first 30 days of adoption to ensure the best fit for both the pet and the adopter.',
+    expanded: true,
+  },
+  {
+    question: 'Are there any age restrictions for adopters?',
+    answer: 'Adopters must be at least 21 years old to adopt a pet from us.',
+    expanded: true,
+  },
+  {
+    question: "Can I return the pet if it doesn't work out?",
+    answer: 'Yes, we have a no-questions-asked return policy within the first 30 days of adoption.',
+    expanded: false,
+  },
+  {
+    question: 'Can I foster a pet before adopting?',
+    answer:
+      'Yes, we encourage fostering as it helps pets adjust to home life and allows you to see if the pet is a good fit for your family.',
+    expanded: false,
+  },
+  {
+    question: 'Do you offer support after adoption?',
+    answer:
+      'Yes, we provide lifetime support to our adopters, including behavioral advice and resources.',
+    expanded: false,
+  },
+])
+
+const toggleFaq = (index: number) => {
+  faqs.value[index].expanded = !faqs.value[index].expanded
+}
+</script>
+
+<template>
+  <div class="adopt-detail__adoption-faq">
+    <h2>Adoption FAQs</h2>
+    <ul>
+      <li v-for="(faq, index) in faqs" :key="index">
+        <p @click="toggleFaq(index)" class="faq-question">
+          <span>{{ faq.expanded ? '⌄' : '›' }}</span>
+          {{ faq.question }}
+        </p>
+        <p v-if="faq.expanded" class="faq-answer">{{ faq.answer }}</p>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style scoped lang="css">
+.adopt-detail__adoption-faq {
+  width: 50%;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &:hover {
+      color: var(--blue);
+    }
+  }
+  .faq-answer {
+    margin: 8px 0 16px 20px;
+    color: var(--font-color-dark);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
+</style>

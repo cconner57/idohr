@@ -12,6 +12,7 @@ export const mockPetData: IPet[] = [
       age: '2 years',
       size: 'Small',
       color: 'Cream',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -35,9 +36,14 @@ export const mockPetData: IPet[] = [
       behavioralDescription:
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
     },
-    spotlight: true,
     spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
     photos: ['/images/apricot-1.jpg', '/images/apricot-2.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
 ]
 
@@ -46,21 +52,22 @@ export const mockPetsData: IPet[] = [
     slug: 'apricot',
     name: 'Apricot',
     physicalTraits: {
-      species: 'Cat',
-      breed: 'Domestic Short Hair',
-      sex: 'Female',
       age: '2 years',
-      size: 'Small',
+      breed: 'Domestic Short Hair',
+      coatLength: 'Short',
       color: 'Cream',
+      sex: 'Female',
+      size: 'Small',
+      species: 'Cat',
     },
     behavioralTraits: {
-      mustGoWithAnotherCat: false,
-      goodWithKids: true,
-      goodWithDogs: false,
-      goodWithCats: true,
       energyLevel: 'Medium',
-      temperament: 'Affectionate',
+      goodWithCats: true,
+      goodWithDogs: false,
+      goodWithKids: true,
       houseTrained: true,
+      mustGoWithAnotherCat: false,
+      temperament: 'Affectionate',
     },
     medicalHistory: {
       vaccinationsUpToDate: true,
@@ -68,7 +75,6 @@ export const mockPetsData: IPet[] = [
       microchipped: true,
     },
     adoptionFee: 75,
-    spotlight: true,
     descriptions: {
       medicalDescription: 'No known medical issues.',
       physicalDescription: 'Sweet, chatty lap buddy who loves feather wands.',
@@ -80,6 +86,12 @@ export const mockPetsData: IPet[] = [
     },
 
     photos: ['/images/apricot-1.jpg', '/images/apricot-2.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'montclair',
@@ -91,6 +103,7 @@ export const mockPetsData: IPet[] = [
       age: '3 years',
       size: 'Medium',
       color: 'Gray tabby',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -154,7 +167,6 @@ export const mockPetsData: IPet[] = [
       },
     },
     adoptionFee: 300,
-    spotlight: true,
     descriptions: {
       medicalDescription: 'No known medical issues.',
       physicalDescription: 'Curious guy; professional treat inspector.',
@@ -171,6 +183,12 @@ export const mockPetsData: IPet[] = [
       ],
     },
     photos: ['/images/montclair-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'cat',
+    },
   },
   {
     slug: 'crystal',
@@ -182,6 +200,7 @@ export const mockPetsData: IPet[] = [
       age: '4 years',
       size: 'Small',
       color: 'White & gray',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -199,6 +218,12 @@ export const mockPetsData: IPet[] = [
     },
     adoptionFee: 50,
     photos: ['/images/crystal-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'casper',
@@ -210,6 +235,7 @@ export const mockPetsData: IPet[] = [
       age: '1 year',
       size: 'Small',
       color: 'White',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -227,6 +253,12 @@ export const mockPetsData: IPet[] = [
     },
     adoptionFee: 85,
     photos: ['/images/casper-1.jpg', '/images/casper-2.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'buddy',
@@ -238,6 +270,7 @@ export const mockPetsData: IPet[] = [
       age: '3 years',
       size: 'Medium',
       color: 'Brown',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -258,6 +291,12 @@ export const mockPetsData: IPet[] = [
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
     },
     photos: ['/images/buddy-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'max',
@@ -269,6 +308,7 @@ export const mockPetsData: IPet[] = [
       age: '5 years',
       size: 'Large',
       color: 'Black',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -286,6 +326,12 @@ export const mockPetsData: IPet[] = [
     },
     adoptionFee: 120,
     photos: ['/images/max-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'bella',
@@ -297,6 +343,7 @@ export const mockPetsData: IPet[] = [
       age: '2 years',
       size: 'Medium',
       color: 'Brown & white',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -317,6 +364,12 @@ export const mockPetsData: IPet[] = [
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
     },
     photos: ['/images/bella-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'luna',
@@ -328,6 +381,7 @@ export const mockPetsData: IPet[] = [
       age: '1 year',
       size: 'Small',
       color: 'Black & white',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -341,6 +395,12 @@ export const mockPetsData: IPet[] = [
     medicalHistory: { vaccinationsUpToDate: false, spayedOrNeutered: false, microchipped: false },
     adoptionFee: 100,
     photos: ['/images/luna-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'buddy-2',
@@ -351,6 +411,8 @@ export const mockPetsData: IPet[] = [
       sex: 'Male',
       age: '4 years',
       size: 'Large',
+      color: 'Golden',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -363,6 +425,12 @@ export const mockPetsData: IPet[] = [
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: true, microchipped: true },
     adoptionFee: 110,
     photos: ['/images/buddy-2-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'max-2',
@@ -373,6 +441,8 @@ export const mockPetsData: IPet[] = [
       sex: 'Male',
       age: '6 years',
       size: 'Large',
+      color: 'Black',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -396,6 +466,12 @@ export const mockPetsData: IPet[] = [
         'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
     },
     photos: ['/images/max-2-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'bella-2',
@@ -406,6 +482,8 @@ export const mockPetsData: IPet[] = [
       sex: 'Female',
       age: '3 years',
       size: 'Medium',
+      color: 'Brown & white',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -418,6 +496,12 @@ export const mockPetsData: IPet[] = [
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: true, microchipped: false },
     adoptionFee: 130,
     photos: ['/images/bella-2-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'luna-2',
@@ -428,6 +512,8 @@ export const mockPetsData: IPet[] = [
       sex: 'Female',
       age: '2 years',
       size: 'Small',
+      color: 'Black & white',
+      coatLength: 'Short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: false,
@@ -440,6 +526,12 @@ export const mockPetsData: IPet[] = [
     medicalHistory: { vaccinationsUpToDate: true, spayedOrNeutered: true, microchipped: true },
     adoptionFee: 125,
     photos: ['/images/luna-2-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: true,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
   {
     slug: 'betsy',
@@ -506,7 +598,6 @@ export const mockPetsData: IPet[] = [
       },
     },
     adoptionFee: 400,
-    spotlight: false,
     descriptions: {
       medicalDescription: 'No known medical issues.',
       physicalDescription: 'Curious girl; professional treat inspector.',
@@ -522,5 +613,11 @@ export const mockPetsData: IPet[] = [
       ],
     },
     photos: ['/images/betsy-1.jpg'],
+    profileSettings: {
+      isSpotlightFeatured: true,
+      showMedicalHistory: false,
+      showAdditionalInformation: true,
+      adoptionProcess: 'dog',
+    },
   },
 ]

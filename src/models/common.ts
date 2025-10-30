@@ -2,14 +2,14 @@ export interface IPet {
   slug: string
   name: string
   physicalTraits?: {
-    sex?: string
-    age?: string
-    size?: string
+    sex: string
+    age: string
+    size: string
     breed: string
-    color?: string
+    color: string
     health?: string
     species: string
-    coatLength?: string
+    coatLength: string
   }
   behavioralTraits?: {
     mustGoWithAnotherCat?: boolean
@@ -17,15 +17,15 @@ export interface IPet {
     goodWithKids?: boolean
     goodWithDogs?: boolean
     goodWithCats?: boolean
-    energyLevel?: string
-    temperament?: string
+    energyLevel: string
+    temperament: string
     specialNeeds?: string
-    houseTrained?: boolean
+    houseTrained: boolean
   }
   medicalHistory?: {
-    vaccinationsUpToDate?: boolean
-    spayedOrNeutered?: boolean
-    microchipped?: boolean
+    vaccinationsUpToDate: boolean
+    spayedOrNeutered: boolean
+    microchipped: boolean
     shots?: {
       felineHerpesVirus?: IMedicalHistoryItem
       felineCalicivirus?: IMedicalHistoryItem
@@ -43,8 +43,7 @@ export interface IPet {
       h3n2H3n8?: IMedicalHistoryItem
     }
   }
-  adoptionFee?: number
-  spotlight?: boolean
+  adoptionFee: number
   spotlightDescription?: string
   photos?: string[]
   descriptions?: {
@@ -55,6 +54,12 @@ export interface IPet {
     funDescription?: string
     aboutDescription?: string
     additionalInformation?: string[]
+  }
+  profileSettings: {
+    isSpotlightFeatured: boolean
+    showMedicalHistory: boolean
+    showAdditionalInformation: boolean
+    adoptionProcess: string
   }
 }
 
