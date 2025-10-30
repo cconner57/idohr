@@ -37,17 +37,16 @@ function handleAdopt() {
   }
 
   @media (max-width: 440px) {
-    padding: 7rem 3rem 2rem;
+    padding: 8rem 2.85rem 2rem;
     min-height: 400px;
     background-position: 50% 20%;
 
     & h1 {
-      font-size: 3rem;
-      line-height: 3.5rem;
+      font-size: 2.5rem;
+      line-height: 3rem;
       width: 300px;
       max-width: 100%;
       margin-bottom: 16px;
-      margin-top: 20px;
     }
   }
 }
