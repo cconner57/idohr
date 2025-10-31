@@ -2,9 +2,9 @@
 import type { IPet } from '../../../models/common'
 import Button from '../../common/ui/Button.vue'
 import Capsules from '../../common/ui/Capsules.vue'
-import AdoptionFAQ from './AdoptionFAQ.vue'
-import AdoptionProcess from './AdoptionProcess.vue'
-import MoreFriends from './MoreFriends.vue'
+import AdoptionFAQ from '../adopt-faq/AdoptionFAQ.vue'
+import AdoptionProcess from '../adopt-process/AdoptionProcess.vue'
+import MoreFriends from '../more-friends/MoreFriends.vue'
 
 defineProps<{
   pet: IPet
