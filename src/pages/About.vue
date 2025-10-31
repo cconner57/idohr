@@ -71,13 +71,22 @@ import Candid from '../components/common/candid-award/Candid.vue'
   padding: 150px 180px 50px;
   color: var(--font-color-light);
   background-color: var(--green);
+  h1 {
+    font-size: 2.5rem;
+  }
   p {
     font-size: 1.25rem;
     max-width: 600px;
     margin-top: 12px;
   }
-  & h1 {
-    font-size: 2.5rem;
+  @media (max-width: 440px) {
+    padding: 100px 30px 50px;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.15rem;
+    }
   }
 }
 
@@ -100,6 +109,11 @@ import Candid from '../components/common/candid-award/Candid.vue'
     font-size: 1.15rem;
     max-width: 600px;
     margin-top: 12px;
+  }
+  @media (max-width: 440px) {
+    padding: 50px 30px 50px;
+    grid-template-columns: 100%;
+    gap: 30px;
   }
 }
 
@@ -138,6 +152,11 @@ import Candid from '../components/common/candid-award/Candid.vue'
     color: #bbf7d0;
     font-weight: 700;
   }
+  @media (max-width: 440px) {
+    padding: 50px 30px 50px;
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
 }
 
 img {
@@ -172,6 +191,17 @@ img {
     gap: 3rem;
     align-items: center;
     justify-content: center;
+  }
+  @media (max-width: 440px) {
+    padding: 50px 30px 50px;
+    grid-template-columns: 100%;
+    gap: 30px;
+    .notice {
+      margin-left: 0;
+    }
+    .awards {
+      gap: 2rem;
+    }
   }
 }
 </style>
