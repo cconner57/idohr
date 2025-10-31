@@ -2,9 +2,9 @@
 import type { IPet } from '../../../models/common'
 import Button from '../../common/ui/Button.vue'
 import Capsules from '../../common/ui/Capsules.vue'
-import PetItem from '../../common/pet-item/PetItem.vue'
 import AdoptionFAQ from './AdoptionFAQ.vue'
 import AdoptionProcess from './AdoptionProcess.vue'
+import MoreFriends from './MoreFriends.vue'
 
 defineProps<{
   pet: IPet
@@ -160,47 +160,14 @@ const isSpayedOrNeutered = (pet: IPet) => {
       <AdoptionFAQ />
     </div>
   </div>
-  <div class="adopt-detail__more-friends">
-    <h2>More Friends You Might Like</h2>
-    <div class="adopt-detail__more-friends__list">
-      <PetItem
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
-        ]"
-      />
-      <PetItem
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
-        ]"
-      />
-      <PetItem
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
-        ]"
-      />
-      <PetItem
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
-        ]"
-      />
-    </div>
-  </div>
+  <MoreFriends :pet="pet" />
 </template>
 
 <style scoped lang="css">
 .adopt-detail {
+  @media (max-width: 440px) {
+    padding: 0 1rem;
+  }
 }
 
 .adopt-detail__main {
@@ -212,6 +179,14 @@ const isSpayedOrNeutered = (pet: IPet) => {
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+  @media (max-width: 440px) {
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 3rem;
+    }
   }
 }
 
@@ -227,6 +202,13 @@ const isSpayedOrNeutered = (pet: IPet) => {
   height: 500px;
   max-height: 550px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  @media (max-width: 440px) {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    gap: 15px;
+    max-height: none;
+  }
 }
 
 .adopt-detail__info__main {
@@ -237,6 +219,11 @@ const isSpayedOrNeutered = (pet: IPet) => {
   padding-bottom: 20px;
   h1 {
     font-size: 1.75rem;
+  }
+  @media (max-width: 440px) {
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -249,12 +236,18 @@ const isSpayedOrNeutered = (pet: IPet) => {
     padding: 4px 12px;
     border-radius: 16px;
   }
+  @media (max-width: 440px) {
+    flex-wrap: wrap;
+  }
 }
 
 .adopt-detail__actions {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  @media (max-width: 440px) {
+    flex-direction: column;
+  }
 }
 .adopt-detail__actions .start-adoption {
   background-color: var(--blue);
@@ -288,6 +281,20 @@ const isSpayedOrNeutered = (pet: IPet) => {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media (max-width: 440px) {
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-wrap: wrap;
+    }
+    p:last-child {
+      text-wrap: wrap;
+      width: 150px;
+    }
+  }
 }
 
 .adopt-detail__additional-info__item {
@@ -363,6 +370,62 @@ const isSpayedOrNeutered = (pet: IPet) => {
     line-height: 1.5;
     margin-bottom: 12px;
   }
+  @media (max-width: 440px) {
+    flex-direction: column;
+    & .adopt-detail__about__fun {
+      h2 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+    & .adopt-detail__about__content,
+    & .adopt-detail__about__medical {
+      width: 100%;
+      margin-right: 0px;
+    }
+    & .adopt-detail__about__additional-info {
+      margin-bottom: 2rem;
+      ul {
+        padding-left: 15px;
+        li {
+          font-size: 1rem;
+          margin-bottom: 6px;
+        }
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+    & .adopt-detail__about__medical {
+      ul {
+        margin-bottom: 0px;
+        li {
+          width: 100%;
+          flex-direction: column;
+          p:first-child {
+            margin-right: 0px;
+            width: 100%;
+          }
+        }
+      }
+      h2 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+      }
+    }
+  }
 }
 
 .adopt-detail__adoption {
@@ -373,33 +436,8 @@ const isSpayedOrNeutered = (pet: IPet) => {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-}
-
-.adopt-detail__more-friends {
-  margin-top: 30px;
-  width: 100%;
-  background-color: var(--white);
-  color: var(--font-color-dark);
-  padding: 20px 20px 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+  @media (max-width: 440px) {
+    flex-direction: column;
   }
-}
-
-.adopt-detail__more-friends__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 30px;
-}
-
-.adopt-detail__more-friends__item__traits {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
 }
 </style>

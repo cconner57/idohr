@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 import { goToAdopt } from '../../../utils/navigate'
 import Button from '../ui/Button.vue'
 import { ref, type PropType } from 'vue'
+import Capsules from '../ui/Capsules.vue'
 
 const props = defineProps({
   name: {
@@ -47,7 +48,9 @@ function handleAdopt() {
     <div v-else class="img-fallback" aria-hidden="true"></div>
     <div class="info-section">
       <h5>{{ props.name }}</h5>
-      <Capsules></Capsules>
+      <div v-if="props.capsules.length > 0" class="capsules">
+        <Capsules v-for="capText in props.capsules" :key="capText">{{ capText }}</Capsules>
+      </div>
       <p v-if="props.description">{{ props.description }}</p>
       <Button title="Adopt Me" color="blue" @click="handleAdopt" :fullWidth="true" />
     </div>
@@ -86,6 +89,11 @@ function handleAdopt() {
   }
   h5 {
     font-size: 1.5rem;
+  }
+  .capsules {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   p {
     font-size: 1rem;

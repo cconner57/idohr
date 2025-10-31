@@ -39,6 +39,10 @@ const pet = computed(() => pets.find((p) => p.slug === slug.value))
   flex-direction: column;
   gap: 2rem;
   background-color: var(--green);
+  @media (max-width: 440px) {
+    padding: 4rem 1rem 2rem 1rem;
+    gap: 30px;
+  }
 }
 .header {
   display: flex;
@@ -55,8 +59,23 @@ const pet = computed(() => pets.find((p) => p.slug === slug.value))
     max-width: 100%;
     font-weight: 400;
   }
+  @media (max-width: 440px) {
+    padding: 1.5rem 1rem 0;
+    & h1 {
+      font-size: 2.5rem;
+      color: var(--font-color-light);
+      line-height: 3rem;
+    }
+    & p {
+      font-size: 1.05rem;
+      min-width: auto;
+    }
+  }
 }
 main {
   width: 90%;
+  @media (max-width: 440px) {
+    width: 100%;
+  }
 }
 </style>

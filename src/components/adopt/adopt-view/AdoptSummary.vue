@@ -14,6 +14,11 @@ defineProps<{
       :key="pet.slug"
       :name="pet.name"
       :description="pet.descriptions?.physicalDescription"
+      :capsules="[
+        pet?.physicalTraits?.species ?? '',
+        pet?.physicalTraits?.sex ?? '',
+        pet?.physicalTraits?.age ?? '',
+      ]"
     />
   </div>
 </template>
@@ -23,5 +28,8 @@ defineProps<{
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  @media (max-width: 440px) {
+    justify-content: center;
+  }
 }
 </style>

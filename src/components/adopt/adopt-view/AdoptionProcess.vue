@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IPet } from '../../models/common'
+import type { IPet } from '../../../models/common'
 
 defineProps<{
   pet: IPet
@@ -90,10 +90,17 @@ defineProps<{
 .adopt-detail__adoption-process {
   width: 50%;
   margin-right: 20px;
+  @media (max-width: 440px) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
+  @media (max-width: 440px) {
+    font-size: 1.25rem;
+  }
 }
 ol {
   padding-left: 20px;
@@ -103,9 +110,15 @@ ol {
 }
 li {
   margin-bottom: 8px;
+  @media (max-width: 440px) {
+    margin-bottom: 12px;
+  }
 }
 li span {
   font-weight: bold;
+  @media (max-width: 440px) {
+    font-size: 1rem;
+  }
 }
 li p {
   margin: 4px 0;
@@ -113,5 +126,8 @@ li p {
   line-height: 1.4;
   padding-left: 16px;
   font-weight: 400;
+  @media (max-width: 440px) {
+    font-size: 0.95rem;
+  }
 }
 </style>

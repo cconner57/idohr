@@ -82,5 +82,22 @@ const toggleFaq = (index: number) => {
     line-height: 1.4;
     font-weight: 400;
   }
+  @media (max-width: 440px) {
+    width: 100%;
+    margin-right: 0;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 12px;
+      }
+    }
+    .faq-question {
+      font-size: 1rem;
+    }
+    .faq-answer {
+      font-size: 0.95rem;
+      margin-left: 16px;
+    }
+  }
 }
 </style>
