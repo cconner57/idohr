@@ -56,21 +56,32 @@ const clearCanvas = () => {
   }
 }
 
-onMounted(() => {
+const scaleCanvas = () => {
   if (canvasRef.value) {
+    const dpr = window.devicePixelRatio || 1
+    const rect = canvasRef.value.getBoundingClientRect()
+    canvasRef.value.width = rect.width * dpr
+    canvasRef.value.height = rect.height * dpr
     context = canvasRef.value.getContext('2d')
     if (context) {
+      context.scale(dpr, dpr)
       context.lineWidth = 2
       context.lineCap = 'round'
       context.strokeStyle = '#000'
     }
   }
+}
+
+onMounted(() => {
+  scaleCanvas()
 })
 </script>
 
 <template>
   <div class="signature-container">
+    <label for="signatureCanvas" class="signature-label">Please sign below:</label>
     <canvas
+      id="signatureCanvas"
       ref="canvasRef"
       class="signature-canvas"
       width="500"
@@ -95,6 +106,13 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.signature-label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
 
 .signature-canvas {

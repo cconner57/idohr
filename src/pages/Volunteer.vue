@@ -9,6 +9,37 @@ import {
 import Button from '../components/common/ui/Button.vue'
 import InputField from '../components/common/ui/InputField.vue'
 import InputTextArea from '../components/common/ui/InputTextArea.vue'
+
+import { reactive } from 'vue'
+
+const formState = reactive({
+  firstName: '',
+  lastName: '',
+  address: '',
+  city: '',
+  zip: '',
+  phoneNumber: '',
+  birthday: '',
+  age: null as number | null,
+  allergies: '',
+  emergencyContactName: '',
+  emergencyContactPhone: '',
+  volunteerExperience: '',
+  interestReason: '',
+  positionPreferences: [] as string[],
+  availability: [] as string[],
+  nameFull: '',
+  signatureData: null as string | null,
+  signatureDate: '',
+  parentName: '',
+  parentSignatureData: null as string | null,
+  parentSignatureDate: '',
+})
+
+const handleSubmit = () => {
+  console.log('Form submitted with state:', formState)
+  // Add form validation and submission logic here
+}
 </script>
 
 <template>
@@ -18,40 +49,83 @@ import InputTextArea from '../components/common/ui/InputTextArea.vue'
       <fieldset class="grid" aria-labelledby="pi">
         <legend id="pi" class="section-title">Personal Information</legend>
 
-        <InputField label="First Name" placeholder="First name" />
-        <InputField label="Last Name" placeholder="Last name" />
-        <InputField label="Address" placeholder="Address" />
-        <InputField label="City" placeholder="City" />
-        <InputField label="Zip" placeholder="Zip" type="number" />
-        <InputField label="Phone Number" placeholder="Phone" type="tel" />
-        <InputField label="Birthday" placeholder="mm/dd/yyyy" type="date" />
-        <InputField label="If under 21, Age" placeholder="Age" type="number" />
+        <InputField v-model="formState.firstName" label="First Name" placeholder="First name" />
+        <InputField v-model="formState.lastName" label="Last Name" placeholder="Last name" />
+        <InputField v-model="formState.address" label="Address" placeholder="Address" />
+        <InputField v-model="formState.city" label="City" placeholder="City" />
+        <InputField v-model="formState.zip" label="Zip" placeholder="Zip" type="number" />
+        <InputField
+          v-model="formState.phoneNumber"
+          label="Phone Number"
+          placeholder="Phone"
+          type="tel"
+        />
+        <InputField
+          v-model="formState.birthday"
+          label="Birthday"
+          placeholder="mm/dd/yyyy"
+          type="date"
+        />
+        <InputField
+          v-model="formState.age"
+          label="If under 21, Age"
+          placeholder="Age"
+          type="number"
+        />
 
-        <Allergies />
+        <Allergies v-model="formState.allergies" />
 
-        <InputField label="Emergency Contact Person" placeholder="Name" />
-        <InputField label="Phone Number" placeholder="Phone Number" type="tel" />
+        <InputField
+          v-model="formState.emergencyContactName"
+          label="Emergency Contact Person"
+          placeholder="Name"
+        />
+        <InputField
+          v-model="formState.emergencyContactPhone"
+          label="Phone Number"
+          placeholder="Phone Number"
+          type="tel"
+        />
       </fieldset>
 
       <fieldset aria-labelledby="exp">
         <legend id="exp" class="section-title">Experience & Interests</legend>
 
-        <InputTextArea label="Volunteer Experience (if any):" placeholder="Briefly describe" />
+        <InputTextArea
+          v-model="formState.volunteerExperience"
+          label="Volunteer Experience (if any):"
+          placeholder="Briefly describe"
+        />
 
         <InputTextArea
+          v-model="formState.interestReason"
           label="Why are you interested in being a volunteer:"
           placeholder="Your reason"
         />
 
-        <PositionPreferences />
+        <PositionPreferences v-model="formState.positionPreferences" />
       </fieldset>
 
-      <Availability />
+      <Availability v-model="formState.availability" />
 
-      <Agreement />
+      <Agreement
+        :name="formState.nameFull"
+        :age="formState.age!"
+        :signature="formState.signatureData"
+        :signature-date="formState.signatureDate"
+        :parent-name="formState.parentName"
+        :parent-signature="formState.parentSignatureData"
+        :parent-date="formState.parentSignatureDate"
+      />
 
       <div class="actions">
-        <Button type="submit" title="Submit Application" color="green" size="large" />
+        <Button
+          @click="handleSubmit"
+          type="submit"
+          title="Submit Application"
+          color="green"
+          size="large"
+        />
       </div>
     </section>
   </section>
