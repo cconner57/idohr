@@ -199,8 +199,10 @@ img {
     .notice {
       margin-left: 0;
     }
-    .awards {
-      gap: 2rem;
+    & .awards {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 1.5rem;
     }
   }
 }

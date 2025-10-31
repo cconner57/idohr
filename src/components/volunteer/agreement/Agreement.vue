@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import InputSignature from '../../common/ui/InputSignature.vue'
 import InputField from '../../common/ui/InputField.vue'
 </script>
 
@@ -13,7 +14,8 @@ import InputField from '../../common/ui/InputField.vue'
     </p>
 
     <div class="grid">
-      <InputField label="Signature" placeholder="" />
+      <InputField label="Name" placeholder="" />
+      <InputSignature label="Signature" placeholder="" />
       <InputField label="Date" placeholder="" type="date" />
     </div>
 
@@ -23,6 +25,7 @@ import InputField from '../../common/ui/InputField.vue'
     >
     <div class="grid" style="margin-top: 12px">
       <InputField label="Parent/Guardian Name" placeholder="" />
+      <InputSignature label="Parent/Guardian Signature" placeholder="" />
       <InputField label="Date" placeholder="" type="date" />
     </div>
   </fieldset>
