@@ -10,8 +10,8 @@ export function goToDonate(router: Router) {
 
 export function createNavigator(router: Router) {
   return {
-    goToAdopt: () => router.push('/adopt'),
-    goToDonate: () => router.push('/donate'),
+    goToAdopt: (slug?: string) => goToAdopt(router, slug),
+    goToDonate: () => goToDonate(router),
   }
 }
 

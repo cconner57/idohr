@@ -1,0 +1,61 @@
+/* Shared form field styles */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-700);
+  user-select: none;
+}
+
+/* Shared input control styles */
+.control input,
+.control textarea {
+  width: 100%;
+  border: 1px solid #e7ebf0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+  transition:
+    box-shadow 0.15s,
+    border-color 0.15s;
+  background: #fff;
+}
+
+.control input:focus,
+.control textarea:focus {
+  outline: none;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.control textarea {
+  resize: vertical;
+}
+
+/* Shared button color styles */
+.button-color-green {
+  background-color: var(--green);
+}
+.button-color-green:hover {
+  background-color: var(--green-hover);
+}
+
+.button-color-blue {
+  background-color: var(--blue);
+}
+.button-color-blue:hover {
+  background-color: var(--blue-hover);
+}
+
+.button-color-purple {
+  background-color: var(--purple);
+}
+.button-color-purple:hover {
+  background-color: var(--purple-hover);
+}
