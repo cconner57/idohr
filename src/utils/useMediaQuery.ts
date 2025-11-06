@@ -2,13 +2,16 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 export function useMediaQuery(query: string) {
   const matches = ref(false)
-  let mediaQuery: MediaQueryList
+  let mediaQuery: MediaQueryList | undefined
 
   const updateMatch = (e: MediaQueryListEvent | MediaQueryList) => {
     matches.value = e.matches
   }
 
   onMounted(() => {
+    // Check if window and matchMedia are available (SSR safety)
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return
+
     mediaQuery = window.matchMedia(query)
     matches.value = mediaQuery.matches
 
@@ -16,7 +19,9 @@ export function useMediaQuery(query: string) {
   })
 
   onUnmounted(() => {
-    mediaQuery?.removeEventListener('change', updateMatch)
+    if (mediaQuery) {
+      mediaQuery.removeEventListener('change', updateMatch)
+    }
   })
 
   return matches

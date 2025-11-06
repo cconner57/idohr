@@ -1,24 +1,39 @@
 <script setup lang="ts">
+import { ref, computed, watch } from 'vue'
 import PetItem from '../../common/pet-item/PetItem.vue'
+import { useIsMobile } from '../../../utils/useIsMobile'
 
-const isMobile = window.innerWidth <= 440
+const isMobile = useIsMobile()
 
-const petsMobileView = () => {
-  if (isMobile) {
-    const pets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
-    const randomIndex = Math.floor(Math.random() * pets.length)
-    return [pets[randomIndex]]
-  } else {
-    return ['Crystal', 'Montclair', 'Apricot', 'Casper']
+// Pre-define pets array to avoid recreation
+const allPets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
+
+// Use ref to store random pet, initialize only if mobile
+const randomPet = ref(
+  isMobile.value ? allPets[Math.floor(Math.random() * allPets.length)] : '',
+)
+
+// Update random pet when transitioning to mobile view
+watch(isMobile, (newIsMobile, oldIsMobile) => {
+  // Only update when transitioning TO mobile (not from mobile or on initial desktop load)
+  if (newIsMobile && !oldIsMobile) {
+    randomPet.value = allPets[Math.floor(Math.random() * allPets.length)]
   }
-}
+})
+
+const displayedPets = computed(() => {
+  if (isMobile.value) {
+    return [randomPet.value]
+  }
+  return allPets
+})
 </script>
 
 <template>
   <section class="adoption-spotlight">
     <h4>Adoption Spotlight</h4>
     <div class="pet-list">
-      <PetItem v-for="pet in petsMobileView()" :key="pet" :name="pet" />
+      <PetItem v-for="pet in displayedPets" :key="pet" :name="pet" />
     </div>
   </section>
 </template>
