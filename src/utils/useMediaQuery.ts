@@ -4,8 +4,8 @@ export function useMediaQuery(query: string) {
   const matches = ref(false)
   let mediaQuery: MediaQueryList
 
-  const updateMatch = (e: MediaQueryListEvent | MediaQueryList) => {
-    matches.value = e.matches
+  const updateMatch = (mediaQueryEvent: MediaQueryListEvent | MediaQueryList) => {
+    matches.value = mediaQueryEvent.matches
   }
 
   onMounted(() => {

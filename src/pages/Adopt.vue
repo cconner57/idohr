@@ -12,7 +12,7 @@ const slug = computed(() => props.slug ?? (route.params.slug as string | undefin
 
 const pets = mockPetsData
 
-const pet = computed(() => pets.find((p) => p.slug === slug.value))
+const pet = computed(() => pets.find((petItem) => petItem.slug === slug.value))
 </script>
 
 <template>

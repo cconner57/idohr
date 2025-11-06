@@ -22,8 +22,8 @@ const handleShare = () => {
   // Implement sharing logic here
 }
 
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr)
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString)
   return date.toLocaleDateString(undefined, {
     year: 'numeric',
     month: 'short',
