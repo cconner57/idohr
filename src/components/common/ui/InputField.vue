@@ -34,32 +34,5 @@ function onInput(e: Event) {
 </template>
 
 <style scoped lang="css">
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-.label {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--text-700);
-  user-select: none;
-}
-.control input {
-  width: 100%;
-  border: 1px solid #e7ebf0;
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 15px;
-  transition:
-    box-shadow 0.15s,
-    border-color 0.15s;
-  background: #fff;
-}
-.control input:focus {
-  outline: none;
-  border-color: var(--blue-600);
-  box-shadow: 0 0 0 3px var(--ring);
-}
+/* Component-specific styles only */
 </style>

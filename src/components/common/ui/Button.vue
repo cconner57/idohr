@@ -11,9 +11,9 @@ const props = defineProps<{
 <template>
   <button
     :class="{
-      'button-blue': props.color === 'blue',
-      'button-green': props.color === 'green',
-      'button-purple': props.color === 'purple',
+      'button-color-blue': props.color === 'blue',
+      'button-color-green': props.color === 'green',
+      'button-color-purple': props.color === 'purple',
       'button-green-weak': props.color === 'green-weak',
       small: props.size === 'small',
       medium: props.size === 'medium' || !props.size,
@@ -59,25 +59,6 @@ button {
   min-width: 220px;
   padding: 0 32px;
   font-size: 1.5rem;
-}
-
-.button-green {
-  background-color: var(--green);
-  &:hover {
-    background-color: var(--green-hover);
-  }
-}
-.button-blue {
-  background-color: var(--blue);
-  &:hover {
-    background-color: var(--blue-hover);
-  }
-}
-.button-purple {
-  background-color: var(--purple);
-  &:hover {
-    background-color: var(--purple-hover);
-  }
 }
 
 .button-green-weak {

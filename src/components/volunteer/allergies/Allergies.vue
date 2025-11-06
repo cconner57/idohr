@@ -21,18 +21,6 @@
 .col-span-2 {
   grid-column: span 2;
 }
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-.label {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--text-700);
-  user-select: none;
-}
 .switch-row {
   display: flex;
   align-items: center;

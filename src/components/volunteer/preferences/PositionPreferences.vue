@@ -22,11 +22,8 @@ fieldset.field {
     }
   }
 }
+/* Override shared .field styles with media query */
 .field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 12px;
   @media (max-width: 440px) {
     margin-bottom: 8px;
   }
@@ -37,11 +34,8 @@ fieldset.field {
     grid-column: span 1;
   }
 }
+/* Override shared .label styles with media query */
 .label {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--text-700);
-  user-select: none;
   @media (max-width: 440px) {
     font-size: 13px;
     line-height: 1.5;

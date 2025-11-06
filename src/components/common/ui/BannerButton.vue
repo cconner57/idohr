@@ -24,9 +24,9 @@ const imgSrcComputed = computed(() => (props.imgSrc && props.imgSrc.length ? pro
   <button
     class="banner-button"
     :class="{
-      'banner-button-blue': props.color === 'blue',
-      'banner-button-green': props.color === 'green',
-      'banner-button-purple': props.color === 'purple',
+      'button-color-blue': props.color === 'blue',
+      'button-color-green': props.color === 'green',
+      'button-color-purple': props.color === 'purple',
     }"
     :type="props.type"
     :aria-label="props.title"
@@ -78,24 +78,5 @@ h5 {
 p {
   margin: 0;
   font-size: 1rem;
-}
-
-.banner-button-green {
-  background-color: var(--green);
-  &:hover {
-    background-color: var(--green-hover);
-  }
-}
-.banner-button-blue {
-  background-color: var(--blue);
-  &:hover {
-    background-color: var(--blue-hover);
-  }
-}
-.banner-button-purple {
-  background-color: var(--purple);
-  &:hover {
-    background-color: var(--purple-hover);
-  }
 }
 </style>
