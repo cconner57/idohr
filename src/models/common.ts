@@ -1,5 +1,5 @@
 export interface IPet {
-  slug: string
+  id: string
   name: string
   physicalTraits?: {
     sex: string

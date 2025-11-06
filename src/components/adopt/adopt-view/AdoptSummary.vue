@@ -11,14 +11,15 @@ defineProps<{
   <div class="adopt-summary">
     <PetItem
       v-for="pet in pets"
-      :key="pet.slug"
-      :name="pet.name"
-      :description="pet.descriptions?.physicalDescription"
       :capsules="[
         pet?.physicalTraits?.species ?? '',
         pet?.physicalTraits?.sex ?? '',
         pet?.physicalTraits?.age ?? '',
       ]"
+      :description="pet.descriptions?.physicalDescription"
+      :id="pet.id"
+      :key="pet.id"
+      :name="pet.name"
     />
   </div>
 </template>

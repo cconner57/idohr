@@ -14,7 +14,7 @@ const router = createRouter({
     },
     { path: '/adopt', name: 'adopt-list', component: Adopt },
     {
-      path: '/adopt/:slug',
+      path: '/adopt/:id',
       name: 'adopt-pet',
       component: Adopt,
       props: true,
