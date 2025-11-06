@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import PetItem from '../../common/pet-item/PetItem.vue'
 import { useIsMobile } from '../../../utils/useIsMobile'
 
@@ -8,10 +8,19 @@ const isMobile = useIsMobile()
 // Pre-define pets array to avoid recreation
 const allPets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
 
+// Use ref to store random pet so it only changes when mobile state changes
+const randomPet = ref(allPets[Math.floor(Math.random() * allPets.length)])
+
+// Update random pet when mobile state changes
+watch(isMobile, (newIsMobile) => {
+  if (newIsMobile) {
+    randomPet.value = allPets[Math.floor(Math.random() * allPets.length)]
+  }
+})
+
 const displayedPets = computed(() => {
   if (isMobile.value) {
-    const randomIndex = Math.floor(Math.random() * allPets.length)
-    return [allPets[randomIndex]]
+    return [randomPet.value]
   }
   return allPets
 })
