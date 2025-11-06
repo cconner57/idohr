@@ -10,6 +10,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  id: {
+    type: String,
+    required: true,
+  },
   description: {
     type: String,
     required: false,
@@ -29,7 +33,7 @@ function onImgError() {
 }
 
 function handleAdopt() {
-  goToAdopt(router, props.name.toLowerCase())
+  goToAdopt(router, props.id.toLowerCase())
 }
 </script>
 
@@ -45,7 +49,7 @@ function handleAdopt() {
       @error="onImgError"
       @click="handleAdopt"
     />
-    <div v-else class="img-fallback" aria-hidden="true"></div>
+    <div v-else class="img-fallback" aria-hidden="true" @click="handleAdopt"></div>
     <div class="info-section">
       <h5>{{ props.name }}</h5>
       <div v-if="props.capsules.length > 0" class="capsules">

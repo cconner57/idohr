@@ -5,14 +5,14 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { mockPetsData } from '../stores/mockPetData'
 
-const props = defineProps<{ slug?: string }>()
+const props = defineProps<{ id?: string }>()
 const route = useRoute()
 
-const slug = computed(() => props.slug ?? (route.params.slug as string | undefined))
+const id = computed(() => props.id ?? (route.params.id as string | undefined))
 
 const pets = mockPetsData
 
-const pet = computed(() => pets.find((p) => p.slug === slug.value))
+const pet = computed(() => pets.find((p) => p.id === id.value))
 </script>
 
 <template>
