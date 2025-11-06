@@ -8,12 +8,15 @@ const isMobile = useIsMobile()
 // Pre-define pets array to avoid recreation
 const allPets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
 
-// Use ref to store random pet so it only changes when mobile state changes
-const randomPet = ref(allPets[Math.floor(Math.random() * allPets.length)])
+// Use ref to store random pet, initialize only if mobile
+const randomPet = ref(
+  isMobile.value ? allPets[Math.floor(Math.random() * allPets.length)] : allPets[0],
+)
 
-// Update random pet when mobile state changes
-watch(isMobile, (newIsMobile) => {
-  if (newIsMobile) {
+// Update random pet when transitioning to mobile view
+watch(isMobile, (newIsMobile, oldIsMobile) => {
+  // Only update when transitioning TO mobile (not from mobile or on initial desktop load)
+  if (newIsMobile && !oldIsMobile) {
     randomPet.value = allPets[Math.floor(Math.random() * allPets.length)]
   }
 })
