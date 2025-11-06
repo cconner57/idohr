@@ -38,8 +38,8 @@ const faqs = ref([
   },
 ])
 
-const toggleFaq = (index: number) => {
-  faqs.value[index].expanded = !faqs.value[index].expanded
+const toggleFaq = (faqIndex: number) => {
+  faqs.value[faqIndex].expanded = !faqs.value[faqIndex].expanded
 }
 </script>
 
@@ -47,12 +47,12 @@ const toggleFaq = (index: number) => {
   <div class="adopt-detail__adoption-faq">
     <h2>Adoption FAQs</h2>
     <ul>
-      <li v-for="(faq, index) in faqs" :key="index">
-        <p @click="toggleFaq(index)" class="faq-question">
-          <span>{{ faq.expanded ? '⌄' : '›' }}</span>
-          {{ faq.question }}
+      <li v-for="(faqItem, faqIndex) in faqs" :key="faqIndex">
+        <p @click="toggleFaq(faqIndex)" class="faq-question">
+          <span>{{ faqItem.expanded ? '⌄' : '›' }}</span>
+          {{ faqItem.question }}
         </p>
-        <p v-if="faq.expanded" class="faq-answer">{{ faq.answer }}</p>
+        <p v-if="faqItem.expanded" class="faq-answer">{{ faqItem.answer }}</p>
       </li>
     </ul>
   </div>

@@ -28,8 +28,8 @@ const router = createRouter({
       component: Volunteer,
     },
   ],
-  scrollBehavior(to, from, saved) {
-    if (saved) return saved
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
     return { top: 0 }
   },
 })
