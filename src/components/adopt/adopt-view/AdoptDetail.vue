@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { IPet } from '../../../models/common'
 import Button from '../../common/ui/Button.vue'
 import Capsules from '../../common/ui/Capsules.vue'
@@ -6,7 +7,7 @@ import AdoptionFAQ from '../adopt-faq/AdoptionFAQ.vue'
 import AdoptionProcess from '../adopt-process/AdoptionProcess.vue'
 import MoreFriends from '../more-friends/MoreFriends.vue'
 
-defineProps<{
+const props = defineProps<{
   pet: IPet
 }>()
 
@@ -34,6 +35,19 @@ const formatDate = (dateStr: string) => {
 const isSpayedOrNeutered = (pet: IPet) => {
   return pet.physicalTraits?.sex === 'Male' ? 'Neutered' : 'Spayed'
 }
+
+// Computed property for "Good in a home with" to avoid repetitive template logic
+const goodWithText = computed(() => {
+  const traits = props.pet.behavioralTraits
+  if (!traits) return ''
+
+  const goodWith: string[] = []
+  if (traits.goodWithCats) goodWith.push('Other Cats')
+  if (traits.goodWithDogs) goodWith.push('Other Dogs')
+  if (traits.goodWithKids) goodWith.push('Kids')
+
+  return goodWith.join(', ')
+})
 </script>
 
 <template>
@@ -96,23 +110,7 @@ const isSpayedOrNeutered = (pet: IPet) => {
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>Good in a home with</p>
-            <p>
-              {{ pet.behavioralTraits?.goodWithCats ? 'Other Cats' : ''
-              }}{{
-                pet.behavioralTraits?.goodWithCats &&
-                (pet.behavioralTraits?.goodWithDogs || pet.behavioralTraits?.goodWithKids)
-                  ? ', '
-                  : ''
-              }}
-              {{ pet.behavioralTraits?.goodWithDogs ? 'Other Dogs' : ''
-              }}{{
-                pet.behavioralTraits?.goodWithDogs &&
-                (pet.behavioralTraits?.goodWithCats || pet.behavioralTraits?.goodWithKids)
-                  ? ', '
-                  : ''
-              }}
-              {{ pet.behavioralTraits?.goodWithKids ? 'Kids' : '' }}
-            </p>
+            <p>{{ goodWithText }}</p>
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>Adoption Fee</p>
