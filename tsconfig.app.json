@@ -4,7 +4,6 @@
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "baseUrl": ".",
     "types": ["vite/client", "vue"],
     "target": "ESNext",
     "allowJs": false,

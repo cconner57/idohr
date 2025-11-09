@@ -171,7 +171,7 @@ export const mockPetsData: IPet[] = [
       aboutDescription: undefined,
     },
     profileSettings: {
-      isSpotlightFeatured: false,
+      isSpotlightFeatured: true,
       showMedicalHistory: false,
       showAdditionalInformation: false,
       adoptionProcess: 'cat',
@@ -988,7 +988,7 @@ export const mockPetsData: IPet[] = [
       aboutDescription: undefined,
     },
     profileSettings: {
-      isSpotlightFeatured: false,
+      isSpotlightFeatured: true,
       showMedicalHistory: false,
       showAdditionalInformation: false,
       adoptionProcess: 'cat',
@@ -1676,7 +1676,7 @@ export const mockPetsData: IPet[] = [
       aboutDescription: undefined,
     },
     profileSettings: {
-      isSpotlightFeatured: false,
+      isSpotlightFeatured: true,
       showMedicalHistory: false,
       showAdditionalInformation: false,
       adoptionProcess: 'cat',
@@ -4514,7 +4514,7 @@ export const mockPetsData: IPet[] = [
       aboutDescription: undefined,
     },
     profileSettings: {
-      isSpotlightFeatured: false,
+      isSpotlightFeatured: true,
       showMedicalHistory: false,
       showAdditionalInformation: false,
       adoptionProcess: 'cat',

@@ -33,6 +33,7 @@ function onImgError() {
 }
 
 function handleAdopt() {
+  console.log('handleAdopt func ran')
   goToAdopt(router, props.id.toLowerCase())
 }
 </script>

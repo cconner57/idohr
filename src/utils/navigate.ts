@@ -1,7 +1,8 @@
 import { useRouter, type Router } from 'vue-router'
 
-export function goToAdopt(router: Router, slug?: string) {
-  return slug ? router.push({ name: 'adopt-pet', params: { slug } }) : router.push('/adopt')
+export function goToAdopt(router: Router, id?: string) {
+  console.log('id', id, 'router', router)
+  return id ? router.push({ name: 'adopt-pet', params: { id } }) : router.push('/adopt')
 }
 
 export function goToDonate(router: Router) {
@@ -10,7 +11,7 @@ export function goToDonate(router: Router) {
 
 export function createNavigator(router: Router) {
   return {
-    goToAdopt: (slug?: string) => goToAdopt(router, slug),
+    goToAdopt: (id?: string) => goToAdopt(router, id),
     goToDonate: () => goToDonate(router),
   }
 }

@@ -2,28 +2,27 @@
 import { ref, computed, watch } from 'vue'
 import PetItem from '../../common/pet-item/PetItem.vue'
 import { useIsMobile } from '../../../utils/useIsMobile'
+import type { IPet } from '../../../models/common'
+import { mockPetsData } from '../../../stores/mockPetData'
 
 const isMobile = useIsMobile()
 
-// Pre-define pets array to avoid recreation
-const allPets = ['Crystal', 'Montclair', 'Apricot', 'Casper']
+const allPets = mockPetsData.filter((pet) => pet.profileSettings.isSpotlightFeatured)
+console.log('allPets', allPets)
 
-// Use ref to store random pet, initialize only if mobile
-const randomPet = ref(
-  isMobile.value ? allPets[Math.floor(Math.random() * allPets.length)] : '',
+const randomPet = ref<IPet | null>(
+  isMobile.value ? allPets[Math.floor(Math.random() * allPets.length)] : null,
 )
 
-// Update random pet when transitioning to mobile view
 watch(isMobile, (newIsMobile, oldIsMobile) => {
-  // Only update when transitioning TO mobile (not from mobile or on initial desktop load)
   if (newIsMobile && !oldIsMobile) {
     randomPet.value = allPets[Math.floor(Math.random() * allPets.length)]
   }
 })
 
-const displayedPets = computed(() => {
+const displayedPets = computed((): IPet[] => {
   if (isMobile.value) {
-    return [randomPet.value]
+    return randomPet.value ? [randomPet.value] : []
   }
   return allPets
 })
@@ -33,7 +32,12 @@ const displayedPets = computed(() => {
   <section class="adoption-spotlight">
     <h4>Adoption Spotlight</h4>
     <div class="pet-list">
-      <PetItem v-for="pet in displayedPets" :key="pet" :name="pet" />
+      <PetItem
+        v-for="pet in displayedPets"
+        :key="pet.id"
+        :name="pet.name"
+        :id="pet.id.toLowerCase()"
+      />
     </div>
   </section>
 </template>
