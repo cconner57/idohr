@@ -17,7 +17,7 @@ defineProps<{
         pet?.physicalTraits?.sex ?? '',
         pet?.physicalTraits?.age ? formatDate(pet?.physicalTraits?.age ?? '') : '',
       ]"
-      :description="pet.descriptions?.physicalDescription"
+      :description="pet.descriptions?.physicalDescription ?? ''"
       :id="pet.id"
       :key="pet.id"
       :name="pet.name"
@@ -29,7 +29,8 @@ defineProps<{
 .adopt-summary {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: 30px;
+  column-gap: 40px;
   @media (max-width: 440px) {
     justify-content: center;
   }

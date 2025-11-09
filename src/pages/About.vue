@@ -133,7 +133,7 @@ import Candid from '../components/common/candid-award/Candid.vue'
 
   > div,
   > img {
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
   }
 
