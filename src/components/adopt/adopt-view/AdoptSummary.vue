@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IPet } from 'src/models/common'
+import type { IPet } from '../../../models/common'
 import PetItem from '../../common/pet-item/PetItem.vue'
 
 defineProps<{
