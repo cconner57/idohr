@@ -6,6 +6,7 @@ import Capsules from '../../common/ui/Capsules.vue'
 import AdoptionFAQ from '../adopt-faq/AdoptionFAQ.vue'
 import AdoptionProcess from '../adopt-process/AdoptionProcess.vue'
 import MoreFriends from '../more-friends/MoreFriends.vue'
+import { formatDate } from '../../../utils/common'
 
 const props = defineProps<{
   pet: IPet
@@ -21,15 +22,6 @@ const handleScheduleMeet = () => {
 
 const handleShare = () => {
   // Implement sharing logic here
-}
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString)
-  return date.toLocaleDateString(undefined, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  })
 }
 
 const isSpayedOrNeutered = (pet: IPet) => {

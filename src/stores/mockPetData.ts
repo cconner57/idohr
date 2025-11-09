@@ -1,52 +1,6 @@
 /* eslint-disable max-lines */
 import type { IPet } from '../models/common.js'
 
-export const mockPetData: IPet[] = [
-  {
-    id: '3',
-    name: 'Apricot',
-    physicalTraits: {
-      species: 'Cat',
-      breed: 'Domestic Short Hair',
-      sex: 'Female',
-      age: '2 years',
-      size: 'Small',
-      color: 'Cream',
-      coatLength: 'Short',
-    },
-    behavioralTraits: {
-      mustGoWithAnotherCat: false,
-      goodWithKids: true,
-      goodWithDogs: false,
-      goodWithCats: true,
-      energyLevel: 'Medium',
-      temperament: 'Affectionate',
-      houseTrained: true,
-    },
-    medicalHistory: {
-      vaccinationsUpToDate: true,
-      spayedOrNeutered: true,
-      microchipped: true,
-    },
-    adoptionFee: 75,
-    descriptions: {
-      medicalDescription: 'No known medical issues.',
-      physicalDescription: 'Curious guy; professional treat inspector.',
-      spotlightDescription: 'Montclair is our featured cat of the week — playful and cuddly!',
-      behavioralDescription:
-        'Loves interactive play and exploring. He thrives on puzzle toys and will keep you entertained with his antics.',
-    },
-    spotlightDescription: 'Apricot is our featured cat of the week — playful and cuddly!',
-    photos: ['/images/apricot-1.jpg', '/images/apricot-2.jpg'],
-    profileSettings: {
-      isSpotlightFeatured: true,
-      showMedicalHistory: true,
-      showAdditionalInformation: true,
-      adoptionProcess: 'dog',
-    },
-  },
-]
-
 export const mockPetsData: IPet[] = [
   {
     id: '1',
@@ -95,7 +49,7 @@ export const mockPetsData: IPet[] = [
     id: '2',
     name: 'Apollo',
     physicalTraits: {
-      sex: 'nan',
+      sex: 'Male',
       age: '',
       size: '',
       breed: '',
@@ -783,7 +737,7 @@ export const mockPetsData: IPet[] = [
     id: '18',
     name: 'Button BB#1',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-30',
       size: '',
       breed: 'BABY',
@@ -826,7 +780,7 @@ export const mockPetsData: IPet[] = [
     id: '19',
     name: 'Button BB#2',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-30',
       size: '',
       breed: 'BABY',
@@ -869,7 +823,7 @@ export const mockPetsData: IPet[] = [
     id: '20',
     name: 'Button BB#3',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-30',
       size: '',
       breed: 'BABY',
@@ -912,7 +866,7 @@ export const mockPetsData: IPet[] = [
     id: '21',
     name: 'Button BB#4',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-30',
       size: '',
       breed: 'BABY',
@@ -1557,7 +1511,7 @@ export const mockPetsData: IPet[] = [
     id: '36',
     name: 'Creme',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2020-01-01',
       size: '',
       breed: '',
@@ -1600,7 +1554,7 @@ export const mockPetsData: IPet[] = [
     id: '37',
     name: 'Crumpet',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: '',
@@ -2116,7 +2070,7 @@ export const mockPetsData: IPet[] = [
     id: '49',
     name: 'Eire BB#1',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-13',
       size: '',
       breed: 'DSH',
@@ -2159,7 +2113,7 @@ export const mockPetsData: IPet[] = [
     id: '50',
     name: 'Eire BB#2',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-13',
       size: '',
       breed: 'DSH',
@@ -2202,7 +2156,7 @@ export const mockPetsData: IPet[] = [
     id: '51',
     name: 'Eire BB#3',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-04-13',
       size: '',
       breed: 'DSH',
@@ -2546,7 +2500,7 @@ export const mockPetsData: IPet[] = [
     id: '59',
     name: 'Friday',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2025-06-24',
       size: '',
       breed: 'DMH',
@@ -3879,7 +3833,7 @@ export const mockPetsData: IPet[] = [
     id: '90',
     name: 'Manchos',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2025-04-30',
       size: '',
       breed: 'DSH',
@@ -4524,7 +4478,7 @@ export const mockPetsData: IPet[] = [
     id: '105',
     name: 'Munch',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: '',
@@ -4696,7 +4650,7 @@ export const mockPetsData: IPet[] = [
     id: '109',
     name: 'Oliver',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-01-11',
       size: '',
       breed: '',
@@ -5341,7 +5295,7 @@ export const mockPetsData: IPet[] = [
     id: '124',
     name: 'Precious',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: '',
@@ -5427,7 +5381,7 @@ export const mockPetsData: IPet[] = [
     id: '126',
     name: 'Rain',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: '',
@@ -5685,7 +5639,7 @@ export const mockPetsData: IPet[] = [
     id: '132',
     name: 'Sadie',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: '',
@@ -5900,7 +5854,7 @@ export const mockPetsData: IPet[] = [
     id: '137',
     name: 'Sawyer',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '2024-02-22',
       size: '',
       breed: 'Calico',
@@ -7104,7 +7058,7 @@ export const mockPetsData: IPet[] = [
     id: '164',
     name: 'Yoda',
     physicalTraits: {
-      sex: 'nan',
+      sex: '',
       age: '',
       size: '',
       breed: 'DSH',

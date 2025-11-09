@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { IPet } from '../../../models/common'
 import PetItem from '../../common/pet-item/PetItem.vue'
+import { formatDate } from '../../../utils/common'
 
 defineProps<{
   pets: IPet[]
@@ -14,7 +15,7 @@ defineProps<{
       :capsules="[
         pet?.physicalTraits?.species ?? '',
         pet?.physicalTraits?.sex ?? '',
-        pet?.physicalTraits?.age ?? '',
+        pet?.physicalTraits?.age ? formatDate(pet?.physicalTraits?.age ?? '') : '',
       ]"
       :description="pet.descriptions?.physicalDescription"
       :id="pet.id"
