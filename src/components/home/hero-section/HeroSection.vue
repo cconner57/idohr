@@ -23,7 +23,7 @@ function handleAdopt() {
   inline-size: 100%;
   min-height: 600px;
   background: url('/images/hero.png') 50% 30% / cover no-repeat;
-  padding: 100px clamp(16px, 10dvw, 140px) 40px;
+  padding: 100px clamp(16px, 10dvw, 170px) 40px;
   overflow: hidden;
 
   & h1 {

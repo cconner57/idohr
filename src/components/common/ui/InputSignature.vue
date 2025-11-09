@@ -106,6 +106,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .signature-label {
@@ -120,6 +121,8 @@ onMounted(() => {
   border-radius: 4px;
   cursor: crosshair;
   background-color: #fff;
+  width: 100%;
+  height: 200px;
 }
 
 .signature-actions {
@@ -131,7 +134,7 @@ onMounted(() => {
 button {
   padding: 5px 10px;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;

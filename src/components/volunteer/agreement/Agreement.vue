@@ -1,15 +1,28 @@
 <script setup lang="ts">
-import InputSignature from '../../common/ui/InputSignature.vue'
+import type { VolunteerFormState } from '../../../models/common'
 import InputField from '../../common/ui/InputField.vue'
+import InputSignature from '../../common/ui/InputSignature.vue'
 
-const props = defineProps<{
+const {
+  name,
+  fullName,
+  age,
+  signature,
+  signatureDate,
+  parentName,
+  parentSignature,
+  parentDate,
+  formState,
+} = defineProps<{
+  age: number | null
+  fullName: string
   name: string
-  age: number
-  signature: string | null
-  signatureDate: string
+  parentDate: string
   parentName: string
   parentSignature: string | null
-  parentDate: string
+  signature: string | null
+  signatureDate: string
+  formState: VolunteerFormState
 }>()
 </script>
 
@@ -17,30 +30,34 @@ const props = defineProps<{
   <fieldset class="waiver-container">
     <legend id="waiv" class="section-title">Agreement</legend>
     <p class="waiver">
-      I, {{ props.name }}, hereby volunteer to assist in various tasks to support IDOHR. I
-      understand that IDOHR and partners are not responsible for any illness or injury caused during
-      volunteer work. I agree to hold harmless IDOHR and partners should I become sick or injured
-      from any animals as a result of my volunteer work.
+      I, {{ name === ' ' ? '(volunteer name)' : name }}, hereby volunteer to assist in various tasks
+      to support IDOHR. I understand that IDOHR and partners are not responsible for any illness or
+      injury caused during volunteer work. I agree to hold harmless IDOHR and partners should I
+      become sick or injured from any animals as a result of my volunteer work.
     </p>
 
     <div class="acknowledgement">
-      <InputField label="Name" placeholder="" :modelValue="props.name" />
-      <InputSignature label="Signature" placeholder="" :modelValue="props.signature" />
-      <InputField label="Date" placeholder="" type="date" :modelValue="props.signatureDate" />
+      <div class="name-date-container">
+        <InputField label="Name" placeholder="" :modelValue="fullName" />
+        <InputField label="Date" placeholder="" type="date" :modelValue="signatureDate" />
+      </div>
+      <InputSignature label="Signature" placeholder="" :modelValue="signature" />
     </div>
 
-    <label v-if="props.age < 18" for="parental-consent" class="label"
-      >If under 18, I (parent/guardian name) give permission for my child to volunteer with IDOHR
-      and agree to the above waiver.</label
+    <label v-if="age !== null && age < 18" for="parental-consent" class="label"
+      >If under 18, I ({{ parentName === '' ? 'parent/guardian name' : parentName }}) give
+      permission for my child to volunteer with IDOHR and agree to the above waiver.</label
     >
-    <div v-if="props.age < 18" class="parentGuardian">
-      <InputField label="Parent/Guardian Name" placeholder="" :modelValue="props.parentName" />
+    <div v-if="age !== null && age < 18" class="parentGuardian">
+      <div class="name-date-container">
+        <InputField label="Parent/Guardian Name" placeholder="" v-model="formState.parentName" />
+        <InputField label="Date" placeholder="" type="date" :modelValue="parentDate" />
+      </div>
       <InputSignature
         label="Parent/Guardian Signature"
         placeholder=""
-        :modelValue="props.parentSignature"
+        :modelValue="parentSignature"
       />
-      <InputField label="Date" placeholder="" type="date" :modelValue="props.parentDate" />
     </div>
   </fieldset>
 </template>
@@ -53,10 +70,31 @@ const props = defineProps<{
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 
-  & .acknowledgement {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
+  & .acknowledgement,
+  .parentGuardian {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+
+    & .name-date-container {
+      display: flex;
+      gap: 12px;
+      & > :nth-child(1) {
+        flex: 1;
+      }
+      & > :nth-child(2) {
+        flex: 0 0 33%;
+      }
+    }
+    @media (max-width: 440px) {
+      .name-date-container {
+        flex-direction: column;
+        gap: 0px;
+        & > :nth-child(2) {
+          flex: none;
+        }
+      }
+    }
   }
 
   label {
@@ -64,12 +102,8 @@ const props = defineProps<{
     padding-top: 12px;
     margin-top: 12px;
     font-weight: 600;
-  }
-
-  & .parentGuardian {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
+    grid-column: 1 / -1;
+    text-align: center;
   }
 
   @media (max-width: 440px) {
@@ -77,6 +111,7 @@ const props = defineProps<{
     gap: 8px;
   }
 }
+
 .waiver {
   color: var(--text-700);
   background: #f7fbff;
@@ -87,13 +122,11 @@ const props = defineProps<{
   line-height: 1.4;
   margin-bottom: 12px;
   width: 100%;
-  min-width: 1000px;
   max-width: 100%;
+  grid-column: 1 / -1;
 
   @media (max-width: 440px) {
     font-size: 0.9rem;
-    min-width: 100%;
-    max-width: 100%;
   }
 }
 </style>

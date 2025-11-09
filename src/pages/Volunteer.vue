@@ -9,10 +9,10 @@ import {
 import Button from '../components/common/ui/Button.vue'
 import InputField from '../components/common/ui/InputField.vue'
 import InputTextArea from '../components/common/ui/InputTextArea.vue'
-
+import type { VolunteerFormState } from '../models/common'
 import { reactive } from 'vue'
 
-const formState = reactive({
+const formState = reactive<VolunteerFormState>({
   firstName: '',
   lastName: '',
   address: '',
@@ -109,7 +109,9 @@ const handleSubmit = () => {
       <Availability v-model="formState.availability" />
 
       <Agreement
-        :name="formState.nameFull"
+        :formState="formState"
+        :name="formState.firstName + ' ' + formState.lastName"
+        :fullName="formState.nameFull"
         :age="formState.age!"
         :signature="formState.signatureData"
         :signature-date="formState.signatureDate"
