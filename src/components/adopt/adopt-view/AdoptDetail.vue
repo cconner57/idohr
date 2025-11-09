@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import type { IPet } from '../../../models/common'
 import Button from '../../common/ui/Button.vue'
 import Capsules from '../../common/ui/Capsules.vue'
@@ -42,12 +42,24 @@ const goodWithText = computed(() => {
 
   return goodWith.join(', ')
 })
+
+const imgError = ref(false)
+
+function onImgError() {
+  imgError.value = true
+}
 </script>
 
 <template>
   <div class="adopt-detail">
     <div class="adopt-detail__main">
-      <img :src="`/images/${pet.name.toLowerCase() ?? ''}.jpeg`" :alt="pet.name" />
+      <img
+        v-if="!imgError"
+        :src="`/images/${pet.name.toLowerCase() ?? ''}.jpeg`"
+        :alt="pet.name"
+        @error="onImgError"
+      />
+      <div v-else class="img-fallback" aria-hidden="true"></div>
       <div class="adopt-detail__info">
         <div class="adopt-detail__info__main">
           <h1>{{ pet.name }}</h1>
@@ -182,12 +194,25 @@ const goodWithText = computed(() => {
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   }
+  & .img-fallback {
+    height: 500px;
+    width: 780px;
+    border-radius: 16px;
+    background: url('/images/paw.svg') 350px 180px/100px 100px no-repeat #add8e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
   @media (max-width: 440px) {
     flex-direction: column;
     img {
       width: 100%;
       height: auto;
       margin-top: 3rem;
+    }
+    & .img-fallback {
+      width: 100%;
+      height: 300px;
+      margin-top: 3rem;
+      background: url('/images/paw.svg') 125px 100px/100px 100px no-repeat #add8e6;
     }
   }
 }

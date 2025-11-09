@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SurrenderCat from '../components/about/surrender/SurrenderCat.vue'
 import Candid from '../components/common/candid-award/Candid.vue'
 </script>
 
@@ -58,6 +59,7 @@ import Candid from '../components/common/candid-award/Candid.vue'
       </div>
     </section>
   </main>
+  <SurrenderCat />
 </template>
 
 <style scoped lang="css">
