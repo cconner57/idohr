@@ -1,7 +1,6 @@
 import { useRouter, type Router } from 'vue-router'
 
 export function goToAdopt(router: Router, id?: string) {
-  console.log('id', id, 'router', router)
   return id ? router.push({ name: 'adopt-pet', params: { id } }) : router.push('/adopt')
 }
 
