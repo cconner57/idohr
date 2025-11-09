@@ -36,6 +36,7 @@ fieldset.field {
 }
 /* Override shared .label styles with media query */
 .label {
+  margin-bottom: 8px;
   @media (max-width: 440px) {
     font-size: 13px;
     line-height: 1.5;

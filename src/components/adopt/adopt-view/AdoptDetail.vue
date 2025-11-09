@@ -31,7 +31,9 @@ const isSpayedOrNeutered = (pet: IPet) => {
 // Computed property for "Good in a home with" to avoid repetitive template logic
 const goodWithText = computed(() => {
   const traits = props.pet.behavioralTraits
-  if (!traits) return ''
+  if (!traits || (!traits.goodWithCats && !traits.goodWithDogs && !traits.goodWithKids)) {
+    return 'N/A'
+  }
 
   const goodWith: string[] = []
   if (traits.goodWithCats) goodWith.push('Other Cats')
@@ -50,9 +52,12 @@ const goodWithText = computed(() => {
         <div class="adopt-detail__info__main">
           <h1>{{ pet.name }}</h1>
           <div class="adopt-detail__traits">
-            <Capsules :label="pet.physicalTraits?.species" />
-            <Capsules :label="pet.physicalTraits?.sex" />
-            <Capsules :label="pet.physicalTraits?.age" />
+            <Capsules v-if="pet?.physicalTraits?.species" :label="pet?.physicalTraits?.species" />
+            <Capsules v-if="pet?.physicalTraits?.sex" :label="pet?.physicalTraits?.sex" />
+            <Capsules
+              v-if="pet?.physicalTraits?.age"
+              :label="formatDate(pet?.physicalTraits?.age)"
+            />
           </div>
           <p>{{ pet?.descriptions?.behavioralDescription }}</p>
           <div class="adopt-detail__actions">
@@ -74,15 +79,15 @@ const goodWithText = computed(() => {
         <div class="adopt-detail__additional-info">
           <div class="adopt-detail__additional-info__item">
             <p>Breed</p>
-            <p>{{ pet.physicalTraits?.breed }}</p>
+            <p>{{ pet.physicalTraits?.breed ?? 'N/A' }}</p>
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>Color</p>
-            <p>{{ pet.physicalTraits?.color }}</p>
+            <p>{{ pet.physicalTraits?.color ?? 'N/A' }}</p>
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>Size</p>
-            <p>{{ pet.physicalTraits?.size }}</p>
+            <p>{{ pet.physicalTraits?.size ?? 'N/A' }}</p>
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>House-trained</p>
@@ -106,14 +111,21 @@ const goodWithText = computed(() => {
           </div>
           <div class="adopt-detail__additional-info__item">
             <p>Adoption Fee</p>
-            <p>${{ pet.adoptionFee }}</p>
+            <p>{{ pet.adoptionFee !== null ? '$' + pet.adoptionFee : 'N/A' }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="adopt-detail__about">
+    <div
+      v-if="
+        pet.descriptions?.funDescription ||
+        pet.descriptions?.additionalInformation?.length ||
+        pet.profileSettings.showAdditionalInformation
+      "
+      class="adopt-detail__about"
+    >
       <div class="adopt-detail__about__content">
-        <div class="adopt-detail__about__fun">
+        <div v-if="pet.descriptions?.funDescription" class="adopt-detail__about__fun">
           <h2>From {{ pet.name }}</h2>
           <p>{{ pet.descriptions?.funDescription }}</p>
         </div>
@@ -271,6 +283,7 @@ const goodWithText = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   @media (max-width: 440px) {
     gap: 5px;
     flex-direction: column;
@@ -283,6 +296,9 @@ const goodWithText = computed(() => {
     p:last-child {
       text-wrap: wrap;
       width: 150px;
+      @media (max-width: 404px) {
+        width: 128px;
+      }
     }
   }
 }

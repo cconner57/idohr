@@ -3,6 +3,7 @@ import { defineProps } from 'vue'
 import type { IPet } from '../../../models/common'
 import PetItem from '../../common/pet-item/PetItem.vue'
 import { useIsMobile } from '../../../utils/useIsMobile'
+import { formatDate } from '../../../utils/common'
 
 defineProps<{
   pet: IPet
@@ -17,36 +18,40 @@ const isMobile = useIsMobile()
     <div class="adopt-detail__more-friends__list">
       <PetItem
         name="Crystal"
+        :id="pet.id"
         :capsules="[
           pet.physicalTraits?.species ?? '',
           pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
+          formatDate(pet.physicalTraits?.age ?? ''),
         ]"
       />
       <PetItem
         name="Crystal"
+        :id="pet.id"
         :capsules="[
           pet.physicalTraits?.species ?? '',
           pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
-        ]"
-      />
-      <PetItem
-        v-if="!isMobile"
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
+          formatDate(pet.physicalTraits?.age ?? ''),
         ]"
       />
       <PetItem
         v-if="!isMobile"
+        :id="pet.id"
         name="Crystal"
         :capsules="[
           pet.physicalTraits?.species ?? '',
           pet.physicalTraits?.sex ?? '',
-          pet.physicalTraits?.age ?? '',
+          formatDate(pet.physicalTraits?.age ?? ''),
+        ]"
+      />
+      <PetItem
+        v-if="!isMobile"
+        :id="pet.id"
+        name="Crystal"
+        :capsules="[
+          pet.physicalTraits?.species ?? '',
+          pet.physicalTraits?.sex ?? '',
+          formatDate(pet.physicalTraits?.age ?? ''),
         ]"
       />
     </div>

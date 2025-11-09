@@ -2,30 +2,30 @@ export interface IPet {
   id: string
   name: string
   physicalTraits?: {
-    sex: string
-    age: string
-    size: string
-    breed: string
-    color: string
-    health?: string
-    species: string
-    coatLength: string
+    age: string | null
+    breed: string | null
+    coatLength: string | null
+    color: string | null
+    health?: string | null
+    sex: string | null
+    size: string | null
+    species: string | null
   }
   behavioralTraits?: {
-    mustGoWithAnotherCat?: boolean
-    mustGoWithAnotherDog?: boolean
-    goodWithKids?: boolean
-    goodWithDogs?: boolean
-    goodWithCats?: boolean
-    energyLevel: string
-    temperament: string
-    specialNeeds?: string
-    houseTrained: boolean
+    energyLevel: string | null
+    goodWithCats?: boolean | null
+    goodWithDogs?: boolean | null
+    goodWithKids?: boolean | null
+    houseTrained: boolean | null
+    mustGoWithAnotherCat?: boolean | null
+    mustGoWithAnotherDog?: boolean | null
+    specialNeeds?: string | null
+    temperament: string | null
   }
   medicalHistory?: {
-    vaccinationsUpToDate: boolean
-    spayedOrNeutered: boolean
-    microchipped: boolean
+    vaccinationsUpToDate: boolean | null
+    spayedOrNeutered: boolean | null
+    microchipped: boolean | null
     shots?: {
       felineHerpesVirus?: IMedicalHistoryItem
       felineCalicivirus?: IMedicalHistoryItem
@@ -43,23 +43,23 @@ export interface IPet {
       h3n2H3n8?: IMedicalHistoryItem
     }
   }
-  adoptionFee: number
-  spotlightDescription?: string
-  photos?: string[]
+  adoptionFee: number | null
+  spotlightDescription?: string | null
+  photos?: string[] | null
   descriptions?: {
-    medicalDescription?: string
-    physicalDescription?: string
-    behavioralDescription?: string
-    spotlightDescription?: string
-    funDescription?: string
-    aboutDescription?: string
-    additionalInformation?: string[]
+    aboutDescription?: string | null
+    additionalInformation?: string[] | null
+    behavioralDescription?: string | null
+    funDescription?: string | null
+    medicalDescription?: string | null
+    physicalDescription?: string | null
+    spotlightDescription?: string | null
   }
   profileSettings: {
-    isSpotlightFeatured: boolean
-    showMedicalHistory: boolean
-    showAdditionalInformation: boolean
     adoptionProcess: string
+    isSpotlightFeatured: boolean
+    showAdditionalInformation: boolean
+    showMedicalHistory: boolean
   }
 }
 
