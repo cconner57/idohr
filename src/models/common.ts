@@ -1,6 +1,7 @@
 export interface IPet {
   id: string
   name: string
+  adoptedName?: string | null
   physicalTraits?: {
     age: string | null
     breed: string | null
@@ -26,6 +27,7 @@ export interface IPet {
     vaccinationsUpToDate: boolean | null
     spayedOrNeutered: boolean | null
     microchipped: boolean | null
+    microchipID?: string | null
     shots?: {
       felineHerpesVirus?: IMedicalHistoryItem
       felineCalicivirus?: IMedicalHistoryItem
@@ -43,9 +45,18 @@ export interface IPet {
       h3n2H3n8?: IMedicalHistoryItem
     }
   }
-  adoptionFee: number | null
+  adoption: {
+    fee: number | null
+    adopted: boolean | null
+    beingFostered?: boolean | null
+    returned?: boolean | null
+    sponsored?: boolean | null
+  }
   spotlightDescription?: string | null
-  photos?: string[] | null
+  photos: {
+    primaryPhoto: string | null
+    photos: string[] | null
+  }
   descriptions?: {
     aboutDescription?: string | null
     additionalInformation?: string[] | null

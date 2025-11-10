@@ -35,6 +35,7 @@ button {
   border-radius: 6px;
   color: var(--white);
   transition: background-color 0.2s;
+  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9);
   &:hover {
     cursor: pointer;
   }
@@ -61,9 +62,30 @@ button {
   font-size: 1.5rem;
 }
 
+.button-color-blue {
+  background-color: var(--blue);
+
+  &:hover {
+    background-color: var(--blue-hover);
+  }
+}
+
+.button-color-purple {
+  background-color: var(--purple);
+  &:hover {
+    background-color: var(--purple-hover);
+  }
+}
+
+.button-color-green {
+  background-color: var(--green);
+  &:hover {
+    background-color: var(--green-hover);
+  }
+}
+
 .button-green-weak {
   background-color: var(--green-weak);
-  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9);
   &:hover {
     background-color: var(--green-weak-hover);
   }

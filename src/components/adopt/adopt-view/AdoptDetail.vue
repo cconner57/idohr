@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import type { IPet } from '../../../models/common'
 import Button from '../../common/ui/Button.vue'
 import Capsules from '../../common/ui/Capsules.vue'
@@ -7,6 +7,7 @@ import AdoptionFAQ from '../adopt-faq/AdoptionFAQ.vue'
 import AdoptionProcess from '../adopt-process/AdoptionProcess.vue'
 import MoreFriends from '../more-friends/MoreFriends.vue'
 import { formatDate } from '../../../utils/common'
+import AdditionalInfo from '../additional-info/AdditionalInfo.vue'
 
 const props = defineProps<{
   pet: IPet
@@ -21,27 +22,20 @@ const handleScheduleMeet = () => {
 }
 
 const handleShare = () => {
-  // Implement sharing logic here
-}
-
-const isSpayedOrNeutered = (pet: IPet) => {
-  return pet.physicalTraits?.sex === 'Male' ? 'Neutered' : 'Spayed'
-}
-
-// Computed property for "Good in a home with" to avoid repetitive template logic
-const goodWithText = computed(() => {
-  const traits = props.pet.behavioralTraits
-  if (!traits || (!traits.goodWithCats && !traits.goodWithDogs && !traits.goodWithKids)) {
-    return 'N/A'
+  const shareData = {
+    title: `Check out ${props.pet.name} for adoption!`,
+    text: `I found ${props.pet.name} on IDOHR and thought you might be interested!`,
+    url: globalThis.location.href,
   }
-
-  const goodWith: string[] = []
-  if (traits.goodWithCats) goodWith.push('Other Cats')
-  if (traits.goodWithDogs) goodWith.push('Other Dogs')
-  if (traits.goodWithKids) goodWith.push('Kids')
-
-  return goodWith.join(', ')
-})
+  if (navigator.share) {
+    navigator
+      .share(shareData)
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error))
+  } else {
+    alert('Sharing is not supported in this browser.')
+  }
+}
 
 const imgError = ref(false)
 
@@ -55,7 +49,7 @@ function onImgError() {
     <div class="adopt-detail__main">
       <img
         v-if="!imgError"
-        :src="`/images/${pet.name.toLowerCase() ?? ''}.jpeg`"
+        :src="`/images/${pet.photos?.primaryPhoto ?? ''}`"
         :alt="pet.name"
         @error="onImgError"
       />
@@ -68,7 +62,7 @@ function onImgError() {
             <Capsules v-if="pet?.physicalTraits?.sex" :label="pet?.physicalTraits?.sex" />
             <Capsules
               v-if="pet?.physicalTraits?.age"
-              :label="formatDate(pet?.physicalTraits?.age)"
+              :label="formatDate(pet?.physicalTraits?.age, true)"
             />
           </div>
           <p>{{ pet?.descriptions?.behavioralDescription }}</p>
@@ -88,44 +82,7 @@ function onImgError() {
             <Button title="Share" color="green-weak" @click="handleShare" :fullWidth="false" />
           </div>
         </div>
-        <div class="adopt-detail__additional-info">
-          <div class="adopt-detail__additional-info__item">
-            <p>Breed</p>
-            <p>{{ pet.physicalTraits?.breed ?? 'N/A' }}</p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>Color</p>
-            <p>{{ pet.physicalTraits?.color ?? 'N/A' }}</p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>Size</p>
-            <p>{{ pet.physicalTraits?.size ?? 'N/A' }}</p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>House-trained</p>
-            <p>{{ pet.behavioralTraits?.houseTrained ? 'Yes' : 'No' }}</p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>Health</p>
-            <p>
-              {{ pet.medicalHistory?.vaccinationsUpToDate ? 'Vaccinated' : 'Not Vaccinated' }},
-              {{
-                pet.medicalHistory?.spayedOrNeutered
-                  ? isSpayedOrNeutered(pet)
-                  : `Not ${isSpayedOrNeutered(pet)}`
-              }},
-              {{ pet.medicalHistory?.microchipped ? 'Microchipped' : 'Not Microchipped' }}
-            </p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>Good in a home with</p>
-            <p>{{ goodWithText }}</p>
-          </div>
-          <div class="adopt-detail__additional-info__item">
-            <p>Adoption Fee</p>
-            <p>{{ pet.adoptionFee !== null ? '$' + pet.adoptionFee : 'N/A' }}</p>
-          </div>
-        </div>
+        <AdditionalInfo :pet="pet" />
       </div>
     </div>
     <div
@@ -271,7 +228,7 @@ function onImgError() {
 .adopt-detail__actions {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 14px;
   @media (max-width: 440px) {
     flex-direction: column;
   }
@@ -301,43 +258,6 @@ function onImgError() {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.adopt-detail__additional-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  @media (max-width: 440px) {
-    gap: 5px;
-    flex-direction: column;
-    align-items: flex-start;
-    p {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      text-wrap: wrap;
-    }
-    p:last-child {
-      text-wrap: wrap;
-      width: 150px;
-      @media (max-width: 404px) {
-        width: 128px;
-      }
-    }
-  }
-}
-
-.adopt-detail__additional-info__item {
-  display: flex;
-  flex-direction: row;
-  & p:first-child {
-    width: 200px;
-  }
-  & p:last-child {
-    font-weight: bold;
-    width: 300px;
-  }
 }
 
 .adopt-detail__about {

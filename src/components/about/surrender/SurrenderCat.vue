@@ -55,8 +55,4 @@ h2 {
 .surrender-button {
   margin-bottom: 60px;
 }
-
-.surrender-button:hover {
-  background-color: var(--green-light);
-}
 </style>

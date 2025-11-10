@@ -37,6 +37,8 @@ const displayedPets = computed((): IPet[] => {
         :key="pet.id"
         :name="pet.name"
         :id="pet.id.toLowerCase()"
+        :photo="pet.photos?.primaryPhoto"
+        :description="pet.descriptions?.spotlightDescription || ''"
       />
     </div>
   </section>

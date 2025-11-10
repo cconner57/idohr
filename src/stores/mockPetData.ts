@@ -6,13 +6,13 @@ export const mockPetsData: IPet[] = [
     id: '1',
     name: 'Amari',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-01-01',
       size: null,
       breed: 'DSM',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -32,9 +32,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -49,13 +55,13 @@ export const mockPetsData: IPet[] = [
     id: '2',
     name: 'Apollo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -75,9 +81,14 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -92,14 +103,14 @@ export const mockPetsData: IPet[] = [
     id: '3',
     name: 'Apricot',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: null,
-      size: null,
-      breed: null,
-      color: null,
+      size: 'medium',
+      breed: 'tabby',
+      color: 'white, orange, & gray',
       health: null,
-      species: 'Cat',
-      coatLength: null,
+      species: 'cat',
+      coatLength: 'short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: null,
@@ -110,7 +121,7 @@ export const mockPetsData: IPet[] = [
       energyLevel: null,
       temperament: null,
       specialNeeds: null,
-      houseTrained: false,
+      houseTrained: true,
     },
     medicalHistory: {
       vaccinationsUpToDate: false,
@@ -118,11 +129,17 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: null,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+    photos: {
+      primaryPhoto: 'apricot.jpeg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
+      spotlightDescription: 'A chatty cuddle-bug who loves sunny naps and supervising your chores',
     },
     profileSettings: {
       isSpotlightFeatured: true,
@@ -135,13 +152,13 @@ export const mockPetsData: IPet[] = [
     id: '4',
     name: 'Aragon',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-08-18',
       size: null,
       breed: 'DMH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -161,9 +178,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: false,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -178,13 +202,13 @@ export const mockPetsData: IPet[] = [
     id: '5',
     name: 'Aria Adopted w/ Marie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-14',
       size: null,
       breed: 'DMH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -204,9 +228,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -221,13 +252,13 @@ export const mockPetsData: IPet[] = [
     id: '6',
     name: 'Armin',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: 'DSH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -247,9 +278,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -264,13 +301,13 @@ export const mockPetsData: IPet[] = [
     id: '7',
     name: 'Ashley',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -290,9 +327,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -307,13 +350,13 @@ export const mockPetsData: IPet[] = [
     id: '8',
     name: 'Astra',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-07-16',
       size: null,
       breed: 'DHS',
       color: 'Brn. Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -333,9 +376,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -350,13 +400,13 @@ export const mockPetsData: IPet[] = [
     id: '9',
     name: 'Aurora',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-07-16',
       size: null,
       breed: 'DHS',
       color: 'Brn. Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -376,9 +426,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -393,13 +450,13 @@ export const mockPetsData: IPet[] = [
     id: '10',
     name: 'Beanie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '1yr',
       size: null,
       breed: 'DSH',
       color: 'Torbie',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -419,9 +476,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -436,13 +500,13 @@ export const mockPetsData: IPet[] = [
     id: '11',
     name: 'Beau',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-09',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -462,9 +526,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -479,13 +550,13 @@ export const mockPetsData: IPet[] = [
     id: '12',
     name: 'Bella',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-11-01',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -505,9 +576,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -522,13 +600,13 @@ export const mockPetsData: IPet[] = [
     id: '13',
     name: 'Berlioz',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-31',
       size: null,
       breed: 'DMH',
       color: 'Brn. & White Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -548,9 +626,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'berlioz.jpg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -565,13 +650,13 @@ export const mockPetsData: IPet[] = [
     id: '14',
     name: 'Blythe',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -591,9 +676,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -608,13 +700,13 @@ export const mockPetsData: IPet[] = [
     id: '15',
     name: 'Bobby',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -634,9 +726,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -651,13 +750,13 @@ export const mockPetsData: IPet[] = [
     id: '16',
     name: 'Bud "Rose"',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-20',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -677,9 +776,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -694,13 +800,13 @@ export const mockPetsData: IPet[] = [
     id: '17',
     name: 'Button',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2022-11-13',
       size: null,
       breed: 'DSH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -720,9 +826,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -743,7 +856,7 @@ export const mockPetsData: IPet[] = [
       breed: 'BABY',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -763,9 +876,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -786,7 +906,7 @@ export const mockPetsData: IPet[] = [
       breed: 'BABY',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -806,9 +926,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -829,7 +956,7 @@ export const mockPetsData: IPet[] = [
       breed: 'BABY',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -849,9 +976,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -872,7 +1006,7 @@ export const mockPetsData: IPet[] = [
       breed: 'BABY',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -892,9 +1026,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -909,13 +1050,13 @@ export const mockPetsData: IPet[] = [
     id: '22',
     name: 'Casper',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-16',
       size: null,
       breed: 'DSH',
       color: 'White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -935,11 +1076,19 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'casper.jpeg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
+      spotlightDescription:
+        'A gentle goofball who carries toys around like trophies and adores warm blankets',
     },
     profileSettings: {
       isSpotlightFeatured: true,
@@ -952,13 +1101,13 @@ export const mockPetsData: IPet[] = [
     id: '23',
     name: 'Celeste',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-09-08',
       size: null,
       breed: 'DSH',
       color: 'Orange',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -978,9 +1127,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: false,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -995,13 +1151,13 @@ export const mockPetsData: IPet[] = [
     id: '24',
     name: 'Charlie',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-20',
       size: null,
       breed: 'DMH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1021,9 +1177,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1038,13 +1201,13 @@ export const mockPetsData: IPet[] = [
     id: '25',
     name: 'Cheech',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-20',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1064,9 +1227,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1081,13 +1251,13 @@ export const mockPetsData: IPet[] = [
     id: '26',
     name: 'Chino',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1107,9 +1277,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1124,13 +1301,13 @@ export const mockPetsData: IPet[] = [
     id: '27',
     name: 'Chong',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-20',
       size: null,
       breed: 'DSH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1150,9 +1327,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1167,13 +1351,13 @@ export const mockPetsData: IPet[] = [
     id: '28',
     name: 'Cinder',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1193,9 +1377,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1210,13 +1401,13 @@ export const mockPetsData: IPet[] = [
     id: '29',
     name: 'Cisco',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-02-09',
       size: null,
       breed: 'DSH',
       color: 'Orange',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1236,9 +1427,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1253,13 +1451,13 @@ export const mockPetsData: IPet[] = [
     id: '30',
     name: 'Clara',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-08-14',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1279,9 +1477,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1296,13 +1501,13 @@ export const mockPetsData: IPet[] = [
     id: '31',
     name: 'Claremont',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1322,9 +1527,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1339,13 +1551,13 @@ export const mockPetsData: IPet[] = [
     id: '32',
     name: 'Coco',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-06-01',
       size: null,
       breed: 'Siamese',
       color: 'Chocolate',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1365,9 +1577,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1382,13 +1601,13 @@ export const mockPetsData: IPet[] = [
     id: '33',
     name: 'Cosmic',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-10-04',
       size: null,
       breed: 'DLH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1408,9 +1627,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1425,13 +1651,13 @@ export const mockPetsData: IPet[] = [
     id: '34',
     name: 'Cosmo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-02-07',
       size: null,
       breed: 'DSH',
       color: 'Lilac Point',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1451,9 +1677,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1468,13 +1701,13 @@ export const mockPetsData: IPet[] = [
     id: '35',
     name: 'Cow Bunny',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-02',
       size: null,
       breed: 'DMH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1494,9 +1727,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1517,7 +1757,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1537,9 +1777,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1560,7 +1807,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1580,9 +1827,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1597,13 +1850,13 @@ export const mockPetsData: IPet[] = [
     id: '38',
     name: 'Crystal',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-08-08',
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1623,11 +1876,20 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'crystal.jpeg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
+      spotlightDescription:
+        'A soft-spoken sweetheart who chirps for attention and melts for head scratches',
     },
     profileSettings: {
       isSpotlightFeatured: true,
@@ -1640,13 +1902,13 @@ export const mockPetsData: IPet[] = [
     id: '39',
     name: 'Dakota',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-08-14',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1666,9 +1928,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1683,13 +1952,13 @@ export const mockPetsData: IPet[] = [
     id: '40',
     name: 'Doc',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1709,9 +1978,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1726,13 +2002,13 @@ export const mockPetsData: IPet[] = [
     id: '41',
     name: 'Dorian',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-15',
       size: null,
       breed: 'DMS',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1752,9 +2028,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1769,13 +2052,13 @@ export const mockPetsData: IPet[] = [
     id: '42',
     name: 'Duchess',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-07',
       size: null,
       breed: 'DSH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1795,9 +2078,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1812,13 +2102,13 @@ export const mockPetsData: IPet[] = [
     id: '43',
     name: 'Dust Bunny',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-01',
       size: null,
       breed: 'DMH',
-      color: 'Black/Grey',
+      color: 'Black/gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1838,9 +2128,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1855,13 +2152,13 @@ export const mockPetsData: IPet[] = [
     id: '44',
     name: 'Duzie',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1881,9 +2178,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1898,13 +2201,13 @@ export const mockPetsData: IPet[] = [
     id: '45',
     name: 'Duzie',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-06-30',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1924,9 +2227,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1941,13 +2251,13 @@ export const mockPetsData: IPet[] = [
     id: '46',
     name: 'Earl',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-08-14',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -1967,9 +2277,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -1984,13 +2301,13 @@ export const mockPetsData: IPet[] = [
     id: '47',
     name: 'Earth',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-02-01',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2010,9 +2327,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2027,13 +2351,13 @@ export const mockPetsData: IPet[] = [
     id: '48',
     name: 'Eire',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '1.5yrs',
       size: null,
       breed: 'DSH',
       color: 'Torbie',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2053,9 +2377,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2076,7 +2407,7 @@ export const mockPetsData: IPet[] = [
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2096,9 +2427,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2119,7 +2457,7 @@ export const mockPetsData: IPet[] = [
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2139,9 +2477,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2162,7 +2507,7 @@ export const mockPetsData: IPet[] = [
       breed: 'DSH',
       color: 'Flame Point',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2182,9 +2527,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2199,13 +2551,13 @@ export const mockPetsData: IPet[] = [
     id: '52',
     name: 'Elowen',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-20',
       size: null,
       breed: 'DMH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2225,9 +2577,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2242,13 +2601,13 @@ export const mockPetsData: IPet[] = [
     id: '53',
     name: 'Ember',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Calico',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2268,9 +2627,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2285,13 +2651,13 @@ export const mockPetsData: IPet[] = [
     id: '54',
     name: 'Ernie',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2311,9 +2677,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2328,13 +2700,13 @@ export const mockPetsData: IPet[] = [
     id: '55',
     name: 'Erika',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-02-09',
       size: null,
       breed: 'DSH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2354,9 +2726,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2371,13 +2750,13 @@ export const mockPetsData: IPet[] = [
     id: '56',
     name: 'Felix',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2017-03-01',
       size: null,
       breed: 'DSH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2397,9 +2776,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2414,13 +2800,13 @@ export const mockPetsData: IPet[] = [
     id: '57',
     name: 'Figi',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-02-26',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2440,9 +2826,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2457,13 +2850,13 @@ export const mockPetsData: IPet[] = [
     id: '58',
     name: 'Flare',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2023-06-01',
       size: null,
       breed: 'DSH',
       color: 'Snowshoe mix',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2483,9 +2876,17 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 0,
+      adopted: true,
+      sponsored: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2506,7 +2907,7 @@ export const mockPetsData: IPet[] = [
       breed: 'DMH',
       color: 'Brn. Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2526,9 +2927,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2543,13 +2951,13 @@ export const mockPetsData: IPet[] = [
     id: '60',
     name: 'Frodo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-08-18',
       size: null,
       breed: 'DSH',
       color: 'Black, white on face',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2569,9 +2977,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: false,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2586,13 +3001,13 @@ export const mockPetsData: IPet[] = [
     id: '61',
     name: 'Gala',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DLH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2612,9 +3027,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2629,13 +3051,13 @@ export const mockPetsData: IPet[] = [
     id: '62',
     name: 'Gidget',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-06-30',
       size: null,
       breed: 'DSH',
-      color: 'Dilute Tabby Grey & White',
+      color: 'Dilute Tabby gray & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2655,9 +3077,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2672,13 +3101,13 @@ export const mockPetsData: IPet[] = [
     id: '63',
     name: 'Gigi Adopted w/ Kiki',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2698,9 +3127,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2715,13 +3151,13 @@ export const mockPetsData: IPet[] = [
     id: '64',
     name: 'Gizmo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-02-07',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2741,9 +3177,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2758,13 +3201,13 @@ export const mockPetsData: IPet[] = [
     id: '65',
     name: 'Gizmo#2',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-04-13',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2784,9 +3227,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2801,13 +3251,13 @@ export const mockPetsData: IPet[] = [
     id: '66',
     name: 'Granny Smith',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-10-04',
       size: null,
       breed: 'DLH',
       color: 'Brn Tabby & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2827,9 +3277,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2844,13 +3301,13 @@ export const mockPetsData: IPet[] = [
     id: '67',
     name: 'Heather',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-02-01',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2870,9 +3327,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2887,13 +3351,13 @@ export const mockPetsData: IPet[] = [
     id: '68',
     name: 'Honey Bunny',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-02',
       size: null,
       breed: 'DSH',
       color: 'Orange',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2913,9 +3377,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2930,13 +3401,13 @@ export const mockPetsData: IPet[] = [
     id: '69',
     name: 'Iceland',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '1yr',
       size: null,
       breed: 'DSH',
-      color: 'Grey & White',
+      color: 'gray & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -2956,9 +3427,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -2972,36 +3450,44 @@ export const mockPetsData: IPet[] = [
   {
     id: '70',
     name: 'Jaylene',
+    adoptedName: 'Luna',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-11-01',
       size: null,
       breed: 'DSH',
-      color: 'Black',
-      health: null,
-      species: 'Cat',
-      coatLength: null,
+      color: 'black',
+      health: 'good',
+      species: 'cat',
+      coatLength: 'short',
     },
     behavioralTraits: {
-      mustGoWithAnotherCat: null,
+      mustGoWithAnotherCat: false,
       mustGoWithAnotherDog: null,
       goodWithKids: null,
       goodWithDogs: null,
-      goodWithCats: null,
-      energyLevel: null,
-      temperament: null,
+      goodWithCats: true,
+      energyLevel: 'medium',
+      temperament: 'sweet',
       specialNeeds: null,
-      houseTrained: false,
+      houseTrained: true,
     },
     medicalHistory: {
-      vaccinationsUpToDate: false,
-      spayedOrNeutered: false,
-      microchipped: false,
+      vaccinationsUpToDate: true,
+      spayedOrNeutered: true,
+      microchipped: true,
+      microchipID: null,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 300,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3016,13 +3502,13 @@ export const mockPetsData: IPet[] = [
     id: '71',
     name: 'Jonathan',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DLH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3042,9 +3528,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3059,13 +3552,13 @@ export const mockPetsData: IPet[] = [
     id: '72',
     name: 'Jupiter',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3085,9 +3578,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3102,13 +3602,13 @@ export const mockPetsData: IPet[] = [
     id: '73',
     name: 'Kai',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-07-30',
       size: null,
       breed: 'DSH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3128,9 +3628,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3145,13 +3652,13 @@ export const mockPetsData: IPet[] = [
     id: '74',
     name: 'Kelsey#1',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-04-24',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3171,9 +3678,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3188,13 +3702,13 @@ export const mockPetsData: IPet[] = [
     id: '75',
     name: 'Kelsey#2',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-04-24',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3214,9 +3728,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3231,13 +3752,13 @@ export const mockPetsData: IPet[] = [
     id: '76',
     name: 'Kelsey#3',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-04-24',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3257,9 +3778,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3274,13 +3802,13 @@ export const mockPetsData: IPet[] = [
     id: '77',
     name: 'Kiki',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Tux',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3300,9 +3828,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3317,13 +3852,13 @@ export const mockPetsData: IPet[] = [
     id: '78',
     name: 'Kira',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3343,9 +3878,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3360,13 +3901,13 @@ export const mockPetsData: IPet[] = [
     id: '79',
     name: 'Kodi',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-07-30',
       size: null,
       breed: 'DSH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3386,9 +3927,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3403,13 +3951,13 @@ export const mockPetsData: IPet[] = [
     id: '80',
     name: 'Lady',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-06-24',
       size: null,
       breed: 'DSH',
       color: 'Calico',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3429,9 +3977,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3446,13 +4001,13 @@ export const mockPetsData: IPet[] = [
     id: '81',
     name: 'Legolas',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-08-18',
       size: null,
       breed: 'DSH',
       color: 'Black & White on chin & forehead',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3472,9 +4027,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3489,13 +4051,13 @@ export const mockPetsData: IPet[] = [
     id: '82',
     name: 'Lena',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-04-01',
       size: null,
       breed: 'DSH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3515,9 +4077,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3532,13 +4101,13 @@ export const mockPetsData: IPet[] = [
     id: '83',
     name: 'Liam',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3558,9 +4127,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3575,13 +4150,13 @@ export const mockPetsData: IPet[] = [
     id: '84',
     name: 'Lilac',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-07-24',
       size: null,
       breed: 'Siamese',
       color: 'Lilac Point',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3601,9 +4176,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3618,13 +4200,13 @@ export const mockPetsData: IPet[] = [
     id: '85',
     name: 'Lincoln',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-07-01',
       size: null,
       breed: 'DMH',
       color: 'Silver',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3644,9 +4226,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3661,13 +4250,13 @@ export const mockPetsData: IPet[] = [
     id: '86',
     name: 'Link',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2023-06-06',
       size: null,
-      breed: 'Siamese Grey',
+      breed: 'Siamese gray',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3687,9 +4276,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3704,13 +4300,13 @@ export const mockPetsData: IPet[] = [
     id: '87',
     name: 'Logan',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-02-07',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3730,9 +4326,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3747,13 +4350,13 @@ export const mockPetsData: IPet[] = [
     id: '88',
     name: 'Mada',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-09-01',
       size: null,
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3773,9 +4376,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3790,13 +4400,13 @@ export const mockPetsData: IPet[] = [
     id: '89',
     name: 'Maddie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-09-01',
       size: null,
       breed: 'DMH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3816,9 +4426,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3831,15 +4448,15 @@ export const mockPetsData: IPet[] = [
   },
   {
     id: '90',
-    name: 'Manchos',
+    name: 'Manchas',
     physicalTraits: {
-      sex: null,
+      sex: 'male',
       age: '2025-04-30',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3859,9 +4476,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'manchas.jpg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3876,13 +4500,13 @@ export const mockPetsData: IPet[] = [
     id: '91',
     name: 'Marie Adopted w/ Aria',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-31',
       size: null,
       breed: 'DSH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3902,9 +4526,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3919,13 +4550,13 @@ export const mockPetsData: IPet[] = [
     id: '92',
     name: 'Mars',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3945,9 +4576,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -3962,13 +4600,13 @@ export const mockPetsData: IPet[] = [
     id: '93',
     name: 'Martin',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-02-26',
       size: null,
       breed: 'DSH',
       color: 'Orange Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -3988,9 +4626,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4005,13 +4650,13 @@ export const mockPetsData: IPet[] = [
     id: '94',
     name: 'Memphis',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-09',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4031,9 +4676,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4048,13 +4700,13 @@ export const mockPetsData: IPet[] = [
     id: '95',
     name: 'Mercury',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4074,9 +4726,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4091,13 +4750,13 @@ export const mockPetsData: IPet[] = [
     id: '96',
     name: 'Merry',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-08-18',
       size: null,
       breed: 'DSH',
-      color: 'Grey & White; no white on face',
+      color: 'gray & White; no white on face',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4117,9 +4776,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4134,13 +4800,13 @@ export const mockPetsData: IPet[] = [
     id: '97',
     name: 'Millie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-08-29',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4160,9 +4826,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4177,13 +4850,13 @@ export const mockPetsData: IPet[] = [
     id: '98',
     name: 'Mimi',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-03-01',
       size: null,
       breed: 'DLH',
       color: 'Dilute Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4203,9 +4876,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4220,13 +4900,13 @@ export const mockPetsData: IPet[] = [
     id: '99',
     name: 'Mimi-Momo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2022-06-01',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4246,9 +4926,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4263,13 +4950,13 @@ export const mockPetsData: IPet[] = [
     id: '100',
     name: 'Mish',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '6/1/204',
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4289,9 +4976,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4306,13 +4999,13 @@ export const mockPetsData: IPet[] = [
     id: '101',
     name: 'Mollie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-05-22',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4332,9 +5025,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4349,13 +5049,13 @@ export const mockPetsData: IPet[] = [
     id: '102',
     name: 'Monarch',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Tortie',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4375,9 +5075,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4392,13 +5099,13 @@ export const mockPetsData: IPet[] = [
     id: '103',
     name: 'Monday',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4418,9 +5125,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4435,13 +5149,13 @@ export const mockPetsData: IPet[] = [
     id: '104',
     name: 'Montclair',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-29',
       size: 'Small',
       breed: 'DSH',
       color: 'Brown Tabby',
       health: 'good',
-      species: 'Cat',
+      species: 'cat',
       coatLength: 'medium',
     },
     behavioralTraits: {
@@ -4461,11 +5175,18 @@ export const mockPetsData: IPet[] = [
       microchipped: true,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+    photos: {
+      primaryPhoto: 'montclair.jpeg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
+      spotlightDescription:
+        'A curious little explorer with big owl eyes and an even bigger love for treats',
       funDescription:
         "Hi! I'm Montclair, your future cuddle buddy and adventure partner. Here in my cozy corner, I spend my days dreaming of a forever home where I can share my boundless love and playful antics. I'm brave, always ready to explore new corners or pounce on a stray toy. After playtime, I love nothing more than snuggling up for a nap and some sweet pets. If you're looking for a companion who's full of life and ready to fill your days with joy, I'm the one! Let's make endless memories together.",
       additionalInformation: [],
@@ -4487,7 +5208,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4507,9 +5228,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4524,13 +5251,13 @@ export const mockPetsData: IPet[] = [
     id: '106',
     name: 'Neptune',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4550,9 +5277,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4567,13 +5301,13 @@ export const mockPetsData: IPet[] = [
     id: '107',
     name: 'Nimbus',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-06-05',
       size: null,
       breed: 'DLH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4593,9 +5327,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4610,13 +5351,13 @@ export const mockPetsData: IPet[] = [
     id: '108',
     name: 'Oli',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2022-04-08',
       size: null,
       breed: 'DMH',
       color: 'Calico',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4636,9 +5377,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4659,7 +5407,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4679,9 +5427,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4696,13 +5451,13 @@ export const mockPetsData: IPet[] = [
     id: '110',
     name: 'Onion',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-01',
       size: null,
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4722,9 +5477,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4739,13 +5501,13 @@ export const mockPetsData: IPet[] = [
     id: '111',
     name: 'Ontario',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-29',
-      size: null,
+      size: 'medium',
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4765,9 +5527,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'ontario.jpg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4782,13 +5551,13 @@ export const mockPetsData: IPet[] = [
     id: '112',
     name: 'Onyx',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-30',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4808,9 +5577,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4825,13 +5601,13 @@ export const mockPetsData: IPet[] = [
     id: '113',
     name: 'Ophelia',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-30',
       size: null,
       breed: 'DSH',
       color: 'Cali/tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4851,9 +5627,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4868,13 +5651,13 @@ export const mockPetsData: IPet[] = [
     id: '114',
     name: 'Orla',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '6mos',
       size: null,
       breed: 'DSH',
       color: 'Tortie',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4894,9 +5677,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4911,13 +5700,13 @@ export const mockPetsData: IPet[] = [
     id: '115',
     name: 'Oscar',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-04-06',
       size: null,
       breed: 'DLH',
       color: 'Orange Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4937,9 +5726,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4954,13 +5750,13 @@ export const mockPetsData: IPet[] = [
     id: '116',
     name: 'Panther',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -4980,9 +5776,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -4997,13 +5800,13 @@ export const mockPetsData: IPet[] = [
     id: '117',
     name: 'Pasadena',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
-      color: 'Grey & White',
+      color: 'gray & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5023,9 +5826,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5040,13 +5850,13 @@ export const mockPetsData: IPet[] = [
     id: '118',
     name: 'Pepper',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: null,
       size: null,
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5066,9 +5876,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5083,13 +5899,13 @@ export const mockPetsData: IPet[] = [
     id: '119',
     name: 'Pippi',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Torbie',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5109,9 +5925,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5126,13 +5949,13 @@ export const mockPetsData: IPet[] = [
     id: '120',
     name: 'Pippin',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-08-18',
       size: null,
       breed: 'DSH',
-      color: 'Grey & White on face',
+      color: 'gray & White on face',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5152,9 +5975,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5169,13 +5999,13 @@ export const mockPetsData: IPet[] = [
     id: '121',
     name: 'Pixie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-17',
       size: null,
       breed: 'DSH',
-      color: 'Calico/Grey Tabby',
+      color: 'Calico/gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5195,9 +6025,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5212,13 +6049,13 @@ export const mockPetsData: IPet[] = [
     id: '122',
     name: 'Pomona',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5238,9 +6075,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5255,13 +6099,13 @@ export const mockPetsData: IPet[] = [
     id: '123',
     name: 'Poppy',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-04-13',
       size: null,
       breed: 'DSH',
       color: 'Orange Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5281,9 +6125,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5304,7 +6155,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5324,9 +6175,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5341,13 +6198,13 @@ export const mockPetsData: IPet[] = [
     id: '125',
     name: 'Puddles',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-02-01',
       size: null,
       breed: 'DLH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5367,9 +6224,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5390,7 +6254,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5410,9 +6274,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5427,13 +6297,13 @@ export const mockPetsData: IPet[] = [
     id: '127',
     name: 'Rancho',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5453,9 +6323,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5470,13 +6347,13 @@ export const mockPetsData: IPet[] = [
     id: '128',
     name: 'Raven',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5496,9 +6373,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5513,13 +6397,13 @@ export const mockPetsData: IPet[] = [
     id: '129',
     name: 'Remy',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-03-09',
       size: null,
       breed: 'DSH',
       color: 'Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5539,9 +6423,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5556,13 +6447,13 @@ export const mockPetsData: IPet[] = [
     id: '130',
     name: 'Ruby',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2021-03-01',
       size: null,
       breed: 'DSH',
       color: 'Brn. Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5582,9 +6473,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5599,13 +6497,13 @@ export const mockPetsData: IPet[] = [
     id: '131',
     name: 'Sabrina',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-06-06',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5625,9 +6523,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5648,7 +6553,7 @@ export const mockPetsData: IPet[] = [
       breed: null,
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5668,9 +6573,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5685,13 +6596,13 @@ export const mockPetsData: IPet[] = [
     id: '133',
     name: 'Sally',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: null,
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5711,9 +6622,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5728,13 +6645,13 @@ export const mockPetsData: IPet[] = [
     id: '134',
     name: 'Samwise',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-08-18',
       size: null,
       breed: 'DSH',
       color: 'Black & White on nose',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5754,9 +6671,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5771,13 +6695,13 @@ export const mockPetsData: IPet[] = [
     id: '135',
     name: 'Saturday',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5797,9 +6721,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5814,13 +6745,13 @@ export const mockPetsData: IPet[] = [
     id: '136',
     name: 'Saturn',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey tabby',
+      color: 'gray tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5840,9 +6771,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5863,7 +6801,7 @@ export const mockPetsData: IPet[] = [
       breed: 'Calico',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5883,9 +6821,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5900,13 +6845,13 @@ export const mockPetsData: IPet[] = [
     id: '138',
     name: 'Shadow',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-16',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5926,9 +6871,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: 'shadow.jpeg',
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5943,13 +6895,13 @@ export const mockPetsData: IPet[] = [
     id: '139',
     name: 'Shuri',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '1yr',
       size: null,
       breed: 'DMH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -5969,9 +6921,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -5986,13 +6945,13 @@ export const mockPetsData: IPet[] = [
     id: '140',
     name: 'Sir Louie',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-06-26',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6012,9 +6971,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6029,13 +6995,13 @@ export const mockPetsData: IPet[] = [
     id: '141',
     name: 'Smudge',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-01-01',
       size: null,
       breed: 'Siamese',
       color: null,
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6055,9 +7021,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6072,13 +7045,13 @@ export const mockPetsData: IPet[] = [
     id: '142',
     name: 'Snowflake',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Flame Point',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6098,9 +7071,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6115,13 +7095,13 @@ export const mockPetsData: IPet[] = [
     id: '143',
     name: 'Sunbeam',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6141,9 +7121,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6158,13 +7145,13 @@ export const mockPetsData: IPet[] = [
     id: '144',
     name: 'Sunday',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6184,9 +7171,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6201,13 +7195,13 @@ export const mockPetsData: IPet[] = [
     id: '145',
     name: 'Suzie',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-06-30',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6227,9 +7221,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6244,13 +7245,13 @@ export const mockPetsData: IPet[] = [
     id: '146',
     name: 'Sydney',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-05-01',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6270,9 +7271,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6287,13 +7295,13 @@ export const mockPetsData: IPet[] = [
     id: '147',
     name: 'Taca Meow Meow',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-01',
       size: null,
       breed: 'DSH',
       color: 'Tuxedo',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6313,9 +7321,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6330,13 +7345,13 @@ export const mockPetsData: IPet[] = [
     id: '148',
     name: 'Tanner',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2023-05-12',
       size: null,
       breed: 'DSH',
       color: 'Orange Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6356,9 +7371,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6373,13 +7395,13 @@ export const mockPetsData: IPet[] = [
     id: '149',
     name: 'Theo',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-09',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6399,9 +7421,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6416,13 +7445,13 @@ export const mockPetsData: IPet[] = [
     id: '150',
     name: 'Thursday',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6442,9 +7471,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6459,13 +7495,13 @@ export const mockPetsData: IPet[] = [
     id: '151',
     name: 'Tinker',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-17',
       size: null,
       breed: 'Calico',
       color: 'Orange & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6485,9 +7521,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6502,13 +7545,13 @@ export const mockPetsData: IPet[] = [
     id: '152',
     name: 'Titi',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-04-01',
       size: null,
       breed: 'DSH',
-      color: 'Grey Tabby',
+      color: 'gray Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6528,9 +7571,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6545,13 +7595,13 @@ export const mockPetsData: IPet[] = [
     id: '153',
     name: 'Toulouse',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-03-31',
       size: null,
       breed: 'DMH',
       color: 'Brn. & White Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6571,9 +7621,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6588,13 +7645,13 @@ export const mockPetsData: IPet[] = [
     id: '154',
     name: 'Tuesday',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Black & White',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6614,9 +7671,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6631,13 +7695,13 @@ export const mockPetsData: IPet[] = [
     id: '155',
     name: 'Upland',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-04-29',
       size: null,
       breed: 'DSH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6657,9 +7721,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6674,13 +7745,13 @@ export const mockPetsData: IPet[] = [
     id: '156',
     name: 'Vanilla',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-03-08',
       size: null,
       breed: 'DSH',
       color: 'Orange Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6700,9 +7771,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6717,13 +7795,13 @@ export const mockPetsData: IPet[] = [
     id: '157',
     name: 'Venus',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-10-04',
       size: null,
       breed: 'DSH',
-      color: 'Grey tabby',
+      color: 'gray tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6743,9 +7821,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6760,13 +7845,13 @@ export const mockPetsData: IPet[] = [
     id: '158',
     name: 'Vicky',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2025-03-14',
       size: null,
       breed: 'DSH',
       color: 'Brn Spotted Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6786,9 +7871,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6803,13 +7895,13 @@ export const mockPetsData: IPet[] = [
     id: '159',
     name: 'Vicky',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-02-07',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6829,9 +7921,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6846,13 +7945,13 @@ export const mockPetsData: IPet[] = [
     id: '160',
     name: 'Victor',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2024-04-24',
       size: null,
       breed: 'DSH',
       color: 'Black',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6872,9 +7971,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6889,13 +7995,13 @@ export const mockPetsData: IPet[] = [
     id: '161',
     name: 'Vincent',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-08-16',
       size: null,
       breed: 'DMH',
-      color: 'Grey',
+      color: 'gray',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6915,9 +8021,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6932,13 +8045,13 @@ export const mockPetsData: IPet[] = [
     id: '162',
     name: 'Wanda',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2024-02-07',
       size: null,
       breed: 'DSH',
       color: 'Chocolate FP',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -6958,9 +8071,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -6975,13 +8095,13 @@ export const mockPetsData: IPet[] = [
     id: '163',
     name: 'Wednesday',
     physicalTraits: {
-      sex: 'Male',
+      sex: 'male',
       age: '2025-06-24',
       size: null,
       breed: 'DMH',
       color: 'Black w/ White Spot',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -7001,9 +8121,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 300,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -7018,13 +8145,13 @@ export const mockPetsData: IPet[] = [
     id: '164',
     name: 'Winter',
     physicalTraits: {
-      sex: 'Female',
+      sex: 'female',
       age: '2022-03-01',
       size: null,
       breed: 'DSH',
       color: 'Brn. Tabby',
       health: null,
-      species: 'Cat',
+      species: 'cat',
       coatLength: null,
     },
     behavioralTraits: {
@@ -7044,9 +8171,16 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 250,
-    spotlightDescription: null,
-    photos: null,
+
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },
@@ -7061,14 +8195,14 @@ export const mockPetsData: IPet[] = [
     id: '164',
     name: 'Yoda',
     physicalTraits: {
-      sex: null,
+      sex: 'female',
       age: null,
-      size: null,
+      size: 'medium',
       breed: 'DSH',
-      color: 'White & Grey',
+      color: 'White & gray',
       health: null,
-      species: 'Cat',
-      coatLength: null,
+      species: 'cat',
+      coatLength: 'short',
     },
     behavioralTraits: {
       mustGoWithAnotherCat: null,
@@ -7087,9 +8221,15 @@ export const mockPetsData: IPet[] = [
       microchipped: false,
       shots: {},
     },
-    adoptionFee: 0,
-    spotlightDescription: null,
-    photos: null,
+    adoption: {
+      fee: 250,
+      adopted: true,
+    },
+
+    photos: {
+      primaryPhoto: null,
+      photos: [],
+    },
     descriptions: {
       aboutDescription: null,
     },

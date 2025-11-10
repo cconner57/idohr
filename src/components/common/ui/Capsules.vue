@@ -38,6 +38,7 @@ const sizeClass = computed(() => {
   text-overflow: ellipsis;
   max-width: 12rem;
   overflow: hidden;
+  text-transform: capitalize;
 }
 
 .capsule--sm {

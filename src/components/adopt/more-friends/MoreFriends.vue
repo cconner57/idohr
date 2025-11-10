@@ -24,6 +24,7 @@ const isMobile = useIsMobile()
           pet.physicalTraits?.sex ?? '',
           formatDate(pet.physicalTraits?.age ?? ''),
         ]"
+        :photo="pet.photos?.primaryPhoto"
       />
       <PetItem
         name="Crystal"
@@ -33,16 +34,7 @@ const isMobile = useIsMobile()
           pet.physicalTraits?.sex ?? '',
           formatDate(pet.physicalTraits?.age ?? ''),
         ]"
-      />
-      <PetItem
-        v-if="!isMobile"
-        :id="pet.id"
-        name="Crystal"
-        :capsules="[
-          pet.physicalTraits?.species ?? '',
-          pet.physicalTraits?.sex ?? '',
-          formatDate(pet.physicalTraits?.age ?? ''),
-        ]"
+        :photo="pet.photos?.primaryPhoto"
       />
       <PetItem
         v-if="!isMobile"
@@ -53,6 +45,18 @@ const isMobile = useIsMobile()
           pet.physicalTraits?.sex ?? '',
           formatDate(pet.physicalTraits?.age ?? ''),
         ]"
+        :photo="pet.photos?.primaryPhoto"
+      />
+      <PetItem
+        v-if="!isMobile"
+        :id="pet.id"
+        name="Crystal"
+        :capsules="[
+          pet.physicalTraits?.species ?? '',
+          pet.physicalTraits?.sex ?? '',
+          formatDate(pet.physicalTraits?.age ?? ''),
+        ]"
+        :photo="pet.photos?.primaryPhoto"
       />
     </div>
   </div>

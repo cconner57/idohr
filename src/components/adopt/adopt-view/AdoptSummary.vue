@@ -15,12 +15,13 @@ defineProps<{
       :capsules="[
         pet?.physicalTraits?.species ?? '',
         pet?.physicalTraits?.sex ?? '',
-        pet?.physicalTraits?.age ? formatDate(pet?.physicalTraits?.age ?? '') : '',
+        pet?.physicalTraits?.age ? formatDate(pet?.physicalTraits?.age ?? '', true) : '',
       ]"
       :description="pet.descriptions?.physicalDescription ?? ''"
       :id="pet.id"
       :key="pet.id"
       :name="pet.name"
+      :photo="pet.photos?.primaryPhoto"
     />
   </div>
 </template>

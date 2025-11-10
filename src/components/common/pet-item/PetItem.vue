@@ -23,6 +23,10 @@ const props = defineProps({
     required: false,
     default: () => [],
   },
+  photo: {
+    type: String as PropType<string | null>,
+    required: false,
+  },
 })
 const router = useRouter()
 
@@ -41,7 +45,7 @@ function handleAdopt() {
   <div class="pet-item">
     <img
       v-if="!imgError"
-      :src="`/images/${props.name.toLowerCase() ?? ''}.jpeg`"
+      :src="`/images/${props.photo ?? ''}`"
       :alt="props.name"
       height="300"
       width="300"
@@ -54,7 +58,7 @@ function handleAdopt() {
       <h5>{{ props.name }}</h5>
       <div v-if="props.capsules.length > 0" class="capsules">
         <template v-for="capText in props.capsules" :key="capText">
-          <Capsules v-if="capText">{{ capText }}</Capsules>
+          <Capsules v-if="capText && capText !== 'Invalid Date'">{{ capText }}</Capsules>
         </template>
       </div>
       <p v-if="props.description">{{ props.description }}</p>
@@ -93,22 +97,27 @@ function handleAdopt() {
 .pet-item .info-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   padding: 0 20px 16px;
 }
 
 .pet-item h5 {
   font-size: 1.5rem;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pet-item .capsules {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .pet-item p {
   font-size: 1rem;
   flex-grow: 1;
+  margin-bottom: 12px;
 }
 </style>
