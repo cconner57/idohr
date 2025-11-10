@@ -101,7 +101,7 @@ const houseTrainedText = () => {
       text-wrap: wrap;
       width: 150px;
       @media (max-width: 404px) {
-        width: 128px;
+        width: 130px;
       }
     }
   }
@@ -116,6 +116,9 @@ const houseTrainedText = () => {
   }
   & p:first-child {
     width: 200px;
+    @media (max-width: 404px) {
+      width: 170px;
+    }
   }
   & p:last-child {
     font-weight: bold;
