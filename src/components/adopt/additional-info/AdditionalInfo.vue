@@ -86,7 +86,7 @@ const houseTrainedText = () => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 
   @media (max-width: 440px) {
     gap: 5px;
@@ -115,7 +115,7 @@ const houseTrainedText = () => {
     text-transform: capitalize;
   }
   & p:first-child {
-    width: 200px;
+    width: 225px;
     @media (max-width: 404px) {
       width: 170px;
     }
