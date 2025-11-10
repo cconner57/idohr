@@ -8,12 +8,12 @@ export interface IPet {
     coatLength: string | null
     color: string | null
     health?: string | null
-    sex: string | null
-    size: string | null
-    species: string | null
+    sex: 'male' | 'female' | null
+    size: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large' | null
+    species: 'cat' | 'dog' | null
   }
   behavioralTraits?: {
-    energyLevel: string | null
+    energyLevel: 'low' | 'medium' | 'high' | null
     goodWithCats?: boolean | null
     goodWithDogs?: boolean | null
     goodWithKids?: boolean | null
@@ -48,6 +48,7 @@ export interface IPet {
   adoption: {
     fee: number | null
     adopted: boolean | null
+    adoptionDate?: Date | null
     beingFostered?: boolean | null
     returned?: boolean | null
     sponsored?: boolean | null

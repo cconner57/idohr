@@ -40,7 +40,7 @@ import Candid from '../components/common/candid-award/Candid.vue'
           <li>Adopter education and lifetime support</li>
         </ul>
       </div>
-      <img src="/images/montclair.jpeg" alt="Happy adopted dog and cat" />
+      <img class="mission-image" src="/images/mission.png" alt="Happy adopted dog and cat" />
     </section>
 
     <section class="transparency">
@@ -135,6 +135,18 @@ import Candid from '../components/common/candid-award/Candid.vue'
   > img {
     width: 80%;
     box-sizing: border-box;
+  }
+
+  img {
+    align-self: center;
+    justify-self: center;
+    margin-right: 150px;
+    width: 225px;
+    max-width: 100%;
+    height: auto;
+    @media (max-width: 440px) {
+      margin-right: 0px;
+    }
   }
 
   & .ticks {

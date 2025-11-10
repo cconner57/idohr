@@ -5151,7 +5151,7 @@ export const mockPetsData: IPet[] = [
     physicalTraits: {
       sex: 'female',
       age: '2025-04-29',
-      size: 'Small',
+      size: 'small',
       breed: 'DSH',
       color: 'Brown Tabby',
       health: 'good',
@@ -5634,7 +5634,7 @@ export const mockPetsData: IPet[] = [
     },
 
     photos: {
-      primaryPhoto: null,
+      primaryPhoto: 'ophelia.jpeg',
       photos: [],
     },
     descriptions: {
