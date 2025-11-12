@@ -153,20 +153,6 @@ function onImgError() {
       background: url('/images/paw.svg') 350px 180px/100px 100px no-repeat #add8e6;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     }
-    @media (min-width: 321px) and (max-width: 430px) {
-      flex-direction: column;
-      img {
-        width: 100%;
-        height: auto;
-        margin-top: 3rem;
-      }
-      & .img-fallback {
-        width: 100%;
-        height: 300px;
-        margin-top: 3rem;
-        background: url('/images/paw.svg') 150px 100px/100px 100px no-repeat #add8e6;
-      }
-    }
     .adopt-detail__info {
       display: flex;
       flex-direction: column;
@@ -358,6 +344,20 @@ function onImgError() {
   }
   @media (min-width: 321px) and (max-width: 430px) {
     padding: 0 1rem;
+    .adopt-detail__main {
+      flex-direction: column;
+      img {
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+      }
+      & .img-fallback {
+        width: 100%;
+        height: 300px;
+        margin-top: 3rem;
+        background: url('/images/paw.svg') 150px 100px/100px 100px no-repeat #add8e6;
+      }
+    }
   }
   @media (min-width: 431px) and (max-width: 768px) {
   }
@@ -370,14 +370,13 @@ function onImgError() {
     align-items: center;
     & .adopt-detail__main {
       max-width: 1100px;
+      & img {
+        width: 500px;
+      }
     }
     & .adopt-detail__adoption {
       max-width: 1100px;
       width: 100%;
-      & .adopt-detail__about__content {
-      }
-      & .adopt-detail__about__medical {
-      }
     }
   }
 }
