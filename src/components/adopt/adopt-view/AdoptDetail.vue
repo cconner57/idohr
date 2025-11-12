@@ -164,7 +164,7 @@ function onImgError() {
         width: 100%;
         height: 300px;
         margin-top: 3rem;
-        background: url('/images/paw.svg') 125px 100px/100px 100px no-repeat #add8e6;
+        background: url('/images/paw.svg') 150px 100px/100px 100px no-repeat #add8e6;
       }
     }
     .adopt-detail__info {

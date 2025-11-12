@@ -114,7 +114,7 @@ const {
 
 .waiver {
   color: var(--text-700);
-  background: #f7fbff;
+  background: #fff;
   border: 1px dashed #cfe2ff;
   padding: 12px;
   border-radius: 10px;

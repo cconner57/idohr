@@ -134,6 +134,16 @@ function handleAdopt() {
   }
 
   @media (min-width: 321px) and (max-width: 430px) {
+    & .img-fallback {
+      height: 400px;
+      background: url('/images/paw.svg') 90px 50px/100px 100px no-repeat #add8e6;
+    }
+    & .info-section {
+      & .capsules {
+        margin-bottom: 8px;
+        gap: 2px;
+      }
+    }
   }
   @media (min-width: 431px) and (max-width: 768px) {
   }

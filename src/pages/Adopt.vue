@@ -64,11 +64,12 @@ const pet = computed(() => pets.find((p) => p.id === id.value))
     margin-top: 1rem;
   }
   @media (min-width: 321px) and (max-width: 430px) {
-    padding: 1.5rem 1rem 0;
+    padding-top: 5.5rem;
+    text-align: center;
     & h1 {
       font-size: 2.5rem;
       color: var(--font-color-light);
-      line-height: 3rem;
+      line-height: 4rem;
     }
     & p {
       font-size: 1.05rem;

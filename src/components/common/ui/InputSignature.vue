@@ -9,16 +9,17 @@ let context: CanvasRenderingContext2D | null = null
 const getEventPosition = (event: MouseEvent | TouchEvent) => {
   if (canvasRef.value) {
     const rect = canvasRef.value.getBoundingClientRect()
+    const dpr = window.devicePixelRatio || 1 // Get the device pixel ratio
     if (event instanceof MouseEvent) {
       return {
-        offsetX: event.clientX - rect.left,
-        offsetY: event.clientY - rect.top,
+        offsetX: (event.clientX - rect.left) / dpr, // Adjust for scaling
+        offsetY: (event.clientY - rect.top) / dpr, // Adjust for scaling
       }
     } else {
       const touch = event.touches[0]
       return {
-        offsetX: touch.clientX - rect.left,
-        offsetY: touch.clientY - rect.top,
+        offsetX: (touch.clientX - rect.left) / dpr, // Adjust for scaling
+        offsetY: (touch.clientY - rect.top) / dpr, // Adjust for scaling
       }
     }
   }
