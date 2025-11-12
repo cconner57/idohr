@@ -57,5 +57,12 @@ function handleAdopt() {
       line-height: 80px;
     }
   }
+  @media (min-width: 1441px) {
+    padding: 8rem 15rem 2rem;
+    & h1 {
+      font-size: 6rem;
+      line-height: 100px;
+    }
+  }
 }
 </style>

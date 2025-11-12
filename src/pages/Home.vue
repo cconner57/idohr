@@ -56,7 +56,7 @@ main {
   align-items: center;
   gap: 64px;
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     padding: 0 1rem;
     gap: 40px;
   }
@@ -68,7 +68,7 @@ main {
   margin-top: -20px;
   height: 975px;
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     margin: 0px;
     padding-bottom: 60px;
     height: auto;
@@ -81,7 +81,7 @@ main {
   padding-bottom: 220px;
   height: 550px;
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     padding: 40px 2rem 0;
     height: auto;
   }
@@ -94,7 +94,7 @@ main {
   padding: 0 60px;
   gap: 60px;
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     flex-direction: column;
     gap: 20px;
     margin: 10px 0 40px;
