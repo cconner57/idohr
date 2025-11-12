@@ -33,33 +33,37 @@ const pet = computed(() => pets.find((p) => p.id === id.value))
 
 <style scoped lang="css">
 .adopt {
-  width: 100%;
-  padding: 8rem 0 3rem 11.5rem;
+  width: 100dvw;
+  margin: 0 auto;
+  padding: 8rem 0 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   background-color: var(--green);
-  @media (max-width: 440px) {
-    padding: 4rem 1rem 2rem 1rem;
-    gap: 30px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    & h1 {
+      font-size: 3.5rem;
+      color: var(--font-color-light);
+    }
+    & p {
+      font-size: 1.25rem;
+      color: var(--font-color-light);
+      min-width: 400px;
+      max-width: 100%;
+      font-weight: 400;
+    }
   }
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  & h1 {
-    font-size: 3.5rem;
-    color: var(--font-color-light);
+
+  @media (min-width: 0px) and (max-width: 320px) {
+    margin-top: 1rem;
   }
-  & p {
-    font-size: 1.25rem;
-    color: var(--font-color-light);
-    min-width: 400px;
-    max-width: 100%;
-    font-weight: 400;
-  }
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     padding: 1.5rem 1rem 0;
     & h1 {
       font-size: 2.5rem;
@@ -70,12 +74,29 @@ const pet = computed(() => pets.find((p) => p.id === id.value))
       font-size: 1.05rem;
       min-width: auto;
     }
+    main {
+      width: 100%;
+    }
   }
-}
-main {
-  width: 90%;
-  @media (max-width: 440px) {
-    width: 100%;
+  @media (min-width: 431px) and (max-width: 768px) {
+    padding: 6rem 1.5rem 2rem 1.5rem;
+    gap: 40px;
+    align-items: center;
+    .header {
+      max-width: 580px;
+      h1 {
+        font-size: 2.75rem;
+        line-height: 3.25rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    max-width: 1440px;
   }
 }
 </style>

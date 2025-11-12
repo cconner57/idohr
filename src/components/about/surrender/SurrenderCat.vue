@@ -7,7 +7,7 @@ const router = useRouter()
 
 // Function to navigate to the surrender form page
 const goToSurrenderForm = () => {
-  router.push('/surrender-form')
+  router.push('/surrender')
 }
 </script>
 

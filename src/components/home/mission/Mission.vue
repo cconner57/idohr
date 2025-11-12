@@ -18,9 +18,12 @@
 <style scoped lang="css">
 .mission {
   width: 100%;
-  max-width: var(--desktop-breakpoint);
   text-align: start;
-  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  max-width: 1440px;
 
   & h4 {
     font-size: 2.75rem;
@@ -47,7 +50,7 @@
     }
   }
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     padding: 0 2rem;
 
     & h4 {
@@ -69,6 +72,24 @@
         color: var(--font-color-medium);
         line-height: 1.6;
         font-weight: 400;
+      }
+    }
+  }
+  @media (min-width: 431px) and (max-width: 768px) {
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    max-width: 1120px;
+    & h4 {
+      font-size: 2.25rem;
+    }
+    & content {
+      & p {
+        width: 50%;
+      }
+      & img {
+        margin-right: 0px;
       }
     }
   }

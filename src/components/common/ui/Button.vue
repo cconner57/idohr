@@ -35,7 +35,6 @@ button {
   border-radius: 6px;
   color: var(--white);
   transition: background-color 0.2s;
-  text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9);
   &:hover {
     cursor: pointer;
   }

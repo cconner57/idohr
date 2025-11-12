@@ -75,7 +75,14 @@ const isMobile = useIsMobile()
     font-size: 1.5rem;
     margin-bottom: 16px;
   }
-  @media (max-width: 440px) {
+  .adopt-detail__more-friends__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+  }
+  @media (min-width: 321px) and (max-width: 430px) {
     margin: 30px auto 0;
     width: 90%;
     padding: 20px;
@@ -83,20 +90,19 @@ const isMobile = useIsMobile()
       font-size: 1.25rem;
       margin-bottom: 12px;
     }
+    .adopt-detail__more-friends__list {
+      flex-direction: column;
+      gap: 15px;
+      padding: 0;
+      align-items: center;
+    }
   }
-}
-
-.adopt-detail__more-friends__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 30px;
-  @media (max-width: 440px) {
-    flex-direction: column;
-    gap: 15px;
-    padding: 0;
-    align-items: center;
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    width: 100%;
+    max-width: 1100px;
+    .adopt-detail__more-friends__list {
+      padding: 0px;
+    }
   }
 }
 </style>

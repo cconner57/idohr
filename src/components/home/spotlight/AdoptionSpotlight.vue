@@ -8,7 +8,6 @@ import { mockPetsData } from '../../../stores/mockPetData'
 const isMobile = useIsMobile()
 
 const allPets = mockPetsData.filter((pet) => pet.profileSettings.isSpotlightFeatured)
-console.log('allPets', allPets)
 
 const randomPet = ref<IPet | null>(
   isMobile.value ? allPets[Math.floor(Math.random() * allPets.length)] : null,
@@ -39,6 +38,7 @@ const displayedPets = computed((): IPet[] => {
         :id="pet.id.toLowerCase()"
         :photo="pet.photos?.primaryPhoto"
         :description="pet.descriptions?.spotlightDescription || ''"
+        :size="isMobile ? 'large' : 'medium'"
       />
     </div>
   </section>
@@ -53,8 +53,9 @@ const displayedPets = computed((): IPet[] => {
   flex-direction: column;
   gap: 16px;
   margin: -120px auto 0;
-  max-width: var(--desktop-breakpoint);
+  max-width: 1440px;
   padding: 24px 50px 40px 50px;
+  max-height: 510px;
 
   & h4 {
     font-size: 2rem;
@@ -68,7 +69,7 @@ const displayedPets = computed((): IPet[] => {
     justify-content: center;
   }
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     margin: -3rem 0 0;
     padding: 1rem 2rem;
     gap: 0.5rem;
@@ -77,6 +78,27 @@ const displayedPets = computed((): IPet[] => {
     }
     .pet-list {
       gap: 1rem;
+    }
+  }
+  @media (min-width: 431px) and (max-width: 768px) {
+    & h4 {
+      font-size: 1.75rem;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    & h4 {
+      font-size: 1.75rem;
+    }
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    width: 100%;
+    max-width: 1120px;
+    padding: 24px 30px 30px;
+    & h4 {
+      font-size: 1.75rem;
+    }
+    .pet-list {
+      gap: 2rem;
     }
   }
 }

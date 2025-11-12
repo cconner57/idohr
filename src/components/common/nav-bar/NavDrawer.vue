@@ -220,6 +220,11 @@ svg[data-open='true'] .hx-bot {
   display: grid;
   grid-template-rows: auto 1fr auto;
   outline: none;
+  @media (min-width: 431px) and (max-width: 768px) {
+    max-width: 450px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
 }
 .drawer-header {
   display: flex;

@@ -49,7 +49,24 @@ const toggleFaq = (faqIndex: number) => {
     <ul>
       <li v-for="(faqItem, faqIndex) in faqs" :key="faqIndex">
         <p @click="toggleFaq(faqIndex)" class="faq-question">
-          <span>{{ faqItem.expanded ? '⌄' : '›' }}</span>
+          <svg
+            :class="['arrow', faqItem.expanded ? 'rotated-arrow' : '']"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            role="img"
+          >
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
           {{ faqItem.question }}
         </p>
         <p v-if="faqItem.expanded" class="faq-answer">{{ faqItem.answer }}</p>
@@ -77,12 +94,12 @@ const toggleFaq = (faqIndex: number) => {
     }
   }
   .faq-answer {
-    margin: 8px 0 16px 20px;
+    margin: 8px 0 16px 34px;
     color: var(--font-color-dark);
     line-height: 1.4;
     font-weight: 400;
   }
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     width: 100%;
     margin-right: 0;
     ul {
@@ -96,8 +113,15 @@ const toggleFaq = (faqIndex: number) => {
     }
     .faq-answer {
       font-size: 0.95rem;
-      margin-left: 16px;
+      margin-left: 32px;
     }
   }
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+.rotated-arrow {
+  transform: rotate(90deg);
 }
 </style>

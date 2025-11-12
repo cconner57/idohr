@@ -35,6 +35,13 @@
 
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  --viewport-small-phone: 320px;
+  --viewport-phone: 430px;
+  --viewport-tablet: 768px;
+  --viewport-landscape-tablet: 1024px;
+  --viewport-desktop: 1280px;
+  --viewport-large-desktop: 1440px;
 }
 
 *,

@@ -11,12 +11,12 @@ export const formatDate = (dateString: string, birthday?: boolean) => {
     }
 
     if (years > 0) {
-      return `${years} year${years > 1 ? 's' : ''} old`
+      return `${years} year${years > 1 ? 's' : ''}`
     } else if (months > 0) {
-      return `${months} month${months > 1 ? 's' : ''} old`
+      return `${months} month${months > 1 ? 's' : ''}`
     } else if (months === 0) {
       const days = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
-      return `${days} day${days > 1 ? 's' : ''} old`
+      return `${days} day${days > 1 ? 's' : ''}`
     }
     return 'N/A'
   }

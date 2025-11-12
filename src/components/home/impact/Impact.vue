@@ -79,7 +79,7 @@ import Candid from '../../common/candid-award/Candid.vue'
     }
   }
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     margin-top: -80px;
     padding: 16px 20px 30px 20px;
     gap: 12px;
@@ -124,6 +124,17 @@ import Candid from '../../common/candid-award/Candid.vue'
           margin-left: 0;
         }
       }
+    }
+  }
+
+  @media (min-width: 431px) and (max-width: 768px) {
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    max-width: 1120px;
+    & h4 {
+      font-size: 1.75rem;
     }
   }
 }

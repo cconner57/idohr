@@ -27,6 +27,11 @@ const props = defineProps({
     type: String as PropType<string | null>,
     required: false,
   },
+  size: {
+    type: String as PropType<'small' | 'medium' | 'large'>,
+    required: false,
+    default: 'medium',
+  },
 })
 const router = useRouter()
 
@@ -47,8 +52,8 @@ function handleAdopt() {
       v-if="!imgError"
       :src="`/images/${props.photo ?? ''}`"
       :alt="props.name"
-      height="300"
-      width="300"
+      height="250"
+      width="240"
       loading="lazy"
       @error="onImgError"
       @click="handleAdopt"
@@ -62,7 +67,9 @@ function handleAdopt() {
         </template>
       </div>
       <p v-if="props.description">{{ props.description }}</p>
-      <Button title="Adopt Me" color="blue" @click="handleAdopt" :fullWidth="true" />
+      <div class="adopt-button">
+        <Button title="Adopt Me" color="blue" @click="handleAdopt" :fullWidth="true" />
+      </div>
     </div>
   </div>
 </template>
@@ -78,46 +85,73 @@ function handleAdopt() {
   background-color: var(--white);
   color: var(--font-color-dark);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-}
+  height: 400px;
 
-.pet-item img {
-  width: 100%;
-  object-fit: cover;
-  height: 250px;
-  background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
-  cursor: pointer;
-}
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
+    cursor: pointer;
+  }
 
-.pet-item .img-fallback {
-  width: 100%;
-  height: 250px;
-  background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
-}
+  .img-fallback {
+    width: 100%;
+    height: 180px;
+    background: url('/images/paw.svg') 90px 60px/100px 100px no-repeat #add8e6;
+  }
 
-.pet-item .info-section {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px 16px;
-}
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 16px;
+    height: 100%;
+  }
 
-.pet-item h5 {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  h5 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.pet-item .capsules {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
+  .capsules {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
 
-.pet-item p {
-  font-size: 1rem;
-  flex-grow: 1;
-  margin-bottom: 12px;
+  p {
+    font-size: 1rem;
+    flex-grow: 1;
+    margin-bottom: 12px;
+  }
+
+  .adopt-button {
+    margin-top: auto;
+  }
+
+  @media (min-width: 321px) and (max-width: 430px) {
+  }
+  @media (min-width: 431px) and (max-width: 768px) {
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    width: 240px;
+    height: 360px;
+    & .img-fallback {
+      height: 360px;
+      background: url('/images/paw.svg') 70px 50px/100px 100px no-repeat #add8e6;
+    }
+    & .info-section {
+      & .capsules {
+        margin-bottom: 12px;
+        gap: 2px;
+      }
+    }
+  }
 }
 </style>

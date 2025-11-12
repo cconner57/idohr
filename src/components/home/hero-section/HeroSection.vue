@@ -36,7 +36,7 @@ function handleAdopt() {
     user-select: none;
   }
 
-  @media (max-width: 440px) {
+  @media (min-width: 321px) and (max-width: 430px) {
     padding: 8rem 2.85rem 2rem;
     min-height: 400px;
     background-position: 50% 20%;
@@ -47,6 +47,14 @@ function handleAdopt() {
       width: 300px;
       max-width: 100%;
       margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    padding: 8rem 10rem 2rem;
+    & h1 {
+      font-size: 5rem;
+      line-height: 80px;
     }
   }
 }
