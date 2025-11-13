@@ -22,7 +22,7 @@ fieldset.field {
     }
   }
 }
-/* Override shared .field styles with media query */
+
 .field {
   @media (max-width: 440px) {
     margin-bottom: 8px;
@@ -34,7 +34,7 @@ fieldset.field {
     grid-column: span 1;
   }
 }
-/* Override shared .label styles with media query */
+
 .label {
   margin-bottom: 8px;
   @media (max-width: 440px) {
