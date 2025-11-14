@@ -104,5 +104,12 @@ const isMobile = useIsMobile()
       padding: 0px;
     }
   }
+  @media (min-width: 1441px) {
+    width: 100%;
+    max-width: 1500px;
+    .adopt-detail__more-friends__list {
+      padding: 0px;
+    }
+  }
 }
 </style>

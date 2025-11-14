@@ -379,5 +379,25 @@ function onImgError() {
       width: 100%;
     }
   }
+  @media (min-width: 1441px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & .adopt-detail__main {
+      max-width: 1500px;
+      & img {
+        width: 900px;
+      }
+    }
+    & .adopt-detail__about {
+      max-width: 1500px;
+      width: 100%;
+    }
+    & .adopt-detail__adoption {
+      max-width: 1500px;
+      width: 100%;
+    }
+  }
 }
 </style>
