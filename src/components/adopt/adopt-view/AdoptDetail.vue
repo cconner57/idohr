@@ -113,7 +113,7 @@ function onImgError() {
       <div class="adopt-detail__about__medical" v-if="pet.profileSettings.showMedicalHistory">
         <h2>Medical History</h2>
         <ul>
-          <li v-for="(shot, index) in pet.medicalHistory?.shots" :key="index">
+          <li v-for="(shot, index) in pet.medicalHistory?.procedures" :key="index">
             <p>{{ shot?.description }}</p>
             <p>
               {{

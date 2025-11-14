@@ -30,13 +30,12 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
       adopted: true,
     },
-
     photos: {
       primaryPhoto: null,
       photos: [],
@@ -79,7 +78,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -127,7 +126,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -176,7 +175,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -226,7 +225,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -276,7 +275,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -325,7 +324,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -374,7 +373,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -424,7 +423,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -474,7 +473,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -524,7 +523,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -574,7 +573,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -624,7 +623,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -674,7 +673,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -724,7 +723,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -774,7 +773,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -824,7 +823,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -874,7 +873,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -924,7 +923,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -974,7 +973,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1024,7 +1023,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1074,7 +1073,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 300,
@@ -1125,7 +1124,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1175,7 +1174,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1225,7 +1224,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1275,7 +1274,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1325,7 +1324,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1375,7 +1374,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1425,7 +1424,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1475,7 +1474,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1525,7 +1524,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1575,7 +1574,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1625,7 +1624,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1675,7 +1674,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1725,7 +1724,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1775,7 +1774,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1825,7 +1824,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -1874,7 +1873,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1926,7 +1925,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -1976,7 +1975,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2026,7 +2025,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2076,7 +2075,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2126,7 +2125,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2176,7 +2175,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 300,
@@ -2225,7 +2224,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2275,7 +2274,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2325,7 +2324,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2375,7 +2374,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2425,7 +2424,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2475,7 +2474,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2525,7 +2524,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2575,7 +2574,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2625,7 +2624,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2675,7 +2674,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -2724,7 +2723,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2774,7 +2773,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2824,7 +2823,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2874,7 +2873,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2925,7 +2924,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -2975,7 +2974,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3025,7 +3024,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3075,7 +3074,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3125,7 +3124,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3175,7 +3174,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3225,7 +3224,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3275,7 +3274,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3325,7 +3324,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3375,7 +3374,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3425,7 +3424,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3450,7 +3449,7 @@ export const mockPetsData: IPet[] = [
   {
     id: '70',
     name: 'Jaylene',
-    adoptedName: 'Luna',
+
     physicalTraits: {
       sex: 'female',
       age: '2024-11-01',
@@ -3477,11 +3476,12 @@ export const mockPetsData: IPet[] = [
       spayedOrNeutered: true,
       microchipped: true,
       microchipID: null,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 300,
       adopted: true,
+      adoptedName: 'Luna',
     },
 
     photos: {
@@ -3526,7 +3526,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3576,7 +3576,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3626,7 +3626,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3676,7 +3676,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3726,7 +3726,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3776,7 +3776,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3826,7 +3826,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3876,7 +3876,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -3925,7 +3925,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -3975,7 +3975,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4025,7 +4025,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4075,7 +4075,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4125,7 +4125,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -4174,7 +4174,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4224,7 +4224,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4274,7 +4274,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4324,7 +4324,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4374,7 +4374,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4424,7 +4424,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4474,7 +4474,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4524,7 +4524,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4574,7 +4574,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4624,7 +4624,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4674,7 +4674,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4724,7 +4724,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4774,7 +4774,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4824,7 +4824,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4874,7 +4874,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4924,7 +4924,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -4974,7 +4974,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -5023,7 +5023,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5073,7 +5073,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5123,7 +5123,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5148,6 +5148,7 @@ export const mockPetsData: IPet[] = [
   {
     id: '104',
     name: 'Montclair',
+
     physicalTraits: {
       sex: 'female',
       age: '2025-04-29',
@@ -5156,10 +5157,10 @@ export const mockPetsData: IPet[] = [
       color: 'Brown Tabby',
       health: 'good',
       species: 'cat',
-      coatLength: 'medium',
+      coatLength: 'short',
     },
     behavioralTraits: {
-      mustGoWithAnotherCat: null,
+      mustGoWithAnotherCat: false,
       mustGoWithAnotherDog: null,
       goodWithKids: true,
       goodWithDogs: null,
@@ -5173,11 +5174,41 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: true,
       spayedOrNeutered: true,
       microchipped: true,
-      shots: {},
+      microchipID: '985113009738690',
+      microchipCompany: 'HomeAgain',
+      procedures: {
+        felinePanleukopenia1: {
+          description: 'Feline Panleukopenia Vaccine',
+          dateAdministered: '2025-07-23',
+          receivedTreatment: true,
+        },
+        felineHerpesVirus: {
+          description: 'Feline Herpes Virus Vaccine',
+          dateAdministered: '2025-07-23',
+          receivedTreatment: true,
+        },
+        felineCalicivirus: {
+          description: 'Feline Calicivirus Vaccine',
+          dateAdministered: '2025-07-23',
+          receivedTreatment: true,
+        },
+        rabies: {
+          description: 'Rabies Vaccine',
+          dateAdministered: '2025-08-20',
+          receivedTreatment: true,
+        },
+        spayNeuter: {
+          description: 'Spayed',
+          dateAdministered: '2025-11-12',
+          receivedTreatment: true,
+        },
+      },
     },
     adoption: {
-      fee: 250,
+      fee: 300,
       adopted: true,
+      adoptionDate: new Date('2025-10-05'),
+      adoptedName: 'Monty',
     },
     photos: {
       primaryPhoto: 'montclair.jpeg',
@@ -5193,9 +5224,12 @@ export const mockPetsData: IPet[] = [
     },
     profileSettings: {
       isSpotlightFeatured: true,
-      showMedicalHistory: false,
+      showMedicalHistory: true,
       showAdditionalInformation: false,
       adoptionProcess: 'cat',
+    },
+    otherDetails: {
+      litter: 'City Kitty Family',
     },
   },
   {
@@ -5226,7 +5260,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -5275,7 +5309,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5325,7 +5359,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5375,7 +5409,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5425,7 +5459,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5475,7 +5509,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5525,7 +5559,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5575,7 +5609,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5625,7 +5659,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5675,7 +5709,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -5724,7 +5758,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5774,7 +5808,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5823,8 +5857,10 @@ export const mockPetsData: IPet[] = [
     medicalHistory: {
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
-      microchipped: false,
-      shots: {},
+      microchipped: true,
+      microchipID: '985113009724701',
+      microchipCompany: 'HomeAgain',
+      procedures: {},
     },
 
     adoption: {
@@ -5874,7 +5910,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -5923,7 +5959,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -5973,7 +6009,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6023,7 +6059,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6073,7 +6109,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6123,7 +6159,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6173,7 +6209,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -6222,7 +6258,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6272,7 +6308,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -6321,7 +6357,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6371,7 +6407,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6421,7 +6457,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6471,7 +6507,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6521,7 +6557,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6571,7 +6607,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -6620,7 +6656,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,
@@ -6669,7 +6705,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6719,7 +6755,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6769,7 +6805,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6819,7 +6855,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6869,7 +6905,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6919,7 +6955,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -6969,7 +7005,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7019,7 +7055,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7069,7 +7105,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7119,7 +7155,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7169,7 +7205,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7219,7 +7255,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7269,7 +7305,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7319,7 +7355,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7369,7 +7405,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7419,7 +7455,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7469,7 +7505,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7519,7 +7555,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7569,7 +7605,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7619,7 +7655,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7669,7 +7705,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7718,8 +7754,10 @@ export const mockPetsData: IPet[] = [
     medicalHistory: {
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
-      microchipped: false,
-      shots: {},
+      microchipped: true,
+      microchipID: '985113009725040',
+      microchipCompany: 'HomeAgain',
+      procedures: {},
     },
 
     adoption: {
@@ -7769,7 +7807,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7819,7 +7857,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7869,7 +7907,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7919,7 +7957,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -7969,7 +8007,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -8019,7 +8057,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -8069,7 +8107,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -8119,7 +8157,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -8169,7 +8207,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
 
     adoption: {
@@ -8219,7 +8257,7 @@ export const mockPetsData: IPet[] = [
       vaccinationsUpToDate: false,
       spayedOrNeutered: false,
       microchipped: false,
-      shots: {},
+      procedures: {},
     },
     adoption: {
       fee: 250,

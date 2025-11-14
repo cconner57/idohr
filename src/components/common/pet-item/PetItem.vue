@@ -163,5 +163,13 @@ function handleAdopt() {
       }
     }
   }
+  @media (min-width: 1441px) {
+    width: 260px;
+    height: 380px;
+    & .img-fallback {
+      height: 380px;
+      background: url('/images/paw.svg') 80px 55px/100px 100px no-repeat #add8e6;
+    }
+  }
 }
 </style>

@@ -1,7 +1,6 @@
 export interface IPet {
   id: string
   name: string
-  adoptedName?: string | null
   physicalTraits?: {
     age: string | null
     breed: string | null
@@ -28,14 +27,15 @@ export interface IPet {
     spayedOrNeutered: boolean | null
     microchipped: boolean | null
     microchipID?: string | null
-    shots?: {
+    microchipCompany?: string | null
+    procedures?: {
       felineHerpesVirus?: IMedicalHistoryItem
       felineCalicivirus?: IMedicalHistoryItem
       felinePanleukopenia1?: IMedicalHistoryItem
       felinePanleukopenia2?: IMedicalHistoryItem
       felinePanleukopenia3?: IMedicalHistoryItem
-      felineLeukemina1?: IMedicalHistoryItem
-      felineLeukemina2?: IMedicalHistoryItem
+      felineLeukemia1?: IMedicalHistoryItem
+      felineLeukemia2?: IMedicalHistoryItem
       rabies?: IMedicalHistoryItem
       spayNeuter?: IMedicalHistoryItem
       canineDistemperAdenovirusParvovirusParainfluenza?: IMedicalHistoryItem
@@ -52,6 +52,7 @@ export interface IPet {
     beingFostered?: boolean | null
     returned?: boolean | null
     sponsored?: boolean | null
+    adoptedName?: string | null
   }
   spotlightDescription?: string | null
   photos: {
@@ -72,6 +73,11 @@ export interface IPet {
     isSpotlightFeatured: boolean
     showAdditionalInformation: boolean
     showMedicalHistory: boolean
+  }
+  otherDetails?: {
+    shelterLocation?: string | null
+    intakeDate?: string | null
+    litter?: string | null
   }
 }
 
