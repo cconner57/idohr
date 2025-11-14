@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { SurrenderFormState } from '../models/common'
-import { reactive } from 'vue'
+import { reactive, ref, computed } from 'vue'
 import {
   AggressiveSection,
   FeedingSection,
@@ -11,6 +11,7 @@ import {
 } from '../components/about/surrender'
 import Button from '../components/common/ui/Button.vue'
 import SurrenderSteps from '../components/about/surrender/SurrenderSteps.vue'
+import PetSelectSection from '../components/about/surrender/PetSelectSection.vue'
 
 const formState = reactive<SurrenderFormState>({
   // Cat & Household Information
@@ -97,45 +98,85 @@ const formState = reactive<SurrenderFormState>({
   copiesOfRecords: '',
 })
 
-const formStep = reactive({
-  currentStep: 1,
-})
+const formStep = ref(0)
+const selectedAnimal = ref<'dog' | 'cat' | null>(null)
+const formError = ref<boolean>(false)
 
 const handleSubmit = () => {
+  if (formStep.value === 0 && !selectedAnimal.value) {
+    formError.value = true
+    console.log('Form submitted with state:', selectedAnimal.value)
+    return
+  }
   console.log('Form submitted with state:', formState)
   // Add form validation and submission logic here
-  if (formStep.currentStep < 6) {
-    formStep.currentStep += 1
+  if (formStep.value < 6) {
+    formStep.value += 1
   } else {
     // Final submission logic
     alert('Form submitted successfully!')
   }
 }
+
+const headerText = computed(() => {
+  if (!selectedAnimal.value || formStep.value === 0) {
+    return 'Surrender Pet'
+  }
+  return selectedAnimal.value === 'cat' ? 'Feline Surrender' : 'Canine Surrender'
+})
 </script>
 
 <template>
   <section class="page-shell">
     <section class="form-card" aria-labelledby="form-title">
       <div class="form-header">
-        <img src="../../public/images/cat.png" alt="cat" height="50" width="100" />
-        <h1>Feline Surrender</h1>
+        <img
+          v-if="selectedAnimal === 'cat' && formStep > 0"
+          src="../../public/images/cat.png"
+          alt="cat"
+          height="50"
+          width="100"
+        />
+        <img
+          v-if="selectedAnimal === 'dog' && formStep > 0"
+          src="../../public/images/dog.png"
+          alt="cat"
+          height="50"
+          width="100"
+        />
+        <h1>{{ headerText }}</h1>
       </div>
-      <SurrenderSteps :formStep="formStep.currentStep" />
+      <SurrenderSteps
+        v-if="selectedAnimal && formStep > 0"
+        :formStep="formStep"
+        :selectedAnimal="selectedAnimal"
+      />
       <content>
-        <HouseholdSection v-if="formStep.currentStep === 1" :formState="formState" />
-        <BehaviorSection v-if="formStep.currentStep === 2" :formState="formState" />
-        <AggressiveSection v-if="formStep.currentStep === 3" :formState="formState" />
-        <MedicalSection v-if="formStep.currentStep === 4" :formState="formState" />
-        <FeedingSection v-if="formStep.currentStep === 5" :formState="formState" />
-        <OtherSection v-if="formStep.currentStep === 6" :formState="formState" />
+        <PetSelectSection
+          v-if="formStep === 0"
+          :formError="formError"
+          :selectedAnimal="selectedAnimal"
+          @update:selectedAnimal="
+            (value) => {
+              selectedAnimal = value
+            }
+          "
+        />
+        <HouseholdSection v-if="formStep === 1" :formState="formState" />
+        <BehaviorSection v-if="formStep === 2" :formState="formState" />
+        <AggressiveSection v-if="formStep === 3" :formState="formState" />
+        <MedicalSection v-if="formStep === 4" :formState="formState" />
+        <FeedingSection v-if="formStep === 5" :formState="formState" />
+        <OtherSection v-if="formStep === 6" :formState="formState" />
       </content>
       <div class="actions">
         <Button
           @click="handleSubmit"
           type="submit"
-          :title="formStep.currentStep === 6 ? 'Submit' : 'Next'"
+          :title="formStep === (selectedAnimal === 'dog' ? 6 : 5) ? 'Submit' : 'Next'"
           color="green"
           size="large"
+          :disabled="formStep === 0 && !selectedAnimal"
         />
       </div>
     </section>

@@ -5,6 +5,7 @@ const props = defineProps<{
   size?: 'small' | 'medium' | 'large'
   title: string
   fullWidth?: boolean
+  disabled?: boolean
 }>()
 </script>
 
@@ -19,8 +20,10 @@ const props = defineProps<{
       medium: props.size === 'medium' || !props.size,
       large: props.size === 'large',
       'w-full': props.fullWidth,
+      'button-disabled': props.disabled,
     }"
     @click="props.onClick && props.onClick()"
+    :disabled="props.disabled"
   >
     {{ props.title }}
   </button>
@@ -92,5 +95,13 @@ button {
 
 .w-full {
   width: 100%;
+}
+
+.button-disabled {
+  filter: grayscale(60%);
+  cursor: not-allowed;
+  &:hover {
+    filter: grayscale(70%);
+  }
 }
 </style>

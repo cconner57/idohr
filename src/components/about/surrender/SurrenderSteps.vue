@@ -1,6 +1,7 @@
 <script setup lang="ts">
-const { formStep } = defineProps<{
+const { formStep, selectedAnimal } = defineProps<{
   formStep: number
+  selectedAnimal: 'dog' | 'cat' | null
 }>()
 </script>
 
@@ -9,30 +10,46 @@ const { formStep } = defineProps<{
     <div class="step" :class="{ active: formStep >= 1 }">
       <div class="step-number">1</div>
       <div class="step-label">Household</div>
-      <div class="line" :class="{ activeLine: formStep >= 1 }"></div>
+      <div
+        class="line"
+        :class="{ activeLine: formStep >= 1 }"
+        :style="{ width: selectedAnimal === 'dog' ? '100px' : '80px' }"
+      ></div>
     </div>
     <div class="step" :class="{ active: formStep >= 2 }">
       <div class="step-number">2</div>
       <div class="step-label">Behavior</div>
-      <div class="line" :class="{ activeLine: formStep >= 2 }"></div>
-    </div>
-    <div class="step" :class="{ active: formStep >= 3 }">
-      <div class="step-number">3</div>
-      <div class="step-label">Medical</div>
-      <div class="line" :class="{ activeLine: formStep >= 3 }"></div>
-    </div>
-    <div class="step" :class="{ active: formStep >= 4 }">
-      <div class="step-number">4</div>
-      <div class="step-label">Feeding</div>
-      <div class="line" :class="{ activeLine: formStep >= 4 }"></div>
+      <div
+        class="line"
+        :class="{ activeLine: formStep >= 2 }"
+        :style="{ width: selectedAnimal === 'dog' ? '100px' : '80px' }"
+      ></div>
     </div>
     <div class="step" :class="{ active: formStep >= 5 }">
-      <div class="step-number">5</div>
-      <div class="step-label">Aggressive</div>
-      <div class="line" :class="{ activeLine: formStep >= 5 }"></div>
+      <div class="step-number">3</div>
+      <div class="step-label">Aggression</div>
+      <div
+        class="line"
+        :class="{ activeLine: formStep >= 5 }"
+        :style="{ width: selectedAnimal === 'dog' ? '100px' : '80px' }"
+      ></div>
+    </div>
+    <div class="step" v-if="selectedAnimal === 'cat'" :class="{ active: formStep >= 3 }">
+      <div class="step-number">4</div>
+      <div class="step-label">Medical</div>
+      <div class="line" :class="{ activeLine: formStep >= 3 }" :style="{ width: '80px' }"></div>
+    </div>
+    <div class="step" :class="{ active: formStep >= 4 }">
+      <div class="step-number">{{ selectedAnimal === 'dog' ? 4 : 5 }}</div>
+      <div class="step-label">Feeding</div>
+      <div
+        class="line"
+        :class="{ activeLine: formStep >= 4 }"
+        :style="{ width: selectedAnimal === 'dog' ? '100px' : '80px' }"
+      ></div>
     </div>
     <div class="step" :class="{ active: formStep >= 6 }">
-      <div class="step-number">6</div>
+      <div class="step-number">{{ selectedAnimal === 'dog' ? 5 : 6 }}</div>
       <div class="step-label">Other</div>
     </div>
   </div>
