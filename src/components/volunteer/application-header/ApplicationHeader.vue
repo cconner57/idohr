@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { headerTitle, headerText } = defineProps<{
+  headerTitle: string
+  headerText?: string
+}>()
+</script>
 
 <template>
   <header class="form-header">
@@ -26,16 +31,11 @@
       />
     </svg>
 
-    <h1 id="form-title">Volunteer Application</h1>
+    <h1 id="form-title">{{ headerTitle }} Application</h1>
   </header>
 
   <p class="lede">
-    I Dream of Home Rescue (IDOHR) is an all-volunteer, nonprofit dedicated to helping homeless cats
-    and kittens find loving, permanent homes. We’re looking for responsible volunteers to help with
-    feeding and cleaning, socializing cats and kittens, supporting adoptions, and light
-    administrative tasks. Volunteers must be 18 or older. If under 18, a parent or guardian must
-    sign the waiver below. Join us and help change a life. You’ll connect with amazing animals, work
-    alongside caring volunteers, and make a meaningful impact.
+    {{ headerText }}
   </p>
 </template>
 
@@ -72,7 +72,7 @@
   }
 }
 .lede {
-  color: var(--text-700);
+  color: black;
   margin: 6px 0 18px;
   font-size: 1.125rem;
   line-height: 1.6;

@@ -1133,7 +1133,7 @@ export const mockPetsData: IPet[] = [
     },
 
     photos: {
-      primaryPhoto: null,
+      primaryPhoto: 'celeste.jpeg',
       photos: [],
     },
     descriptions: {
@@ -5383,7 +5383,7 @@ export const mockPetsData: IPet[] = [
   },
   {
     id: '108',
-    name: 'Oli',
+    name: 'Ollie',
     physicalTraits: {
       sex: 'female',
       age: '2022-04-08',
@@ -5418,7 +5418,7 @@ export const mockPetsData: IPet[] = [
     },
 
     photos: {
-      primaryPhoto: null,
+      primaryPhoto: 'ollie.jpeg',
       photos: [],
     },
     descriptions: {

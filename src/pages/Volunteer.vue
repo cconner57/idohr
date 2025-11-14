@@ -45,7 +45,15 @@ const handleSubmit = () => {
 <template>
   <section class="page-shell">
     <section class="form-card" aria-labelledby="form-title">
-      <ApplicationHeader />
+      <ApplicationHeader
+        header-title="Volunteer"
+        header-text="I Dream of Home Rescue (IDOHR) is an all-volunteer, nonprofit dedicated to helping homeless cats
+    and kittens find loving, permanent homes. We’re looking for responsible volunteers to help with
+    feeding and cleaning, socializing cats and kittens, supporting adoptions, and light
+    administrative tasks. Volunteers must be 18 or older. If under 18, a parent or guardian must
+    sign the waiver below. Join us and help change a life. You’ll connect with amazing animals, work
+    alongside caring volunteers, and make a meaningful impact."
+      />
       <fieldset class="grid" aria-labelledby="pi">
         <legend id="pi" class="section-title">Personal Information</legend>
 
@@ -127,6 +135,12 @@ const handleSubmit = () => {
           title="Submit Application"
           color="green"
           size="large"
+          :disabled="
+            Object.values(formState).every(
+              (value: string | number | null | string[]) =>
+                value === '' || value === null || (Array.isArray(value) && value.length === 0),
+            )
+          "
         />
       </div>
     </section>
@@ -155,12 +169,12 @@ const handleSubmit = () => {
         font-size: 18px;
         margin: 18px 0 12px;
       }
-      .actions {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 20px;
-      }
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
     }
     .grid {
       display: grid;

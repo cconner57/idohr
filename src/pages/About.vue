@@ -314,7 +314,6 @@ import Candid from '../components/common/candid-award/Candid.vue'
     }
     & .transparency {
       width: 100dvw;
-      outline: 5px solid red;
     }
   }
 }

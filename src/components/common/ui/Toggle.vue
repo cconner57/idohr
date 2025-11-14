@@ -26,7 +26,7 @@ const { leftLabel = 'No', rightLabel = 'Yes' } = defineProps<{
   margin-top: 6px;
 }
 .switch-text {
-  color: var(--text-700);
+  color: black;
   font-weight: 600;
 }
 

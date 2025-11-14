@@ -32,7 +32,7 @@ const router = createRouter({
       component: SurrenderPet,
     },
     {
-      path: '/pet-adoption',
+      path: '/pet-adoption/:id',
       component: PetAdoption,
     },
   ],

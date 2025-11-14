@@ -8,17 +8,21 @@ import AdoptionProcess from '../adopt-process/AdoptionProcess.vue'
 import MoreFriends from '../more-friends/MoreFriends.vue'
 import { formatDate } from '../../../utils/common'
 import AdditionalInfo from '../additional-info/AdditionalInfo.vue'
+import AdoptDrawer from './AdoptDrawer.vue'
 
 const props = defineProps<{
   pet: IPet
 }>()
 
+const isDrawerOpen = ref(false)
+
 const handleStartAdoption = () => {
-  // Implement start adoption logic here
+  // Direct user to PetAdoption page
+  globalThis.location.href = `/pet-adoption/${props.pet.id}`
 }
 
 const handleScheduleMeet = () => {
-  // Implement scheduling logic here
+  isDrawerOpen.value = true
 }
 
 const handleShare = () => {
@@ -132,6 +136,11 @@ function onImgError() {
     </div>
   </div>
   <MoreFriends :pet="pet" />
+  <AdoptDrawer
+    :pet="pet"
+    :isDrawerOpen="isDrawerOpen"
+    @update:isDrawerOpen="isDrawerOpen = $event"
+  />
 </template>
 
 <style scoped lang="css">

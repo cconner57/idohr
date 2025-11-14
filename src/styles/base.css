@@ -29,6 +29,8 @@
 
   --font-regular: 'Roboto-V';
 
+  --border-color: #e0e0e0;
+
   --mobile-breakpoint: 440px;
   --tablet-breakpoint: 1024px;
   --desktop-breakpoint: 1440px;

@@ -1,4 +1,3 @@
-/* Shared form field styles */
 .field {
   display: flex;
   flex-direction: column;
@@ -9,11 +8,10 @@
 .label {
   font-weight: 600;
   font-size: 14px;
-  color: var(--text-700);
+  color: var(--font-color-dark);
   user-select: none;
 }
 
-/* Shared input control styles */
 .control input,
 .control textarea {
   width: 100%;
@@ -25,6 +23,13 @@
     box-shadow 0.15s,
     border-color 0.15s;
   background: #fff;
+  color: var(--font-color-dark);
+}
+
+.control input::placeholder,
+.control textarea::placeholder {
+  color: var(--font-color-dark);
+  opacity: 0.6;
 }
 
 .control input:focus,
@@ -38,7 +43,6 @@
   resize: vertical;
 }
 
-/* Shared button color styles */
 .button-color-green {
   background-color: var(--green);
 }
@@ -58,4 +62,21 @@
 }
 .button-color-purple:hover {
   background-color: var(--purple-hover);
+}
+
+input[type='date'],
+input[type='time'] {
+  appearance: auto;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  color-scheme: light dark;
+}
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+input[type='date']::placeholder,
+input[type='time']::placeholder {
+  color: inherit;
+  opacity: 0.6;
 }
