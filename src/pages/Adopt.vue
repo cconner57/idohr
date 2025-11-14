@@ -99,5 +99,8 @@ const pet = computed(() => pets.find((p) => p.id === id.value))
   @media (min-width: 1025px) and (max-width: 1440px) {
     max-width: 1440px;
   }
+  @media (min-width: 1441px) {
+    max-width: 1500px;
+  }
 }
 </style>
