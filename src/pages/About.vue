@@ -69,7 +69,6 @@ import Candid from '../components/common/candid-award/Candid.vue'
   width: 100%;
   overflow: hidden;
   color: var(--font-color-dark);
-  max-width: 1440px;
   .hero {
     padding: 150px 180px 50px;
     color: var(--font-color-light);
@@ -185,6 +184,8 @@ import Candid from '../components/common/candid-award/Candid.vue'
       justify-content: center;
     }
   }
+  @media (min-width: 0px) and (max-width: 320px) {
+  }
   @media (min-width: 321px) and (max-width: 430px) {
     .hero {
       padding: 100px 30px 50px;
@@ -220,6 +221,10 @@ import Candid from '../components/common/candid-award/Candid.vue'
         margin-top: 1.5rem;
       }
     }
+  }
+  @media (min-width: 431px) and (max-width: 768px) {
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
   }
   @media (min-width: 1025px) and (max-width: 1440px) {
     display: flex;
@@ -264,6 +269,52 @@ import Candid from '../components/common/candid-award/Candid.vue'
         margin-top: 12px;
         font-weight: 400;
       }
+    }
+  }
+  @media (min-width: 1441px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .hero {
+      padding: 120px 100px 50px;
+      & p {
+        font-weight: 400;
+      }
+    }
+    & .story {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px 170px 50px;
+      & content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%vw;
+        & img {
+          max-width: 450px;
+          height: auto;
+        }
+      }
+      & .story-text {
+        padding-left: 95px;
+        & p {
+          font-size: 1.15rem;
+          margin-top: 12px;
+        }
+      }
+    }
+    & .mission {
+      padding: 50px 0px 50px;
+      & p {
+        font-size: 1.15rem;
+        margin-top: 12px;
+        font-weight: 400;
+      }
+    }
+    & .transparency {
+      width: 100dvw;
+      outline: 5px solid red;
     }
   }
 }
