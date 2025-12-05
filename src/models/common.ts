@@ -1,186 +1,196 @@
+import type { TPetBreed } from '../constants/breeds.ts'
+
+export type TSpecies = 'cat' | 'dog'
+export type TSex = 'male' | 'female'
+export type TSize = 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large'
+export type TAgeGroup = 'baby' | 'young' | 'adult' | 'senior'
+export type TEnergyLevel = 'low' | 'medium' | 'high'
+export type TCoatLength = 'short' | 'medium' | 'long' | 'wire' | 'hairless'
+export type TEnvironment = 'outdoor' | 'indoor' | 'indoor/outdoor'
+
+export type TAdoptionFlow = 'cat' | 'dog'
+
+export type TPetStatus =
+  | 'intake'
+  | 'available'
+  | 'adoption-pending'
+  | 'adopted'
+  | 'foster'
+  | 'hold'
+  | 'archived'
+
+export type TTemperament =
+  | 'affectionate'
+  | 'playful'
+  | 'shy'
+  | 'independent'
+  | 'vocal'
+  | 'curious'
+  | 'laid-back'
+  | 'bossy'
+  | 'anxious'
+  | 'hunter'
+
+export type TMedicalConcern =
+  | 'anemia'
+  | 'asthma'
+  | 'bladder infection'
+  | 'cancer'
+  | 'cystitis'
+  | 'dental problems'
+  | 'diabetes'
+  | 'ear infections'
+  | 'feline leukemia virus (felv)'
+  | 'feline infectious peritonitis (fip)'
+  | 'feline immunodeficiency (fiv)'
+  | 'allergies - flea'
+  | 'allergies - food'
+  | 'allergies - skin'
+  | 'gastrointestinal issues'
+  | 'heartworm disease'
+  | 'hyperthyroidism'
+  | 'kidney disease'
+  | 'obesity'
+  | 'upper respiratory infections'
+
 export interface IPet {
   id: string
+  slug?: string
+
   name: string
-  physicalTraits?: {
-    age: string | null
-    breed: string | null
-    coatLength: string | null
+  species: TSpecies
+  breed: TPetBreed | 'Unknown' | 'Mix' | null
+  sex: TSex | 'unknown'
+
+  physical: {
+    size: TSize | null
     color: string | null
-    health?: string | null
-    sex: 'male' | 'female' | null
-    size: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large' | null
-    species: 'cat' | 'dog' | null
+    coatLength: TCoatLength | null
+    ageGroup: TAgeGroup | null
+    dateOfBirth?: string | null
+    healthSummary?: string | null
   }
-  behavioralTraits?: {
-    energyLevel: 'low' | 'medium' | 'high' | null
-    goodWithCats?: boolean | null
-    goodWithDogs?: boolean | null
-    goodWithKids?: boolean | null
-    houseTrained: boolean | null
+
+  behavior: {
+    energyLevel: TEnergyLevel | null
+    personalityTags: TTemperament[] | null
+    isHouseTrained: boolean | null
+    isGoodWithKids: boolean | null
+    isGoodWithCats: boolean | null
+    isGoodWithDogs: boolean | null
+    prefersToBeAlone: boolean | null
+    specialNeeds?: string | null
     mustGoWithAnotherCat?: boolean | null
     mustGoWithAnotherDog?: boolean | null
-    specialNeeds?: string | null
-    temperament: string | null
+    bonded?: {
+      isBonded?: boolean | null
+      bondedWith?: string[] | null
+    } | null
   }
-  medicalHistory?: {
+
+  medical: {
     vaccinationsUpToDate: boolean | null
     spayedOrNeutered: boolean | null
     microchipped: boolean | null
     microchipID?: string | null
     microchipCompany?: string | null
-    procedures?: {
-      felineHerpesVirus?: IMedicalHistoryItem
-      felineCalicivirus?: IMedicalHistoryItem
-      felinePanleukopenia1?: IMedicalHistoryItem
-      felinePanleukopenia2?: IMedicalHistoryItem
-      felinePanleukopenia3?: IMedicalHistoryItem
-      felineLeukemia1?: IMedicalHistoryItem
-      felineLeukemia2?: IMedicalHistoryItem
-      rabies?: IMedicalHistoryItem
-      spayNeuter?: IMedicalHistoryItem
-      canineDistemperAdenovirusParvovirusParainfluenza?: IMedicalHistoryItem
-      leptospira?: IMedicalHistoryItem
-      bordetella?: IMedicalHistoryItem
-      borrelia?: IMedicalHistoryItem
-      h3n2H3n8?: IMedicalHistoryItem
+    healthConcerns?: TMedicalConcern[] | null
+    currentMedications?: string[] | null
+    vaccinations: {
+      rabies?: IVaccineRecord
+      bordetella?: IVaccineRecord
+      felineDistemper?: IVaccineSeries
+      canineDistemper?: IVaccineSeries
+      felineLeukemia?: IVaccineSeries
+      leptospira?: IVaccineSeries
+      other?: IVaccineRecord[]
     }
+    surgeries: IMedicalProcedure[]
   }
-  adoption: {
-    fee: number | null
-    adopted: boolean | null
-    adoptionDate?: Date | null
-    beingFostered?: boolean | null
-    returned?: boolean | null
-    sponsored?: boolean | null
-    adoptedName?: string | null
-  }
-  spotlightDescription?: string | null
-  photos: {
-    primaryPhoto: string | null
-    photos: string[] | null
-  }
-  descriptions?: {
-    aboutDescription?: string | null
+
+  descriptions: {
+    primary: string | null
+    spotlight?: string | null
+    behavioral?: string | null
+    specialNeeds?: string | null
+    origin?: string | null
+    fun?: string | null
     additionalInformation?: string[] | null
-    behavioralDescription?: string | null
-    funDescription?: string | null
-    medicalDescription?: string | null
-    physicalDescription?: string | null
-    spotlightDescription?: string | null
   }
+
+  details: {
+    status: TPetStatus
+    intakeDate?: string | null
+    adoptionFee: number | null
+    shelterLocation?: string | null
+    preferredPetLitter?: string | null
+    environmentType?: TEnvironment | null
+  }
+
+  adoption: {
+    isAdopted: boolean
+    date?: string | null
+    price?: number | null
+    newAdoptedName?: string | null
+    adoptedBy?: string | null
+    photo?: IPhoto | null
+    surveyCompleted?: boolean | null
+  }
+
+  foster: {
+    beingFostered: boolean
+    startDate?: string | null
+    endDate?: string | null
+    parentName?: string | null
+    parentPhoto?: IPhoto | null
+  }
+
+  returned: {
+    isReturned: boolean
+    date?: string | null
+    reason?: string | null
+  }
+
+  sponsored: {
+    isSponsored: boolean
+    sponsoredBy?: string | null
+    amount?: number | null
+    date?: string | null
+  }
+
+  photos: IPhoto[]
+
   profileSettings: {
-    adoptionProcess: string
+    adoptionProcess: TAdoptionFlow
     isSpotlightFeatured: boolean
     showAdditionalInformation: boolean
     showMedicalHistory: boolean
   }
-  otherDetails?: {
-    shelterLocation?: string | null
-    intakeDate?: string | null
-    litter?: string | null
-  }
 }
 
-interface IMedicalHistoryItem {
-  description?: string
-  dateAdministered?: string
-  receivedTreatment?: boolean
+export interface IVaccineRecord {
+  dateAdministered: string
+  expiresAt?: string
+  veterinarian?: string
 }
 
-export interface VolunteerFormState {
-  firstName: string
-  lastName: string
-  address: string
-  city: string
-  zip: string
-  phoneNumber: string
-  birthday: string
-  age: number | null
-  allergies: string
-  emergencyContactName: string
-  emergencyContactPhone: string
-  volunteerExperience: string
-  interestReason: string
-  positionPreferences: string[]
-  availability: string[]
-  nameFull: string
-  signatureData: string | null
-  signatureDate: string
-  parentName: string
-  parentSignatureData: string | null
-  parentSignatureDate: string
+export interface IVaccineSeries {
+  round1?: IVaccineRecord
+  round2?: IVaccineRecord
+  round3?: IVaccineRecord
+  isComplete: boolean
 }
 
-export interface SurrenderFormState {
-  firstName: string
-  lastName: string
-  phoneNumber: string
-  email: string
-  streetAddress: string
-  city: string
-  state: string
-  zipCode: string
-  whenToSurrenderCat: string
-  catName: string
-  catSex: string
-  catAge: string
-  catOwnershipDuration: string
-  catLocationFound: string
-  catWhySurrendered: string
-  agesOfHouseholdMembers: string
-  otherPetsInHousehold: string
-  catsBehaviorTowardsKnownPeople: string
-  catsBehaviorTowardsStrangers: string
-  catsBehaviorTowardsKnownAnimals: string
-  commentsOnBehavior: string
-  catsReactionToNewPeople: string
-  catHouseTrained: string
-  catSpendMajorityOfTime: string
-  catLeftAloneDuration: string
-  catWhenLeftAlone: string
-  catLeftAloneBehaviors: string
-  catHowItPlays: string
-  catToysItLikes: string
-  catGamesItLikes: string
-  catScaredOfAnything: string
-  catScaredOfAnythingExplanation: string
-  catBadHabits: string
-  catAllowedOnFurniture: string
-  catSleepAtNight: string
-  catBehaviorFoodOthers: string
-  catBehaviorToysOthers: string
-  catProblemsRidingInCar: string
-  catProblemsRidingInCarExplanation: string
-  catEscapedBefore: string
-  catEscapedBeforeExplanation: string
-  catEverAttackedPeople: string
-  catEverAttackedPeopleExplanation: string
-  catEverAttackedOtherCats: string
-  catEverAttackedOtherCatsExplanation: string
-  catVeterinarianList: string
-  catVeterinarianYearlyVisits: string
-  catSpayedNeutered: string
-  catVaccinationHistory: string
-  catVaccinationsCurrent: string
-  catTestedHeartworm: string
-  catTestedHeartwormExplanation: string
-  catHeartwormPrevention: string
-  catHeartwormPreventionExplanation: string
-  catMicrochipped: string
-  catMicrochippedExplanation: string
-  catVetOrGroomerBehavior: string
-  catVetMuzzled: string
-  catPastOrPresentHealthProblems: string
-  catPastOrPresentHealthProblemsExplanation: string
-  catCurrentMedications: string
-  catCurrentMedicationsExplanation: string
-  catTypeOfFood: string
-  catEatingFrequency: string
-  catAmountOfFood: string
-  catFoodTreats: string
-  catFoodTreatsExplanation: string
-  additionalInformation: string
-  fullBodyPhotoOfCat: string
-  closeUpPhotoOfCatsFace: string
-  copiesOfRecords: string
+export interface IMedicalProcedure {
+  id: string
+  name: string
+  date: string
+  notes?: string
+}
+
+export interface IPhoto {
+  url: string
+  thumbnailUrl?: string
+  isPrimary: boolean
+  uploadedAt: string
 }
