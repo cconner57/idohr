@@ -8,30 +8,37 @@ export type TEnergyLevel = 'low' | 'medium' | 'high'
 export type TCoatLength = 'short' | 'medium' | 'long' | 'wire' | 'hairless'
 export type TEnvironment = 'outdoor' | 'indoor' | 'indoor/outdoor'
 
-export type TAdoptionFlow = 'cat' | 'dog'
+export type TEatingStatus = 'normal' | 'low' | 'none' | 'excessive' | 'assisted-feeding'
+export type TDrinkingStatus = 'normal' | 'low' | 'none' | 'dehydrated'
+export type TActivityLog = 'normal' | 'calm' | 'lethargic' | 'energetic' | 'hyperactive'
+export type THealthLogUrination = 'normal' | 'none' | 'blood' | 'straining'
+export type THealthLogDefecation = 'normal' | 'diarrhea' | 'none' | 'constipated'
 
 export type TPetStatus =
-  | 'intake'
-  | 'available'
-  | 'adoption-pending'
   | 'adopted'
+  | 'adoption-pending'
+  | 'archived'
+  | 'available'
   | 'foster'
   | 'hold'
-  | 'archived'
+  | 'intake'
 
 export type TTemperament =
   | 'affectionate'
+  | 'anxious'
+  | 'bossy'
+  | 'curious'
+  | 'hunter'
+  | 'independent'
+  | 'laid-back'
   | 'playful'
   | 'shy'
-  | 'independent'
   | 'vocal'
-  | 'curious'
-  | 'laid-back'
-  | 'bossy'
-  | 'anxious'
-  | 'hunter'
 
 export type TMedicalConcern =
+  | 'allergies - flea'
+  | 'allergies - food'
+  | 'allergies - skin'
   | 'anemia'
   | 'asthma'
   | 'bladder infection'
@@ -40,12 +47,9 @@ export type TMedicalConcern =
   | 'dental problems'
   | 'diabetes'
   | 'ear infections'
-  | 'feline leukemia virus (felv)'
-  | 'feline infectious peritonitis (fip)'
   | 'feline immunodeficiency (fiv)'
-  | 'allergies - flea'
-  | 'allergies - food'
-  | 'allergies - skin'
+  | 'feline infectious peritonitis (fip)'
+  | 'feline leukemia virus (felv)'
   | 'gastrointestinal issues'
   | 'heartworm disease'
   | 'hyperthyroidism'
@@ -57,111 +61,118 @@ export interface IPet {
   id: string
   slug?: string
 
+  createdAt: string
+  updatedAt: string
+
   name: string
   species: TSpecies
-  breed: TPetBreed | 'Unknown' | 'Mix' | null
   sex: TSex | 'unknown'
+  litterName?: string | null
 
   physical: {
-    size: TSize | null
-    color: string | null
-    coatLength: TCoatLength | null
     ageGroup: TAgeGroup | null
+    breed: TPetBreed | 'Unknown' | 'Mix' | null
+    coatLength: TCoatLength | null
+    color: string | null
     dateOfBirth?: string | null
-    healthSummary?: string | null
+
+    size: TSize | null
+    currentWeight?: number | null
   }
 
   behavior: {
+    bonded?: {
+      bondedWith?: string[] | null
+      isBonded?: boolean | null
+    } | null
     energyLevel: TEnergyLevel | null
-    personalityTags: TTemperament[] | null
-    isHouseTrained: boolean | null
-    isGoodWithKids: boolean | null
+    healthSummary?: string | null
     isGoodWithCats: boolean | null
     isGoodWithDogs: boolean | null
-    prefersToBeAlone: boolean | null
-    specialNeeds?: string | null
+    isGoodWithKids: boolean | null
+    isHouseTrained: boolean | null
     mustGoWithAnotherCat?: boolean | null
     mustGoWithAnotherDog?: boolean | null
-    bonded?: {
-      isBonded?: boolean | null
-      bondedWith?: string[] | null
-    } | null
+    personalityTags: TTemperament[] | null
+    prefersToBeAlone: boolean | null
+    specialNeeds?: string | null
   }
 
   medical: {
-    vaccinationsUpToDate: boolean | null
-    spayedOrNeutered: boolean | null
-    microchipped: boolean | null
-    microchipID?: string | null
-    microchipCompany?: string | null
-    healthConcerns?: TMedicalConcern[] | null
     currentMedications?: string[] | null
+    healthConcerns?: TMedicalConcern[] | null
+    microchip: {
+      microchipCompany?: string | null
+      microchipID?: string | null
+      microchipped: boolean | null
+    }
+    spayedOrNeutered: boolean | null
+    spayedOrNeuteredDate?: string | null
+    surgeries: IMedicalProcedure[]
     vaccinations: {
-      rabies?: IVaccineRecord
       bordetella?: IVaccineRecord
-      felineDistemper?: IVaccineSeries
       canineDistemper?: IVaccineSeries
+      felineDistemper?: IVaccineSeries
       felineLeukemia?: IVaccineSeries
       leptospira?: IVaccineSeries
       other?: IVaccineRecord[]
+      rabies?: IVaccineRecord
     }
-    surgeries: IMedicalProcedure[]
+    vaccinationsUpToDate: boolean | null
   }
 
   descriptions: {
-    primary: string | null
-    spotlight?: string | null
-    behavioral?: string | null
-    specialNeeds?: string | null
-    origin?: string | null
-    fun?: string | null
     additionalInformation?: string[] | null
+    behavioral?: string | null
+    fun?: string | null
+    origin?: string | null
+    primary: string | null
+    specialNeeds?: string | null
+    spotlight?: string | null
   }
 
   details: {
-    status: TPetStatus
-    intakeDate?: string | null
-    adoptionFee: number | null
-    shelterLocation?: string | null
-    preferredPetLitter?: string | null
     environmentType?: TEnvironment | null
+    intakeDate?: string | null
+    preferredPetLitterType?: string | null
+    shelterLocation?: string | null
+    status: TPetStatus
   }
 
   adoption: {
-    isAdopted: boolean
-    date?: string | null
-    price?: number | null
-    newAdoptedName?: string | null
     adoptedBy?: string | null
+    date?: string | null
+    newAdoptedName?: string | null
     photo?: IPhoto | null
+    fee?: number | null
     surveyCompleted?: boolean | null
+    adopterContactInfo?: IContactInfo
   }
 
   foster: {
-    beingFostered: boolean
-    startDate?: string | null
     endDate?: string | null
     parentName?: string | null
     parentPhoto?: IPhoto | null
+    startDate?: string | null
+    fosterContactInfo?: IContactInfo
   }
 
   returned: {
-    isReturned: boolean
     date?: string | null
+    isReturned: boolean
     reason?: string | null
   }
 
   sponsored: {
-    isSponsored: boolean
-    sponsoredBy?: string | null
     amount?: number | null
     date?: string | null
+    isSponsored: boolean
+    sponsoredBy?: string | null
   }
 
   photos: IPhoto[]
 
   profileSettings: {
-    adoptionProcess: TAdoptionFlow
     isSpotlightFeatured: boolean
     showAdditionalInformation: boolean
     showMedicalHistory: boolean
@@ -175,22 +186,43 @@ export interface IVaccineRecord {
 }
 
 export interface IVaccineSeries {
+  isComplete: boolean
   round1?: IVaccineRecord
   round2?: IVaccineRecord
   round3?: IVaccineRecord
-  isComplete: boolean
 }
 
 export interface IMedicalProcedure {
+  date: string
   id: string
   name: string
-  date: string
   notes?: string
 }
 
 export interface IPhoto {
-  url: string
-  thumbnailUrl?: string
   isPrimary: boolean
+  thumbnailUrl?: string
   uploadedAt: string
+  url: string
+}
+
+export interface IHealthLogEntry {
+  id: string
+  petId: string
+  date: string
+  weight?: number | null
+  temperature?: number | null
+  eating: TEatingStatus | null
+  drinking: TDrinkingStatus | null
+  activity: TActivityLog | null
+  urination: THealthLogUrination | null
+  defecation: THealthLogDefecation | null
+  notes?: string
+  recordedBy?: string
+}
+
+export interface IContactInfo {
+  name?: string | null
+  email?: string | null
+  phone?: string | null
 }

@@ -1,4 +1,5 @@
 export const CAT_BREEDS = [
+  'Unknown',
   'Abyssinian',
   'Aegean',
   'American Bobtail',
@@ -113,6 +114,7 @@ export const CAT_BREEDS = [
 ] as const
 
 export const DOG_BREEDS = [
+  'Unknown',
   'Afghan Hound',
   'Airedale Terrier',
   'Akita',
