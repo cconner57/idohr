@@ -82,7 +82,6 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 **Goal:** Position IDOHR as a community hub, not just a shelter.
 
 - [ ] **Lost & Found Generator:** A public tool allowing community members to upload lost pet info and generate a printable PDF flyer with our branding.
-- [ ] **Volunteer "Skill Swap":** A directory of volunteer professional skills (e.g., Lawyer, Plumber, CPA) for internal resource sharing.
 - [ ] **Community Calendar:** A public view of adoption events, fundraisers, and vaccine clinics.
 
 ## 🕊️ Phase 11: Specialized Care & Crisis
