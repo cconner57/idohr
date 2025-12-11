@@ -1,6 +1,6 @@
 # 🗺️ Product Roadmap (Year 1)
 
-This roadmap outlines the strategic development plan for the IDOHR platform, moving from a foundational MVP to a fully automated "Smart Shelter" system. The schedule is designed for a pace of **one phase per month**.
+This roadmap outlines the strategic development plan for the IDOHR platform, moving from a foundational MVP to a multi-tenant SaaS platform.
 
 ---
 
@@ -18,7 +18,7 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 **Goal:** Secure cash flow and syndicate data to external platforms immediately.
 
 - [ ] **Stripe Foundation:** Implement processing for **Adoption Fee Invoices** (Fixed $300/$250) and **General One-Time Donations**.
-- [ ] **Petfinder & RescueGroups Sync:** Build a background Go job to auto-export our `IPet` database to external APIs nightly, eliminating manual double-entry.
+- [ ] **Petfinder & RescueGroups Sync:** Build a background Go job to auto-export our `IPet` database to external APIs nightly.
 - [ ] **Basic E-Ink Infrastructure:** Deploy Raspberry Pi Pico 2W units to kennels to display dynamic "Digital Kennel Cards" (Name, Breed, QR Code).
 
 ## 🎟️ Phase 3: Engagement Campaigns
@@ -37,13 +37,13 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 - [ ] **Foster-to-Adopt Fast-Track:** A "Keep Them" button in the Foster Portal that skips application review and immediately triggers the adoption invoice.
 - [ ] **SMS Integration:** Connect a privacy-focused SMS provider to send automated "Application Received" text alerts.
 
-## 🧠 Phase 5: Operational Intelligence
+## 📱 Phase 5: Mobile & Field Operations (PWA)
 
-**Goal:** Optimize the usage of volunteer time and shelter resources.
+**Goal:** Empower volunteers to work offline and in the field.
 
-- [ ] **Volunteer Management Core:** Implement a "Check-in" system for safety and a basic profile manager for contact info.
-- [ ] **Smart Scheduling:** A shift management system that matches volunteers to roles based on their `positionPreferences` (e.g., only showing "Dog Walking" to qualified adults).
-- [ ] **Medical "Concierge" Portal:** A view for Fosters to see only their specific pet's vaccine due dates and request medication refills.
+- [ ] **Offline "Field Mode":** Enable PWA capabilities so Intake Coordinators can fill out forms in areas with poor cell service.
+- [ ] **Push Notifications:** Implement web push notifications to alert fosters of urgent needs.
+- [ ] **"Add to Home Screen":** Optimize the web manifest to encourage volunteers to install IDOHR as a native-feeling app.
 
 ## 🔄 Phase 6: Financial Stability
 
@@ -51,7 +51,7 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 
 - [ ] **Monthly Subscriptions:** Enable recurring giving options in Stripe.
 - [ ] **Pet Sponsorships:** Logic linking a recurring payment to a specific `petId` to fund their medical care.
-- [ ] **The "Gotcha Day" Engine:** An automated job that sends "Happy 1st Anniversary" emails to adopters to encourage updates and alumni photos.
+- [ ] **The "Gotcha Day" Engine:** An automated job that sends "Happy 1st Anniversary" emails to adopters.
 
 ## 📺 Phase 7: Advanced Hardware
 
@@ -73,15 +73,16 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 
 **Goal:** Reduce decision fatigue and help adopters find the right fit.
 
-- [ ] **"Find My Match" Quiz:** An interactive wizard that filters the pet database by lifestyle (Energy Level, Good with Kids, etc.) to suggest top 3 matches.
+- [ ] **"Find My Match" Quiz:** An interactive wizard that filters the pet database by lifestyle (Energy Level, Good with Kids, etc.).
 - [ ] **"Pet Alerts":** Users can subscribe to specific criteria (e.g., "Notify me when a Calico Kitten becomes available").
-- [ ] **Lifestyle Badges:** Automated logic that tags pet profiles with badges like "Apartment Friendly" or "Couch Potato".
+- [ ] **Lifestyle Badges:** Automated logic that tags pet profiles with badges like "Apartment Friendly".
 
 ## 🏙️ Phase 10: Community Resources
 
 **Goal:** Position IDOHR as a community hub, not just a shelter.
 
-- [ ] **Lost & Found Generator:** A public tool allowing community members to upload lost pet info and generate a printable PDF flyer with our branding.
+- [ ] **Lost & Found Generator:** A public tool allowing community members to upload lost pet info and generate a printable PDF flyer.
+- [ ] **Volunteer "Skill Swap":** A directory of volunteer professional skills (e.g., Lawyer, Plumber, CPA).
 - [ ] **Community Calendar:** A public view of adoption events, fundraisers, and vaccine clinics.
 
 ## 🕊️ Phase 11: Specialized Care & Crisis
@@ -90,15 +91,24 @@ This roadmap outlines the strategic development plan for the IDOHR platform, mov
 
 - [ ] **"SOS" Volunteer Broadcast:** A filtered alert system to text volunteers who are marked as "Available Today" for urgent needs.
 - [ ] **Fospice (Hospice) Tracker:** A "Quality of Life" daily log for terminally ill pets.
-- [ ] **Event Mode Casting:** A "TV Mode" route designed for adoption events that cycles through a slideshow of currently available pets.
 - [ ] **Smart Visiting Hours:** A live website widget displaying "Open for Visits" or "Quiet Time" based on feeding schedules.
 
 ## 🌟 Phase 12: Security, Performance & Legacy
 
 **Goal:** Harden the application to enterprise standards.
 
-- [ ] **High-Security Auth (Passkeys):** Implement WebAuthn so admins can log in with FaceID/TouchID, eliminating password risks.
-- [ ] **"Zero-Dependency" Audit:** Remove non-essential libraries to ensure long-term maintainability and speed.
-- [ ] **Accessibility Certification:** Ensure full WCAG 2.1 AA compliance (Screen readers, Keyboard navigation).
-- [ ] **"In Honor Of" Tributes:** A donation checkout option to send digital dedication cards for memorial gifts.
+- [ ] **High-Security Auth (Passkeys):** Implement WebAuthn so admins can log in with FaceID/TouchID.
+- [ ] **"Zero-Dependency" Audit:** Remove non-essential libraries to ensure long-term maintainability.
+- [ ] **Accessibility Certification:** Ensure full WCAG 2.1 AA compliance.
 - [ ] **Legacy Giving Portal:** Information and forms for bequests and wills.
+
+## 💎 Phase 13: SaaS Monetization & Access Control
+
+**Goal:** Refactor the codebase to support multi-tenancy and enforce usage limits for paying customers.
+
+- [ ] **Tenant Logic:** Update database schema to associate every record with an `organization_id` to support multiple shelters.
+- [ ] **Usage Metering Middleware:** Implement backend logic to count active resources (Admins, Active Volunteers, Storage) and block actions if limits are exceeded.
+  - _Example:_ Block adding a 4th Admin if on Free Plan.
+  - _Example:_ Block SMS API calls if pre-paid credits are 0.
+- [ ] **Billing Portal:** Create a "Super Admin" dashboard for shelter directors to view their usage stats, pay invoices, and manage payment methods via Stripe Customer Portal.
+- [ ] **Feature Gating:** Wrap premium components (like "Heatmaps" or "Advanced Analytics") in permission checks that verify the organization's subscription status.
