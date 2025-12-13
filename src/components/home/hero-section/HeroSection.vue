@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { goToAdopt } from '../../../utils/navigate'
+import { goToAdopt } from '../../../utils/navigate.ts'
 import Button from '../../common/ui/Button.vue'
 
 const router = useRouter()
@@ -22,7 +22,7 @@ function handleAdopt() {
   box-sizing: border-box;
   inline-size: 100%;
   min-height: 600px;
-  background: url('/images/hero.png') 50% 30% / cover no-repeat;
+  background: url('/images/hero3.png') center 70% / cover no-repeat;
   padding: 100px clamp(16px, 10dvw, 170px) 40px;
   overflow: hidden;
 

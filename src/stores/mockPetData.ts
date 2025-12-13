@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import type { IPet } from '../models/common.js';
+import type { IPet } from '../models/common.js'
 
 export const mockPetsData: IPet[] = [
   {
@@ -251,7 +251,14 @@ export const mockPetsData: IPet[] = [
       amount: null,
       date: null,
     },
-    photos: [],
+    photos: [
+      {
+        isPrimary: true,
+        thumbnailUrl: 'apricot.jpeg',
+        uploadedAt: '2025-01-01T00:00:00Z',
+        url: 'apricot.jpeg',
+      },
+    ],
     profileSettings: {
       isSpotlightFeatured: true,
       showAdditionalInformation: false,
@@ -1885,7 +1892,14 @@ export const mockPetsData: IPet[] = [
       amount: null,
       date: null,
     },
-    photos: [],
+    photos: [
+      {
+        isPrimary: true,
+        thumbnailUrl: 'casper.jpeg',
+        uploadedAt: '2025-01-01T00:00:00Z',
+        url: 'casper.jpeg',
+      },
+    ],
     profileSettings: {
       isSpotlightFeatured: true,
       showAdditionalInformation: false,
@@ -2802,7 +2816,7 @@ export const mockPetsData: IPet[] = [
       origin: null,
       fun: null,
       additionalInformation: null,
-       },
+    },
     details: {
       status: 'available',
       intakeDate: null,
@@ -3175,7 +3189,14 @@ export const mockPetsData: IPet[] = [
       amount: null,
       date: null,
     },
-    photos: [],
+    photos: [
+      {
+        isPrimary: true,
+        thumbnailUrl: 'crystal.jpeg',
+        uploadedAt: '2025-01-01T00:00:00Z',
+        url: 'crystal.jpeg',
+      },
+    ],
     profileSettings: {
       isSpotlightFeatured: true,
       showAdditionalInformation: false,

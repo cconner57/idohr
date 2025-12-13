@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import PetItem from '../../common/pet-item/PetItem.vue'
-import { useIsMobile } from '../../../utils/useIsMobile'
-import type { IPet } from '../../../models/common'
-import { mockPetsData } from '../../../stores/mockPetData'
+import { useIsMobile } from '../../../utils/useIsMobile.ts'
+import type { IPet } from '../../../models/common.ts'
+import { mockPetsData } from '../../../stores/mockPetData.ts'
 
 const isMobile = useIsMobile()
 
@@ -36,8 +36,8 @@ const displayedPets = computed((): IPet[] => {
         :key="pet.id"
         :name="pet.name"
         :id="pet.id.toLowerCase()"
-        :photo="pet.photos?.primaryPhoto"
-        :description="pet.descriptions?.spotlightDescription || ''"
+        :photo="pet.photos?.find((p) => p.isPrimary)?.url || null"
+        :description="pet.descriptions?.spotlight || ''"
         :size="isMobile ? 'large' : 'medium'"
       />
     </div>

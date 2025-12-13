@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { goToAdopt } from '../../../utils/navigate'
+import { goToAdopt } from '../../../utils/navigate.ts'
 import Button from '../ui/Button.vue'
 import { ref, type PropType } from 'vue'
 import Capsules from '../ui/Capsules.vue'
